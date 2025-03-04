@@ -1,0 +1,1644 @@
+{
+  "icons": [
+    {
+      "name": "cmdAbortTask24",
+      "content": "e900"
+    },
+    {
+      "name": "cmdAdd10",
+      "content": "e901"
+    },
+    {
+      "name": "cmdAdd13",
+      "content": "e902"
+    },
+    {
+      "name": "cmdAdd16",
+      "content": "e903"
+    },
+    {
+      "name": "cmdAdd24",
+      "content": "e904"
+    },
+    {
+      "name": "cmdAddBranch24",
+      "content": "e905"
+    },
+    {
+      "name": "cmdAddFromLibrary24",
+      "content": "e906"
+    },
+    {
+      "name": "cmdAddLatestReference24",
+      "content": "e907"
+    },
+    {
+      "name": "cmdAddPart24",
+      "content": "e908"
+    },
+    {
+      "name": "cmdAddSection24",
+      "content": "e909"
+    },
+    {
+      "name": "cmdAddtoStudy24",
+      "content": "e90a"
+    },
+    {
+      "name": "cmdAlertAdd24",
+      "content": "e90b"
+    },
+    {
+      "name": "cmdAlerts16",
+      "content": "e90c"
+    },
+    {
+      "name": "cmdAlerts24",
+      "content": "e90d"
+    },
+    {
+      "name": "cmdAlignBottom16",
+      "content": "e90e"
+    },
+    {
+      "name": "cmdAlignBottom24",
+      "content": "e90f"
+    },
+    {
+      "name": "cmdAlignLeft16",
+      "content": "e910"
+    },
+    {
+      "name": "cmdAlignLeft24",
+      "content": "e911"
+    },
+    {
+      "name": "cmdAlignRight16",
+      "content": "e912"
+    },
+    {
+      "name": "cmdAlignRight24",
+      "content": "e913"
+    },
+    {
+      "name": "cmdAlignTop16",
+      "content": "e914"
+    },
+    {
+      "name": "cmdAlignTop24",
+      "content": "e915"
+    },
+    {
+      "name": "cmdApply10",
+      "content": "e916"
+    },
+    {
+      "name": "cmdApply13",
+      "content": "e917"
+    },
+    {
+      "name": "cmdApply16",
+      "content": "e918"
+    },
+    {
+      "name": "cmdApply24",
+      "content": "e919"
+    },
+    {
+      "name": "cmdApplyExemption24",
+      "content": "e91a"
+    },
+    {
+      "name": "cmdApplyGradeRuleTemplate24",
+      "content": "e91b"
+    },
+    {
+      "name": "cmdArcCenter24",
+      "content": "e91c"
+    },
+    {
+      "name": "cmdAssign10",
+      "content": "e91d"
+    },
+    {
+      "name": "cmdAssign13",
+      "content": "e91e"
+    },
+    {
+      "name": "cmdAssign16",
+      "content": "e91f"
+    },
+    {
+      "name": "cmdAssign24",
+      "content": "e920"
+    },
+    {
+      "name": "cmdAssign32",
+      "content": "e921"
+    },
+    {
+      "name": "cmdAssignLot24",
+      "content": "e922"
+    },
+    {
+      "name": "cmdAssignProject24",
+      "content": "e923"
+    },
+    {
+      "name": "cmdAssignTask24",
+      "content": "e924"
+    },
+    {
+      "name": "cmdAssignVendor24",
+      "content": "e925"
+    },
+    {
+      "name": "cmdAttach16",
+      "content": "e926"
+    },
+    {
+      "name": "cmdAttach24",
+      "content": "e927"
+    },
+    {
+      "name": "cmdBack16",
+      "content": "e928"
+    },
+    {
+      "name": "cmdBack24",
+      "content": "e929"
+    },
+    {
+      "name": "cmdBackwards16",
+      "content": "e92a"
+    },
+    {
+      "name": "cmdBackwards24",
+      "content": "e92b"
+    },
+    {
+      "name": "cmdCalendar16",
+      "content": "e92c"
+    },
+    {
+      "name": "cmdCancel24",
+      "content": "e92d"
+    },
+    {
+      "name": "cmdCancelCheckout24",
+      "content": "e92e"
+    },
+    {
+      "name": "cmdCaution24",
+      "content": "e92f"
+    },
+    {
+      "name": "cmdChangeCurrency24",
+      "content": "e930"
+    },
+    {
+      "name": "cmdChangeOwner24",
+      "content": "e931"
+    },
+    {
+      "name": "cmdChangePassword24",
+      "content": "e932"
+    },
+    {
+      "name": "cmdChangeTextCase24",
+      "content": "e933"
+    },
+    {
+      "name": "cmdChangeTextCase32",
+      "content": "e934"
+    },
+    {
+      "name": "cmdCheckin24",
+      "content": "e935"
+    },
+    {
+      "name": "cmdCheckmark16",
+      "content": "e936"
+    },
+    {
+      "name": "cmdCheckmark24",
+      "content": "e937"
+    },
+    {
+      "name": "cmdCheckout24",
+      "content": "e938"
+    },
+    {
+      "name": "cmdChild24",
+      "content": "e939"
+    },
+    {
+      "name": "cmdChildExpanded24",
+      "content": "e93a"
+    },
+    {
+      "name": "cmdClaimTask24",
+      "content": "e93b"
+    },
+    {
+      "name": "cmdClassification24",
+      "content": "e93c"
+    },
+    {
+      "name": "cmdClipboard16",
+      "content": "e93d"
+    },
+    {
+      "name": "cmdClipboard24",
+      "content": "e93e"
+    },
+    {
+      "name": "cmdClose16OLD",
+      "content": "e93f"
+    },
+    {
+      "name": "cmdClose24",
+      "content": "e940"
+    },
+    {
+      "name": "cmdClose24OLD",
+      "content": "e941"
+    },
+    {
+      "name": "cmdClose32",
+      "content": "e942"
+    },
+    {
+      "name": "cmdCloseFile16",
+      "content": "e943"
+    },
+    {
+      "name": "cmdCloseFile24",
+      "content": "e944"
+    },
+    {
+      "name": "cmdCloseLite24",
+      "content": "e945"
+    },
+    {
+      "name": "cmdClosePanel24",
+      "content": "e946"
+    },
+    {
+      "name": "cmdCloseTab16",
+      "content": "e947"
+    },
+    {
+      "name": "cmdCloudConsole32",
+      "content": "e948"
+    },
+    {
+      "name": "cmdCloudDrive24",
+      "content": "e949"
+    },
+    {
+      "name": "cmdColumnFreeze24",
+      "content": "e94a"
+    },
+    {
+      "name": "cmdColumnUnfreeze24",
+      "content": "e94b"
+    },
+    {
+      "name": "cmdCompareView24",
+      "content": "e94c"
+    },
+    {
+      "name": "cmdConfiguration24",
+      "content": "e94d"
+    },
+    {
+      "name": "cmdConfigureBasedOnSelection24",
+      "content": "e94e"
+    },
+    {
+      "name": "cmdConnect24",
+      "content": "e94f"
+    },
+    {
+      "name": "cmdConnection24",
+      "content": "e950"
+    },
+    {
+      "name": "cmdContextHelp16",
+      "content": "e951"
+    },
+    {
+      "name": "cmdContextHelp24",
+      "content": "e952"
+    },
+    {
+      "name": "cmdConvertToParent24",
+      "content": "e953"
+    },
+    {
+      "name": "cmdCopy16",
+      "content": "e954"
+    },
+    {
+      "name": "cmdCopy24",
+      "content": "e955"
+    },
+    {
+      "name": "cmdCreateBlock24",
+      "content": "e956"
+    },
+    {
+      "name": "cmdCreateChange24",
+      "content": "e957"
+    },
+    {
+      "name": "cmdCreateChangeProposal24",
+      "content": "e958"
+    },
+    {
+      "name": "cmdCreateGroup24",
+      "content": "e959"
+    },
+    {
+      "name": "cmdCreateInteraction24",
+      "content": "e95a"
+    },
+    {
+      "name": "cmdCreateLocation24",
+      "content": "e95b"
+    },
+    {
+      "name": "cmdCreatePort24",
+      "content": "e95c"
+    },
+    {
+      "name": "cmdCreateSchedule24",
+      "content": "e95d"
+    },
+    {
+      "name": "cmdCreateServiceDiscrepancy24",
+      "content": "e95e"
+    },
+    {
+      "name": "cmdCreateSingle24",
+      "content": "e95f"
+    },
+    {
+      "name": "cmdCreateTraceLink24",
+      "content": "e960"
+    },
+    {
+      "name": "cmdCut16",
+      "content": "e961"
+    },
+    {
+      "name": "cmdCut24",
+      "content": "e962"
+    },
+    {
+      "name": "cmdDashboard16",
+      "content": "e963"
+    },
+    {
+      "name": "cmdDelete10",
+      "content": "e964"
+    },
+    {
+      "name": "cmdDelete13",
+      "content": "e965"
+    },
+    {
+      "name": "cmdDelete16",
+      "content": "e966"
+    },
+    {
+      "name": "cmdDelete24",
+      "content": "e967"
+    },
+    {
+      "name": "cmdDeleteAll24",
+      "content": "e968"
+    },
+    {
+      "name": "cmdDeleteAllocationDecision24",
+      "content": "e969"
+    },
+    {
+      "name": "cmdDependency24",
+      "content": "e96a"
+    },
+    {
+      "name": "cmdDesign16",
+      "content": "e96b"
+    },
+    {
+      "name": "cmdDesign24",
+      "content": "e96c"
+    },
+    {
+      "name": "cmdDistribute24",
+      "content": "e96d"
+    },
+    {
+      "name": "cmdDistributeHorizontal16",
+      "content": "e96e"
+    },
+    {
+      "name": "cmdDistributeHorizontal24",
+      "content": "e96f"
+    },
+    {
+      "name": "cmdDistributeVertical16",
+      "content": "e970"
+    },
+    {
+      "name": "cmdDistributeVertical24",
+      "content": "e971"
+    },
+    {
+      "name": "cmdDownload16",
+      "content": "e972"
+    },
+    {
+      "name": "cmdDownload24",
+      "content": "e973"
+    },
+    {
+      "name": "cmdDownloadSpecification24",
+      "content": "e974"
+    },
+    {
+      "name": "cmdDrop24",
+      "content": "e975"
+    },
+    {
+      "name": "cmdDuplicate16",
+      "content": "e976"
+    },
+    {
+      "name": "cmdDuplicate24",
+      "content": "e977"
+    },
+    {
+      "name": "cmdEdge24",
+      "content": "e978"
+    },
+    {
+      "name": "cmdEdit16",
+      "content": "e979"
+    },
+    {
+      "name": "cmdEdit24",
+      "content": "e97a"
+    },
+    {
+      "name": "cmdEditDiagram24",
+      "content": "e97b"
+    },
+    {
+      "name": "cmdEmptyStar24",
+      "content": "e97c"
+    },
+    {
+      "name": "cmdErase24",
+      "content": "e97d"
+    },
+    {
+      "name": "cmdExitFitToWindow16",
+      "content": "e97e"
+    },
+    {
+      "name": "cmdExitFitToWindow24",
+      "content": "e97f"
+    },
+    {
+      "name": "cmdExitFullScreen16",
+      "content": "e980"
+    },
+    {
+      "name": "cmdExitFullScreen24",
+      "content": "e981"
+    },
+    {
+      "name": "cmdExpandAll24",
+      "content": "e982"
+    },
+    {
+      "name": "cmdExport16",
+      "content": "e983"
+    },
+    {
+      "name": "cmdExport24",
+      "content": "e984"
+    },
+    {
+      "name": "cmdExport32",
+      "content": "e985"
+    },
+    {
+      "name": "cmdFavorites16",
+      "content": "e986"
+    },
+    {
+      "name": "cmdFile24",
+      "content": "e987"
+    },
+    {
+      "name": "cmdFilledStar24",
+      "content": "e988"
+    },
+    {
+      "name": "cmdFilter16",
+      "content": "e989"
+    },
+    {
+      "name": "cmdFilter24",
+      "content": "e98a"
+    },
+    {
+      "name": "cmdFilterAnalysisRequest24",
+      "content": "e98b"
+    },
+    {
+      "name": "cmdFind16",
+      "content": "e98c"
+    },
+    {
+      "name": "cmdFind24",
+      "content": "e98d"
+    },
+    {
+      "name": "cmdFitToWindow16",
+      "content": "e98e"
+    },
+    {
+      "name": "cmdFitToWindow24",
+      "content": "e98f"
+    },
+    {
+      "name": "cmdFix16",
+      "content": "e990"
+    },
+    {
+      "name": "cmdFix32",
+      "content": "e991"
+    },
+    {
+      "name": "cmdFlatLoadAll24",
+      "content": "e992"
+    },
+    {
+      "name": "cmdFlatToScreen24",
+      "content": "e993"
+    },
+    {
+      "name": "cmdFlipHoritontal16",
+      "content": "e994"
+    },
+    {
+      "name": "cmdFlipHoritontal24",
+      "content": "e995"
+    },
+    {
+      "name": "cmdFlipVertical16",
+      "content": "e996"
+    },
+    {
+      "name": "cmdFlipVertical24",
+      "content": "e997"
+    },
+    {
+      "name": "cmdFloor24",
+      "content": "e998"
+    },
+    {
+      "name": "cmdFollow24",
+      "content": "e999"
+    },
+    {
+      "name": "cmdForward24",
+      "content": "e99a"
+    },
+    {
+      "name": "cmdForwards16",
+      "content": "e99b"
+    },
+    {
+      "name": "cmdForwards24",
+      "content": "e99c"
+    },
+    {
+      "name": "cmdFreehand24",
+      "content": "e99d"
+    },
+    {
+      "name": "cmdFreehand32",
+      "content": "e99e"
+    },
+    {
+      "name": "cmdFullScreen16",
+      "content": "e99f"
+    },
+    {
+      "name": "cmdFullScreen24",
+      "content": "e9a0"
+    },
+    {
+      "name": "cmdGenerate10",
+      "content": "e9a1"
+    },
+    {
+      "name": "cmdGenerate13",
+      "content": "e9a2"
+    },
+    {
+      "name": "cmdGenerate16",
+      "content": "e9a3"
+    },
+    {
+      "name": "cmdGenerate24",
+      "content": "e9a4"
+    },
+    {
+      "name": "cmdGenerate32",
+      "content": "e9a5"
+    },
+    {
+      "name": "cmdHelp16",
+      "content": "e9a6"
+    },
+    {
+      "name": "cmdHelp24",
+      "content": "e9a7"
+    },
+    {
+      "name": "cmdHide16",
+      "content": "e9a8"
+    },
+    {
+      "name": "cmdHide24",
+      "content": "e9a9"
+    },
+    {
+      "name": "cmdHideAllPMI24",
+      "content": "e9aa"
+    },
+    {
+      "name": "cmdHideAllPMI32",
+      "content": "e9ab"
+    },
+    {
+      "name": "cmdHideGraphOverview24",
+      "content": "e9ac"
+    },
+    {
+      "name": "cmdHidePMI24",
+      "content": "e9ad"
+    },
+    {
+      "name": "cmdHidePMI32",
+      "content": "e9ae"
+    },
+    {
+      "name": "cmdHistory16",
+      "content": "e9af"
+    },
+    {
+      "name": "cmdHistory24",
+      "content": "e9b0"
+    },
+    {
+      "name": "cmdHome16",
+      "content": "e9b1"
+    },
+    {
+      "name": "cmdHome24",
+      "content": "e9b2"
+    },
+    {
+      "name": "cmdHorizontalToolbar24",
+      "content": "e9b3"
+    },
+    {
+      "name": "cmdHorizontalToolbar32",
+      "content": "e9b4"
+    },
+    {
+      "name": "cmdImage16",
+      "content": "e9b5"
+    },
+    {
+      "name": "cmdImage24",
+      "content": "e9b6"
+    },
+    {
+      "name": "cmdImport16",
+      "content": "e9b7"
+    },
+    {
+      "name": "cmdImport24",
+      "content": "e9b8"
+    },
+    {
+      "name": "cmdImport32",
+      "content": "e9b9"
+    },
+    {
+      "name": "cmdImportDeclaration24",
+      "content": "e9ba"
+    },
+    {
+      "name": "cmdImportExport24",
+      "content": "e9bb"
+    },
+    {
+      "name": "cmdInbox16",
+      "content": "e9bc"
+    },
+    {
+      "name": "cmdIncludeVariants24",
+      "content": "e9bd"
+    },
+    {
+      "name": "cmdIncomingPartial24",
+      "content": "e9be"
+    },
+    {
+      "name": "cmdInfo16",
+      "content": "e9bf"
+    },
+    {
+      "name": "cmdInfo24",
+      "content": "e9c0"
+    },
+    {
+      "name": "cmdInsert24",
+      "content": "e9c1"
+    },
+    {
+      "name": "cmdInsertImage24",
+      "content": "e9c2"
+    },
+    {
+      "name": "cmdInsertOLE16",
+      "content": "e9c3"
+    },
+    {
+      "name": "cmdInsertPicture16",
+      "content": "e9c4"
+    },
+    {
+      "name": "cmdInsertPicture24",
+      "content": "e9c5"
+    },
+    {
+      "name": "cmdInsertText16",
+      "content": "e9c6"
+    },
+    {
+      "name": "cmdInsertText24",
+      "content": "e9c7"
+    },
+    {
+      "name": "cmdLargeImageView24",
+      "content": "e9c8"
+    },
+    {
+      "name": "cmdLaunchSimulationTool24",
+      "content": "e9c9"
+    },
+    {
+      "name": "cmdLibrary16",
+      "content": "e9ca"
+    },
+    {
+      "name": "cmdLibrary24",
+      "content": "e9cb"
+    },
+    {
+      "name": "cmdLicense24",
+      "content": "e9cc"
+    },
+    {
+      "name": "cmdLink16",
+      "content": "e9cd"
+    },
+    {
+      "name": "cmdLink24",
+      "content": "e9ce"
+    },
+    {
+      "name": "cmdLinktoNX24",
+      "content": "e9cf"
+    },
+    {
+      "name": "cmdListSummaryView24",
+      "content": "e9d0"
+    },
+    {
+      "name": "cmdLock16",
+      "content": "e9d1"
+    },
+    {
+      "name": "cmdLock24",
+      "content": "e9d2"
+    },
+    {
+      "name": "cmdMail16",
+      "content": "e9d3"
+    },
+    {
+      "name": "cmdMail24",
+      "content": "e9d4"
+    },
+    {
+      "name": "cmdManageDimensions24",
+      "content": "e9d5"
+    },
+    {
+      "name": "cmdMarkup10",
+      "content": "e9d6"
+    },
+    {
+      "name": "cmdMarkup13",
+      "content": "e9d7"
+    },
+    {
+      "name": "cmdMarkup16",
+      "content": "e9d8"
+    },
+    {
+      "name": "cmdMarkUp24",
+      "content": "e9d9"
+    },
+    {
+      "name": "cmdMatrixView24",
+      "content": "e9da"
+    },
+    {
+      "name": "cmdMaximiseVertically16",
+      "content": "e9db"
+    },
+    {
+      "name": "cmdMaximiseVertically24",
+      "content": "e9dc"
+    },
+    {
+      "name": "cmdMaximiseVertically32",
+      "content": "e9dd"
+    },
+    {
+      "name": "cmdMeasureTape24",
+      "content": "e9de"
+    },
+    {
+      "name": "cmdMenu16",
+      "content": "e9df"
+    },
+    {
+      "name": "cmdMenu24",
+      "content": "e9e0"
+    },
+    {
+      "name": "cmdMenu32",
+      "content": "e9e1"
+    },
+    {
+      "name": "cmdMenu48",
+      "content": "e9e2"
+    },
+    {
+      "name": "cmdModelView24",
+      "content": "e9e3"
+    },
+    {
+      "name": "cmdModelViewPalette24",
+      "content": "e9e4"
+    },
+    {
+      "name": "cmdMore16",
+      "content": "e9e5"
+    },
+    {
+      "name": "cmdMore16ARCHIVE",
+      "content": "e9e6"
+    },
+    {
+      "name": "cmdMore24",
+      "content": "e9e7"
+    },
+    {
+      "name": "cmdMore24ARCHIVE",
+      "content": "e9e8"
+    },
+    {
+      "name": "cmdMove16",
+      "content": "e9e9"
+    },
+    {
+      "name": "cmdMove24",
+      "content": "e9ea"
+    },
+    {
+      "name": "cmdMoveDown24",
+      "content": "e9eb"
+    },
+    {
+      "name": "cmdMoveToSection24",
+      "content": "e9ec"
+    },
+    {
+      "name": "cmdMoveUp24",
+      "content": "e9ed"
+    },
+    {
+      "name": "cmdMultipleCreate24",
+      "content": "e9ee"
+    },
+    {
+      "name": "cmdNestedOn24",
+      "content": "e9ef"
+    },
+    {
+      "name": "cmdNestedOnOff24",
+      "content": "e9f0"
+    },
+    {
+      "name": "cmdNew10",
+      "content": "e9f1"
+    },
+    {
+      "name": "cmdNew13",
+      "content": "e9f2"
+    },
+    {
+      "name": "cmdNew16",
+      "content": "e9f3"
+    },
+    {
+      "name": "cmdNew24",
+      "content": "e9f4"
+    },
+    {
+      "name": "cmdOpen16",
+      "content": "e9f5"
+    },
+    {
+      "name": "cmdOpen24",
+      "content": "e9f6"
+    },
+    {
+      "name": "cmdOpenFile16",
+      "content": "e9f7"
+    },
+    {
+      "name": "cmdOpenFile24",
+      "content": "e9f8"
+    },
+    {
+      "name": "cmdOpenInbox24",
+      "content": "e9f9"
+    },
+    {
+      "name": "cmdOpenInNx24",
+      "content": "e9fa"
+    },
+    {
+      "name": "cmdOpenSharedEffectivity24",
+      "content": "e9fb"
+    },
+    {
+      "name": "cmdOppositeSelection24",
+      "content": "e9fc"
+    },
+    {
+      "name": "cmdOrientBack24",
+      "content": "e9fd"
+    },
+    {
+      "name": "cmdOrientBottom24",
+      "content": "e9fe"
+    },
+    {
+      "name": "cmdOrientISO24",
+      "content": "e9ff"
+    },
+    {
+      "name": "cmdOrientLeft24",
+      "content": "ea00"
+    },
+    {
+      "name": "cmdOrientRight24",
+      "content": "ea01"
+    },
+    {
+      "name": "cmdOrientTo24",
+      "content": "ea02"
+    },
+    {
+      "name": "cmdOutgoingPartial24",
+      "content": "ea03"
+    },
+    {
+      "name": "cmdOverideComplianceResult24",
+      "content": "ea04"
+    },
+    {
+      "name": "cmdPan16",
+      "content": "ea05"
+    },
+    {
+      "name": "cmdPan24",
+      "content": "ea06"
+    },
+    {
+      "name": "cmdParent24",
+      "content": "ea07"
+    },
+    {
+      "name": "cmdParentPartial24",
+      "content": "ea08"
+    },
+    {
+      "name": "cmdParts24",
+      "content": "ea09"
+    },
+    {
+      "name": "cmdPaste16",
+      "content": "ea0a"
+    },
+    {
+      "name": "cmdPaste24",
+      "content": "ea0b"
+    },
+    {
+      "name": "cmdPause16",
+      "content": "ea0c"
+    },
+    {
+      "name": "cmdPause24",
+      "content": "ea0d"
+    },
+    {
+      "name": "cmdPerformSubstanceComplianceCheck24",
+      "content": "ea0e"
+    },
+    {
+      "name": "cmdPerformTask24",
+      "content": "ea0f"
+    },
+    {
+      "name": "cmdPin24",
+      "content": "ea10"
+    },
+    {
+      "name": "cmdPin32",
+      "content": "ea11"
+    },
+    {
+      "name": "cmdPinToStartScreen24",
+      "content": "ea12"
+    },
+    {
+      "name": "cmdPinToStartScreen32",
+      "content": "ea13"
+    },
+    {
+      "name": "cmdPlaneNegativeXy24",
+      "content": "ea14"
+    },
+    {
+      "name": "cmdPlaneXy24",
+      "content": "ea15"
+    },
+    {
+      "name": "cmdPlaneXz24",
+      "content": "ea16"
+    },
+    {
+      "name": "cmdPlaneYz24",
+      "content": "ea17"
+    },
+    {
+      "name": "cmdPlanNegativeXz24",
+      "content": "ea18"
+    },
+    {
+      "name": "cmdPlay16",
+      "content": "ea19"
+    },
+    {
+      "name": "cmdPlay24",
+      "content": "ea1a"
+    },
+    {
+      "name": "cmdPMI24",
+      "content": "ea1b"
+    },
+    {
+      "name": "cmdPMI32",
+      "content": "ea1c"
+    },
+    {
+      "name": "cmdPMIFilter24",
+      "content": "ea1d"
+    },
+    {
+      "name": "cmdPMIFilter32",
+      "content": "ea1e"
+    },
+    {
+      "name": "cmdPoint24",
+      "content": "ea1f"
+    },
+    {
+      "name": "cmdPorts24",
+      "content": "ea20"
+    },
+    {
+      "name": "cmdPostEvent24",
+      "content": "ea21"
+    },
+    {
+      "name": "cmdPrint16",
+      "content": "ea22"
+    },
+    {
+      "name": "cmdPrint24",
+      "content": "ea23"
+    },
+    {
+      "name": "cmdProductLines24",
+      "content": "ea24"
+    },
+    {
+      "name": "cmdProject16",
+      "content": "ea25"
+    },
+    {
+      "name": "cmdProject24",
+      "content": "ea26"
+    },
+    {
+      "name": "cmdPromote24",
+      "content": "ea27"
+    },
+    {
+      "name": "cmdPromoteTask24",
+      "content": "ea28"
+    },
+    {
+      "name": "cmdProximity24",
+      "content": "ea29"
+    },
+    {
+      "name": "cmdProxyBid24",
+      "content": "ea2a"
+    },
+    {
+      "name": "cmdPublish24",
+      "content": "ea2b"
+    },
+    {
+      "name": "cmdRadioSelected24",
+      "content": "ea2c"
+    },
+    {
+      "name": "cmdRadioUnselected24",
+      "content": "ea2d"
+    },
+    {
+      "name": "cmdRecordPartMovement24",
+      "content": "ea2e"
+    },
+    {
+      "name": "cmdRecordUtilization24",
+      "content": "ea2f"
+    },
+    {
+      "name": "cmdRedo16",
+      "content": "ea30"
+    },
+    {
+      "name": "cmdRedo24",
+      "content": "ea31"
+    },
+    {
+      "name": "cmdReflection24",
+      "content": "ea32"
+    },
+    {
+      "name": "cmdRefresh16",
+      "content": "ea33"
+    },
+    {
+      "name": "cmdRefresh24",
+      "content": "ea34"
+    },
+    {
+      "name": "cmdRefreshFilter24",
+      "content": "ea35"
+    },
+    {
+      "name": "cmdReject24",
+      "content": "ea36"
+    },
+    {
+      "name": "cmdRelatedObjects24",
+      "content": "ea37"
+    },
+    {
+      "name": "cmdRelease24",
+      "content": "ea38"
+    },
+    {
+      "name": "cmdRemove16",
+      "content": "ea39"
+    },
+    {
+      "name": "cmdRemove24",
+      "content": "ea3a"
+    },
+    {
+      "name": "cmdReorder16",
+      "content": "ea3b"
+    },
+    {
+      "name": "cmdReorder24",
+      "content": "ea3c"
+    },
+    {
+      "name": "cmdReplace16",
+      "content": "ea3d"
+    },
+    {
+      "name": "cmdReplace24",
+      "content": "ea3e"
+    },
+    {
+      "name": "cmdReport13",
+      "content": "ea3f"
+    },
+    {
+      "name": "cmdReport16",
+      "content": "ea40"
+    },
+    {
+      "name": "cmdRequest10",
+      "content": "ea41"
+    },
+    {
+      "name": "cmdRequest13",
+      "content": "ea42"
+    },
+    {
+      "name": "cmdRequest16",
+      "content": "ea43"
+    },
+    {
+      "name": "cmdRequest24",
+      "content": "ea44"
+    },
+    {
+      "name": "cmdRequest32",
+      "content": "ea45"
+    },
+    {
+      "name": "cmdReset24",
+      "content": "ea46"
+    },
+    {
+      "name": "cmdRevertMaximiseVertically16",
+      "content": "ea47"
+    },
+    {
+      "name": "cmdRevertMaximiseVertically24",
+      "content": "ea48"
+    },
+    {
+      "name": "cmdRotate16",
+      "content": "ea49"
+    },
+    {
+      "name": "cmdRotate24",
+      "content": "ea4a"
+    },
+    {
+      "name": "cmdRotateDrawingObject24",
+      "content": "ea4b"
+    },
+    {
+      "name": "cmdSave16",
+      "content": "ea4c"
+    },
+    {
+      "name": "cmdSave24",
+      "content": "ea4d"
+    },
+    {
+      "name": "cmdSearch16",
+      "content": "ea4e"
+    },
+    {
+      "name": "cmdSearch24",
+      "content": "ea4f"
+    },
+    {
+      "name": "cmdSemifixVTwo16",
+      "content": "ea50"
+    },
+    {
+      "name": "cmdSemifixVTwo24",
+      "content": "ea51"
+    },
+    {
+      "name": "cmdSemifixVTwo32",
+      "content": "ea52"
+    },
+    {
+      "name": "cmdSemiShow16",
+      "content": "ea53"
+    },
+    {
+      "name": "cmdSet10",
+      "content": "ea54"
+    },
+    {
+      "name": "cmdSet13",
+      "content": "ea55"
+    },
+    {
+      "name": "cmdSet16",
+      "content": "ea56"
+    },
+    {
+      "name": "cmdSet24",
+      "content": "ea57"
+    },
+    {
+      "name": "cmdSettings16",
+      "content": "ea58"
+    },
+    {
+      "name": "cmdSettings24",
+      "content": "ea59"
+    },
+    {
+      "name": "cmdShare16",
+      "content": "ea5a"
+    },
+    {
+      "name": "cmdShare24",
+      "content": "ea5b"
+    },
+    {
+      "name": "cmdShield16",
+      "content": "ea5c"
+    },
+    {
+      "name": "cmdShield24",
+      "content": "ea5d"
+    },
+    {
+      "name": "cmdShow16",
+      "content": "ea5e"
+    },
+    {
+      "name": "cmdShow24",
+      "content": "ea5f"
+    },
+    {
+      "name": "cmdShowApps24",
+      "content": "ea60"
+    },
+    {
+      "name": "cmdSignout16",
+      "content": "ea61"
+    },
+    {
+      "name": "cmdSignout24",
+      "content": "ea62"
+    },
+    {
+      "name": "cmdSnapShot24",
+      "content": "ea63"
+    },
+    {
+      "name": "cmdSort16",
+      "content": "ea64"
+    },
+    {
+      "name": "cmdSort24",
+      "content": "ea65"
+    },
+    {
+      "name": "cmdSortAtoZ16",
+      "content": "ea66"
+    },
+    {
+      "name": "cmdSortZtoA16",
+      "content": "ea67"
+    },
+    {
+      "name": "cmdStar24",
+      "content": "ea68"
+    },
+    {
+      "name": "cmdStart16",
+      "content": "ea69"
+    },
+    {
+      "name": "cmdStart24",
+      "content": "ea6a"
+    },
+    {
+      "name": "cmdStop16",
+      "content": "ea6b"
+    },
+    {
+      "name": "cmdStop24",
+      "content": "ea6c"
+    },
+    {
+      "name": "cmdStructure24",
+      "content": "ea6d"
+    },
+    {
+      "name": "cmdStructure32",
+      "content": "ea6e"
+    },
+    {
+      "name": "cmdSync16",
+      "content": "ea6f"
+    },
+    {
+      "name": "cmdSync24",
+      "content": "ea70"
+    },
+    {
+      "name": "cmdText24",
+      "content": "ea71"
+    },
+    {
+      "name": "cmdTime16",
+      "content": "ea72"
+    },
+    {
+      "name": "cmdTrash16",
+      "content": "ea73"
+    },
+    {
+      "name": "cmdTrash24",
+      "content": "ea74"
+    },
+    {
+      "name": "cmdUndo16",
+      "content": "ea75"
+    },
+    {
+      "name": "cmdUndo24",
+      "content": "ea76"
+    },
+    {
+      "name": "cmdUnfix16",
+      "content": "ea77"
+    },
+    {
+      "name": "cmdUnfix24",
+      "content": "ea78"
+    },
+    {
+      "name": "cmdUnfix32",
+      "content": "ea79"
+    },
+    {
+      "name": "cmdUnfixVTwo16",
+      "content": "ea7a"
+    },
+    {
+      "name": "cmdUnfixVTwo24",
+      "content": "ea7b"
+    },
+    {
+      "name": "cmdUnfixVTwo32",
+      "content": "ea7c"
+    },
+    {
+      "name": "cmdUnlink16",
+      "content": "ea7d"
+    },
+    {
+      "name": "cmdUnlink24",
+      "content": "ea7e"
+    },
+    {
+      "name": "cmdUnlock16",
+      "content": "ea7f"
+    },
+    {
+      "name": "cmdUnlock24",
+      "content": "ea80"
+    },
+    {
+      "name": "cmdUnpin24",
+      "content": "ea81"
+    },
+    {
+      "name": "cmdUnpin32",
+      "content": "ea82"
+    },
+    {
+      "name": "cmdUpload16",
+      "content": "ea83"
+    },
+    {
+      "name": "cmdUpload24",
+      "content": "ea84"
+    },
+    {
+      "name": "cmdUser16",
+      "content": "ea85"
+    },
+    {
+      "name": "cmdUser24",
+      "content": "ea86"
+    },
+    {
+      "name": "cmdVerticalToolbar24",
+      "content": "ea87"
+    },
+    {
+      "name": "cmdVerticalToolbar32",
+      "content": "ea88"
+    },
+    {
+      "name": "cmdViewMenu24",
+      "content": "ea89"
+    },
+    {
+      "name": "cmdViewMenu32",
+      "content": "ea8a"
+    },
+    {
+      "name": "cmdZoomIn16",
+      "content": "ea8b"
+    },
+    {
+      "name": "cmdZoomIn24",
+      "content": "ea8c"
+    },
+    {
+      "name": "cmdZoomOut16",
+      "content": "ea8d"
+    },
+    {
+      "name": "cmdZoomOut24",
+      "content": "ea8e"
+    },
+    {
+      "name": "cmdZoomTool16",
+      "content": "ea8f"
+    },
+    {
+      "name": "cmdZoomTool24",
+      "content": "ea90"
+    },
+    {
+      "name": "uiClose12",
+      "content": "ea91"
+    },
+    {
+      "name": "uiCommandStackIndicator12",
+      "content": "ea92"
+    },
+    {
+      "name": "uiDecrease12",
+      "content": "ea93"
+    },
+    {
+      "name": "uiDown12",
+      "content": "ea94"
+    },
+    {
+      "name": "uiDownArrow12",
+      "content": "ea95"
+    },
+    {
+      "name": "uiIncrease12",
+      "content": "ea96"
+    },
+    {
+      "name": "uiPin12",
+      "content": "ea97"
+    },
+    {
+      "name": "uiUp12",
+      "content": "ea98"
+    },
+    {
+      "name": "uiUpArrow12",
+      "content": "ea99"
+    }
+  ]
+}

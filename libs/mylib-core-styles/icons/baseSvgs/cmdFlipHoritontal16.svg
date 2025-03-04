@@ -1,0 +1,12 @@
+<svg version="1.1" id="Artwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<rect y="7" class="aw-theme-iconOutline" fill="#464646" width="3" height="1"/>
+<path class="aw-theme-iconOutline" fill="#464646" d="M9,7.4"/>
+<path class="aw-theme-iconOutline" fill="#464646" d="M12.5,15c-0.1,0-0.1,0-0.2,0L2.2,11c-0.2-0.1-0.4-0.3-0.3-0.6c0-0.2,0.3-0.4,0.5-0.4H13v4.5
+	c0,0.2-0.1,0.3-0.2,0.4C12.7,15,12.6,15,12.5,15z M5,11l7,2.8V11H5z"/>
+<path class="aw-theme-iconOutline" fill="#464646" d="M2.3,5C2.1,5,1.9,4.8,1.8,4.6c0-0.2,0.1-0.5,0.3-0.6l10.2-4c0.2-0.1,0.3,0,0.5,0.1C12.9,0.2,13,0.3,13,0.5V5
+	H2.3z M5,4h7V1.2L5,4z"/>
+<rect x="5" y="7" class="aw-theme-iconOutline" fill="#464646" width="2" height="1"/>
+<rect x="9" y="7" class="aw-theme-iconOutline" fill="#464646" width="2" height="1"/>
+<rect x="13" y="7" class="aw-theme-iconOutline" fill="#464646" width="3" height="1"/>
+</svg>

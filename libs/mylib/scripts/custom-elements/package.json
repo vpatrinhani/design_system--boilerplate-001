@@ -1,0 +1,9 @@
+{
+  "name": "@com.my-company/mylib-components",
+  "version": "0.0.0",
+  "description": "Mylib Components exported as custom elements, extending HTMLElement.",
+  "main": "./index.js",
+  "types": "./custom-elements.d.ts",
+  "private": true,
+  "sideEffects": true
+}

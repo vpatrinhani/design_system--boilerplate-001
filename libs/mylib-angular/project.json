@@ -1,0 +1,53 @@
+{
+  "name": "mylib-angular",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/mylib-angular",
+  "projectType": "application",
+  "implicitDependencies": ["mylib"],
+  "tags": ["lib", "lib:mylib:angular"],
+  "targets": {
+    "prepare": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm install"],
+        "cwd": "./libs/mylib-angular",
+        "parallel": false
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm run build"],
+        "cwd": "./libs/mylib-angular",
+        "parallel": false
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm run start"],
+        "cwd": "./libs/mylib-angular",
+        "parallel": false
+      }
+    },
+    "prepare-release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm version {args.version} --allow-same-version"],
+        "cwd": "./libs/mylib-angular/projects/component-library",
+        "parallel": false
+      }
+    },
+    "release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "mkdir -p '../../../pack/libs/mylib-angular'",
+          "npm pack --pack-destination '../../../pack/libs/mylib-angular'"
+        ],
+        "cwd": "./dist/libs/mylib-angular",
+        "parallel": false
+      }
+    }
+  }
+}

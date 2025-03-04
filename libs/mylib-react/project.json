@@ -1,0 +1,42 @@
+{
+  "name": "mylib-react",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/mylib-react/src",
+  "projectType": "library",
+  "implicitDependencies": ["mylib"],
+  "tags": ["lib", "lib:mylib:react"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/mylib-react/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/mylib/bindings/react",
+        "main": "libs/mylib-react/src/index.ts",
+        "tsConfig": "libs/mylib-react/tsconfig.lib.json"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/mylib-react"],
+      "options": {
+        "jestConfig": "libs/mylib-react/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "prepare-release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm version {args.version} --allow-same-version"],
+        "cwd": "./libs/mylib-react",
+        "parallel": false
+      }
+    }
+  }
+}

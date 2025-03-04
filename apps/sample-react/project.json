@@ -1,0 +1,87 @@
+{
+  "name": "sample-react",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sample-react/src",
+  "projectType": "application",
+  "implicitDependencies": [
+    "mylib-core-js",
+    "mylib-core-styles",
+    "mylib",
+    "mylib-react"
+  ],
+  "tags": ["app"],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "development",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/sample-react",
+        "index": "apps/sample-react/src/index.html",
+        "baseHref": "/",
+        "main": "apps/sample-react/src/main.js",
+        "polyfills": "apps/sample-react/src/polyfills.js",
+        "tsConfig": "apps/sample-react/tsconfig.app.json",
+        "assets": [
+          "apps/sample-react/src/favicon.ico",
+          "apps/sample-react/src/assets"
+        ],
+        "styles": ["apps/sample-react/src/styles.scss"],
+        "scripts": ["apps/sample-react/public/scripts/theme-switcher.js"],
+        "webpackConfig": "apps/sample-react/webpack.config.js",
+        "isolatedConfig": true
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/sample-react/src/environments/environment.js",
+              "with": "apps/sample-react/src/environments/environment.prod.js"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        },
+        "development": {
+          "sourceMap": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/webpack:dev-server",
+      "options": {
+        "buildTarget": "sample-react:build",
+        "hmr": true,
+        "proxyConfig": "apps/sample-react/proxy.conf.json",
+        "baseHref": "/",
+        "publicPath": "apps/sample-react/public/"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "sample-react:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sample-react/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/sample-react"],
+      "options": {
+        "jestConfig": "apps/sample-react/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

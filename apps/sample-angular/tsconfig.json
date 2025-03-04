@@ -1,0 +1,45 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./tsconfig.editor.json"
+    }
+  ],
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "$root/*": ["./*"],
+      "@my-lib-org/mylib": ["dist/libs/mylib"],
+      "@my-lib-org/mylib/*": ["dist/libs/mylib/*"],
+      "@my-lib-org/mylib/loader": ["dist/libs/mylib/loader"],
+      "@my-lib-org/mylib-core-js": ["dist/libs/mylib-core-js"],
+      "@my-lib-org/mylib-core-js/*": ["dist/libs/mylib-core-js/*"],
+      "@my-lib-org/mylib-core-styles": [
+        "dist/libs/mylib-core-styles"
+      ],
+      "@my-lib-org/mylib-core-styles/*": [
+        "dist/libs/mylib-core-styles/*"
+      ],
+      "@my-lib-org/mylib-angular": ["dist/libs/mylib-angular"]
+    },
+    "target": "es2020"
+  },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

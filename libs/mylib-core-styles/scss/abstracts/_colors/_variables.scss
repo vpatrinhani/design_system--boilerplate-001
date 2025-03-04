@@ -1,0 +1,126 @@
+$color-white: #fff;
+$color-black: #000;
+
+// mylibens Color Pallete
+
+$mylib-palette: (
+  'teal': (
+    // Dark
+    1: #003c46,
+    2: #00434d,
+    3: #004b55,
+    4: #005761,
+    5: #00646e,
+    6: #006b75,
+    7: #00737d,
+    8: #077a82,
+    9: #0f8287,
+    10: #19898e,
+    11: #239196,
+    12: #2a989b,
+    // Light
+    13: #32a0a0,
+    14: #39a5a5,
+    15: #41aaaa,
+    16: #46b1b1,
+    17: #4bb9b9,
+    18: #61c3c3,
+    19: #78cdcd,
+    20: #8ed7d7,
+    21: #a5e1e1,
+    22: #b4e8e8,
+    23: #c3f0f0,
+    24: #e1f7f7,
+    'light': #41aaaa,
+    'dark': #00646e,
+  ),
+  'blue': (
+    // Dark
+    1: #003750,
+    2: #003e5c,
+    3: #004669,
+    4: #004d73,
+    5: #00557d,
+    6: #005a82,
+    7: #005f87,
+    8: #076b91,
+    9: #0f789b,
+    10: #197fa2,
+    11: #2387aa,
+    12: #2a8eb1,
+    // Light
+    13: #3296b9,
+    14: #39a0c0,
+    15: #41aac8,
+    16: #48b4cf,
+    17: #50bed7,
+    18: #66c8de,
+    19: #7dd2e6,
+    20: #93dced,
+    21: #aae6f5,
+    22: #b9edfa,
+    23: #c8f5ff,
+    24: #e3faff,
+    'light': #50bed7,
+    'dark': #005f87,
+  ),
+  'pl-red': (
+    // Dark
+    1: #130100,
+    2: #260300,
+    3: #390400,
+    4: #4d0600,
+    5: #600700,
+    6: #730900,
+    7: #870b00,
+    8: #91140a,
+    9: #9b1e14,
+    10: #a5271e,
+    11: #af3128,
+    12: #b93a32,
+    // Light
+    13: #c3443c,
+    14: #cd4d46,
+    15: #d75750,
+    16: #db6761,
+    17: #df7873,
+    18: #e38984,
+    19: #e79a96,
+    20: #ebaba7,
+    21: #ebaba7,
+    22: #f3ccca,
+    23: #f7dddc,
+    24: #fbeeed,
+    'light': #d75750,
+    'dark': #870b00,
+  ),
+);
+
+$mylib-color-corporate-petrol: #099;
+$mylib-color-corporate-dynamic-petrol: linear-gradient(to right, mylib-color('teal', 15) 0%, $mylib-color-corporate-petrol 50%, #0099cb 100%);
+
+$mylib-color-corporate: (
+  'primary': (
+    'stone': (
+      'dark': #3c464b,
+      'light': #879baa,
+      'light-35': lighten(#879baa, 35%),
+    ),
+  ),
+  'accent': (),
+  'status': (
+    'green': (
+      'dark': #0a9b00,
+      'light': #28e632,
+    ),
+    'yellow': (
+      'dark': #eb780a,
+      'light': #fadc5a,
+    ),
+    'red': (
+      'dark': #dc0000,
+      'light': #fa142d,
+    ),
+  ),
+  'extra': (),
+);

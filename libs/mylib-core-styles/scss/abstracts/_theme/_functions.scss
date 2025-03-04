@@ -1,0 +1,24 @@
+@function theme-color($key: 'primary', $theme-colors-dic: $theme-colors) {
+  @return var(--mylib-theme--color--#{$key}, map-get($theme-colors-dic, $key));
+}
+
+@function var-theme-state-value($state, $prop, $value: null, $color-scheme: null, $theme-state-dic: $theme-states) {
+  $def-value: $value;
+
+  @if $value == null {
+    $def-color-scheme: 'all';
+    @if $color-scheme {
+      $def-color-scheme: $color-scheme;
+    }
+
+    $map-state: map-get($theme-state-dic, $state);
+    $map-color-scheme: map-get($map-state, $def-color-scheme);
+    $def-value: map-get($map-color-scheme, $prop);
+  }
+
+  @if $color-scheme {
+    @return var(--mylib-theme--#{$color-scheme}--state--#{$state}--#{$prop}, $def-value);
+  }
+
+  @return var(--mylib-theme--state--#{$state}--#{$prop}, $def-value);
+}

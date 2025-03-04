@@ -1,0 +1,58 @@
+<meta property="og:description" content="My Lib" />
+<meta property="og:title" content="My Lib" />
+<!-- <meta property="og:image" content="https://i.ibb.co/kxw3NS1/Socialbanner-1.jpg" /> -->
+<title>MyLib Design System</title>
+
+<style>
+
+  #storybook-explorer-menu svg {
+    color: white;
+  }
+
+  #storybook-explorer-menu .sidebar-subheading {
+    color: #d5d5d5;
+  }
+
+  #storybook-explorer-menu button[aria-expanded="true"],
+  #storybook-explorer-menu button:focus,
+  #storybook-explorer-menu a[data-selected]:hover {
+    background-color: #01526F;
+  }
+
+  #storybook-explorer-menu a[data-selected="true"],
+  #storybook-explorer-menu a[data-selected="true"]:hover {
+    background-color: #075775;
+    color: white;
+  }
+
+  #storybook-explorer-menu a[data-selected="true"] svg {
+    color: white;
+  }
+
+  body {
+    font-family: "Segoe UI", "Open Sans", "Verdana", "Arial", "Helvetica", "sans-serif";
+  }
+
+  .os-viewport .os-content button[title='Change the background of the preview'] {
+    display: none;
+  }
+
+</style>
+
+<script>
+  //workaround to increase the left panel width just enough to show even the longer story names
+  //based on https://github.com/storybookjs/storybook/issues/9682#issuecomment-983356523
+  const DEFAULT_MINIMUM_LEFT_PANEL_WIDTH = 300; // original default is 230
+  let storybookConfig = JSON.parse(localStorage.getItem('storybook-layout'));
+
+  // we only resize the left panel if it is set to a value lower than DEFAULT_MINIMUM_LEFT_PANEL_WIDTH
+  if (typeof storybookConfig === 'object' && storybookConfig !== null && storybookConfig.resizerNav.x < DEFAULT_MINIMUM_LEFT_PANEL_WIDTH) {
+    storybookConfig.resizerNav.x = DEFAULT_MINIMUM_LEFT_PANEL_WIDTH;
+    localStorage.setItem('storybook-layout', JSON.stringify(storybookConfig));
+    document.location.reload();
+  } else if (storybookConfig === null) {
+    storybookConfig = { resizerNav: { x: DEFAULT_MINIMUM_LEFT_PANEL_WIDTH, y: 0 }, };
+    localStorage.setItem('storybook-layout', JSON.stringify(storybookConfig));
+    document.location.reload();
+  }
+</script>

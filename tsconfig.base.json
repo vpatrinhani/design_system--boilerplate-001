@@ -1,0 +1,44 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["dom", "es2015", "es2017"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "preserveConstEnums": true,
+    "stripInternal": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "$lib-mylib/*": ["libs/mylib/*"],
+      "$root/*": ["./*"],
+      "@my-lib-org/mylib": ["dist/libs/mylib"],
+      "@my-lib-org/mylib-core-js": ["libs/mylib-core-js"],
+      "@my-lib-org/mylib-core-js/*": ["libs/mylib-core-js/*"],
+      "@my-lib-org/mylib-core-styles": ["libs/mylib-core-styles"],
+      "@my-lib-org/mylib-core-styles/*": [
+        "libs/mylib-core-styles/*"
+      ],
+      "@my-lib-org/mylib-react": ["libs/mylib-react"],
+      "@my-lib-org/mylib-react/*": ["libs/mylib-react/*"],
+      "@my-lib-org/mylib/*": ["dist/libs/mylib/*"],
+      "@my-lib-org/mylib/components": [
+        "dist/libs/mylib/dist/types/index.d.ts"
+      ],
+      "@my-lib-org/mylib/components/*": [
+        "dist/libs/mylib/components/*"
+      ],
+      "@my-lib-org/mylib/loader": ["dist/libs/mylib/loader"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

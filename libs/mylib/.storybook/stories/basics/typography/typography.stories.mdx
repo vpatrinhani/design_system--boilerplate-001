@@ -1,0 +1,57 @@
+import { Meta } from "@storybook/addon-docs";
+
+import { DIRECTORY } from '../../../constants';
+
+import imgTypographyTypeFace from './assets/segoe-typeface.png';
+import imgTypographyStyleWeights from './assets/segoe-styles-weights.png';
+import imgTypographyTable from './assets/typography_size-table.png';
+
+<Meta
+  title={`${DIRECTORY.BASICS}/Typography`}
+/>
+
+# Typography
+
+<Section>
+</Section>
+
+<DISWRefVersionBadge refName="Web Framework UX Reference" version="11.1.0" refUrl="http://uxhub.net.plm.eds.com/docs/web_framework_ux_reference/basics/typography/" />
+
+## Overview
+Typographic design in the [COMPANY] Web Framework is designed to provide a clear visual hierarchy, as well as, a consistent and simple presentation. This is reflected in the choice of typeface and font sizes.
+
+## Segoe UI
+[COMPANY]’ products are predominantly used on desktop computers running on Windows, and for this reason, [COMPANY] use the Segoe UI typeface, which is a Windows system default. Segoe UI is an approachable, open, and friendly typeface, and as a result, has better legibility. A humanist sans serif with no strong character or distracting quirkiness, the typeface provides a consistent visual effect on screen and in print.
+
+<img src={imgTypographyTypeFace} alt="Typeface" width="100%"/>
+
+## Styles & Weight
+Typography creates purposeful texture, guiding users to read and understand the hierarchy of information. The right typographic treatment and the controlled usage of styles will help manage the display of content, keeping it simple, effective and useful.
+
+Segoe UI style and weights
+
+<img src={imgTypographyStyleWeights} alt="Styles and Weight" width="100%"/>
+
+### Attributes
+Most UI text should be plain without any attributes. Attributes may be used as follows:
+
+* **Semi Bold / Bold.** Typically used in titles to create content hierarchy and sparingly to draw attention to text users must read. Using too much bold lessens its impact.
+* **Italic.** Avoid italicized text, except when providing a voice that calls out action to users. Used commonly in hint text and when instruction is given to a user before content is loaded on a page.  Example: “Select a card from the list on the left to view it’s properties here”.
+* **Bold Italic.** Don’t use.
+* **Underline.** Don’t use except for links. Use italic instead for emphasis.
+
+## Scale & Font Size
+We have recommended sizes for page elements designed to make it easy to create and quickly scan information hierarchy. Consider how your layout will be consumed and utilize these sizes to build a typographic hierarchy around it. Use the largest fonts for titles, mid-sized fonts for prominent elements, and the base font for general content.
+
+Line height = font size x 1.32 (ratio)
+
+<img src={imgTypographyTable} alt="Typography size table" width="100%"/>
+
+Typography used in components are determined on a component by component basis within the design system. Areas of an application where written word is heavy (documentation, guides, etc.) the larger scales can be used for a focus on text readability.
+
+## Recommendations
+* **Be consistent.** Keep typography consistent by sticking to logical hierarchies that are clear and easily recognizable when scanning the page.
+* **Avoid long line lengths.** Long lines of text are difficult to read. While there is no perfect width for line lengths, a good goal is to aim for between 60 and 100 characters per line, including spacing.
+* **Use left-aligned text.** While right-aligned, justified, and centered text have their place, the majority of text should be left-aligned.
+* **Don’t be afraid of white space.** White space helps balance elements and better organize copy content, which in turn improves readability.
+* **Avoid using uppercase.** Uppercase text impedes legibility, so unless necessary, consider other type treatments.

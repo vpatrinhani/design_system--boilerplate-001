@@ -1,0 +1,32 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="New_Gradient_Swatch_1" data-name="New Gradient Swatch 1" x1="25.457" y1="7.733" x2="25.542" y2="32.925" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cde6eb"/>
+      <stop offset="0.221" stop-color="#c6e2e8"/>
+      <stop offset="0.542" stop-color="#b3d8e1"/>
+      <stop offset="0.921" stop-color="#93c7d5"/>
+      <stop offset="1" stop-color="#8cc3d2"/>
+    </linearGradient>
+    <linearGradient id="New_Gradient_Swatch_1-2" x1="7.227" y1="28.432" x2="43.355" y2="36.475" xlink:href="#New_Gradient_Swatch_1"/>
+    <linearGradient id="linear-gradient" x1="7.496" y1="13.296" x2="15.837" y2="50.828" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#bebebe"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="7.281" y1="6.831" x2="12.719" y2="12.269" xlink:href="#linear-gradient"/>
+  </defs>
+  <title>graTraining48R</title>
+  <line x1="25.25" y1="34.5" x2="17.75" y2="42" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="33.25" y1="42" x2="25.75" y2="34.5" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="6.5" y="7.5" width="38" height="26" rx="2" stroke="#464646" stroke-miterlimit="10" fill="url(#New_Gradient_Swatch_1)"/>
+  <rect x="5.5" y="30.5" width="40" height="4" rx="2" stroke="#464646" stroke-miterlimit="10" fill="url(#New_Gradient_Swatch_1-2)"/>
+  <path d="M14.5,15.5A7.779,7.779,0,0,1,10,17a7.779,7.779,0,0,1-4.5-1.5,4.979,4.979,0,0,0-3,4.383V29.5a2.006,2.006,0,0,0,2,2,1.975,1.975,0,0,0,1-.279V42.958a1.629,1.629,0,0,0,1.625,1.625h1.25A1.629,1.629,0,0,0,10,42.958a1.629,1.629,0,0,0,1.625,1.625h1.25A1.629,1.629,0,0,0,14.5,42.958V31.221a1.975,1.975,0,0,0,1,.279,2.006,2.006,0,0,0,2-2V19.883A4.979,4.979,0,0,0,14.5,15.5Z" stroke="#464646" stroke-miterlimit="10" fill="url(#linear-gradient)"/>
+  <path d="M13.5,9.219C13.5,11.273,11.933,14,10,14S6.5,11.273,6.5,9.219A3.614,3.614,0,0,1,10,5.5,3.614,3.614,0,0,1,13.5,9.219Z" stroke="#464646" stroke-miterlimit="10" fill="url(#linear-gradient-2)"/>
+  <line x1="5.5" y1="31" x2="5.5" y2="21.25" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="10" y1="42.375" x2="10" y2="27.625" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="14.5" y1="31" x2="14.5" y2="21.25" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="21.118" y1="17.912" x2="40" y2="17.912" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="21.118" y1="26.147" x2="40" y2="26.147" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="21.118" y1="13.794" x2="36.224" y2="13.794" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="21.118" y1="22.029" x2="36.224" y2="22.029" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="48" height="48" fill="none"/>
+</svg>

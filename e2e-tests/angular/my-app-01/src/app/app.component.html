@@ -1,0 +1,73 @@
+<mylib-button [label]="title" icon="cmdEdit16"></mylib-button>
+
+<mylib-checkbox-group
+  [items]="items"
+  label="Checkbox Group"
+  [dirty]="false"
+  [disabled]="disabled"
+  (selectionChanged)="selectionChanged($event)"
+>
+</mylib-checkbox-group>
+
+<mylib-command-bar [orientation]="'horizontal'" [shadowPosition]="'left'">
+  <mylib-command-button
+    [label]="'My Button'"
+    icon="cmdAdd16"
+    [orientation]="'horizontal'"
+  ></mylib-command-button>
+
+  <mylib-command-pipe></mylib-command-pipe>
+
+  <mylib-command-button
+    [label]="'My Button Label #2'"
+    icon="cmdAlerts24"
+    [orientation]="'horizontal'"
+  ></mylib-command-button>
+
+  <mylib-command-dropdown
+    [label]="'My Button Dropdown Label'"
+    icon="cmdAlerts24"
+    [opened]="false"
+    [orientation]="'horizontal'"
+  >
+    <mylib-command-dropdown-item [label]="'Dropdown item 1'" [disabled]="true">
+    </mylib-command-dropdown-item>
+    <mylib-command-dropdown-item
+      [label]="'Dropdown item 2'"
+      icon="cmdAdd16"
+      icon-size="md"
+    >
+    </mylib-command-dropdown-item>
+  </mylib-command-dropdown>
+
+  <mylib-command-button
+    [label]="'Command Group Label'"
+    icon="cmdCancelCheckout24"
+    [orientation]="'horizontal'"
+    [disabled]="true"
+  ></mylib-command-button>
+
+  <mylib-command-pipe></mylib-command-pipe>
+
+  <mylib-command-button
+    [label]="'Command Group Label Command Group Label'"
+    icon="cmdCancelCheckout24"
+    [orientation]="'horizontal'"
+  ></mylib-command-button>
+
+  <mylib-command-dropdown
+    [label]="'My Button Dropdown Label'"
+    icon="cmdAlerts24"
+    [opened]="false"
+    [orientation]="'horizontal'"
+  >
+    <mylib-command-dropdown-item [label]="'Dropdown item 1'">
+    </mylib-command-dropdown-item>
+    <mylib-command-dropdown-item
+      [label]="'Dropdown item 2'"
+      icon="cmdAdd16"
+      icon-size="md"
+    >
+    </mylib-command-dropdown-item>
+  </mylib-command-dropdown>
+</mylib-command-bar>

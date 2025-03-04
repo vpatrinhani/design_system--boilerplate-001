@@ -1,0 +1,67 @@
+.base:job:
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - .npm/
+  before_script:
+    - export CYPRESS_INSTALL_BINARY=0
+    - export PUPPETEER_SKIP_DOWNLOAD=1
+    - npm ci --cache .npm --prefer-offline
+    - export NX_HEAD=$CI_COMMIT_SHA
+    - export NX_BASE=${CI_MERGE_REQUEST_DIFF_BASE_SHA:-$CI_COMMIT_BEFORE_SHA}
+  artifacts:
+    paths:
+      - node_modules/.cache/nx
+
+.base:ci:job:
+  extends: .base:job
+  interruptible: true
+  before_script:
+    - | 
+      [ -z "${CIJOB_PREPARE_HAS_AFFECTED_LIB_PROJECTS}" ] && exit 0; 
+    - export CYPRESS_INSTALL_BINARY=0
+    - export PUPPETEER_SKIP_DOWNLOAD=1
+    - npm ci --cache .npm --prefer-offline
+    - export NX_HEAD=$CI_COMMIT_SHA
+    - export NX_BASE=${CI_MERGE_REQUEST_DIFF_BASE_SHA:-$CI_COMMIT_BEFORE_SHA}
+    - echo "NX_BASE=$NX_BASE"
+    - echo "NX_HEAD=$NX_HEAD"
+  rules:
+    - if: $CI_COMMIT_REF_NAME !~ /^(main|alpha|beta|next)$/ && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME !~ /^(main|alpha|beta|next)$/
+      when: never
+    - if: $CI_COMMIT_MESSAGE =~ /chore\(release\)\:/
+      when: never
+    - if: $CI_COMMIT_REF_NAME =~ /^(main|alpha|beta|next)$/
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME =~ /^(main|alpha|beta|next)$/
+
+.base:cd:job:
+  extends: .base:job
+  interruptible: true
+  before_script:
+    - | 
+      [ -z "${CIJOB_PREPARE_HAS_AFFECTED_LIB_PROJECTS}" ] && exit 0; 
+    - export CYPRESS_INSTALL_BINARY=0
+    - export PUPPETEER_SKIP_DOWNLOAD=1
+    - npm ci --cache .npm --prefer-offline
+    - export NX_HEAD=$CI_COMMIT_SHA
+    - export NX_BASE=${CI_MERGE_REQUEST_DIFF_BASE_SHA:-$CI_COMMIT_BEFORE_SHA}
+    - git config --global user.name "${GITLAB_USER_NAME}"
+    - git config --global user.email "$s{GITLAB_USER_EMAIL}"
+    - git config --global pull.rebase false
+    - git remote set-url origin "https://gitlab-ci-token:${GITLAB_PRIVATE_TOKEN}@$CI_SERVER_HOST/$CI_PROJECT_PATH.git"
+    - git checkout ${CI_COMMIT_REF_NAME}
+    - git tag -d $(git tag -l)
+    - git fetch --tags
+    - git pull origin ${CI_COMMIT_REF_NAME}
+    - git status
+    - git remote -v
+    - echo "NX_BASE=$NX_BASE"
+    - echo "NX_HEAD=$NX_HEAD"
+  rules:
+    - if: $CI_COMMIT_REF_NAME !~ /^(main|alpha|beta|next)$/
+      when: never
+    - if: $CI_COMMIT_MESSAGE =~ /chore\(release\)\:/
+      when: never
+    - if: $CI_COMMIT_REF_NAME =~ /^(main|alpha|beta|next)$/

@@ -1,0 +1,91 @@
+{
+  "name": "mylib-core-js",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/mylib-core-js/src",
+  "projectType": "library",
+  "tags": ["lib", "lib:mylib-core-js"],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/mylib-core-js",
+        "main": "libs/mylib-core-js/src/index.ts",
+        "tsConfig": "libs/mylib-core-js/tsconfig.lib.json",
+        "assets": ["libs/mylib-core-js/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/mylib-core-js/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/mylib-core-js"],
+      "options": {
+        "passWithNoTests": true,
+        "codeCoverage": true,
+        "jestConfig": "libs/mylib-core-js/jest.config.js"
+      }
+    },
+    "storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx run mylib-core-js:build",
+          "nx run mylib-core-js:serve-storybook"
+        ],
+        "parallel": true
+      }
+    },
+    "serve-storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/web-components",
+        "port": 4400,
+        "configDir": "libs/mylib-core-js/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "uiFramework": "@storybook/web-components",
+        "configDir": "libs/mylib-core-js/.storybook",
+        "outputDir": "dist/storybook/mylib-core-js"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "prepare-release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm version {args.version} --allow-same-version"],
+        "cwd": "./libs/mylib-core-js",
+        "parallel": false
+      }
+    },
+    "release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "mkdir -p '../../../pack/libs/mylib-core-js'",
+          "npm pack --pack-destination '../../../pack/libs/mylib-core-js'"
+        ],
+        "cwd": "./dist/libs/mylib-core-js",
+        "parallel": false
+      }
+    }
+  }
+}

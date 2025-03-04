@@ -1,0 +1,7 @@
+@function mylib-color($key: 'blue', $tone: 'light') {
+  @return map-get(map-get($mylib-palette, $key), $tone);
+}
+
+@function mylib-color-corporate($key: 'primary', $base-color: 'stone', $tone: 'dark') {
+  @return map-get(map-get(map-get($mylib-color-corporate, $key), $base-color), $tone);
+}

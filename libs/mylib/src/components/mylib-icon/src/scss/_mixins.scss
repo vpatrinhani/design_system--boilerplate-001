@@ -1,0 +1,21 @@
+@import '@libs/mylib-core-styles/scss/components/mylib-icon/variables';
+@import '@libs/mylib-core-styles/scss/components/mylib-icon/mixins';
+
+@mixin mylib-icon() {
+  .mylib-icon__content {
+    @include mylib-icon__content();
+
+    &,
+    :host(.mylib-theme--scheme--light) & {
+      @include mylib-icon__content--scheme('light');
+    }
+
+    :host(.mylib-theme--scheme--dark) & {
+      @include mylib-icon__content--scheme('dark');
+    }
+  }
+
+  .mylib-icon__svg--content {
+    @include mylib-icon__svg--content();
+  }
+}

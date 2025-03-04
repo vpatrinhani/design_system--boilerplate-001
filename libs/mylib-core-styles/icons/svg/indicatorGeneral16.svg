@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>indicatorGeneral16</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="indicatorGeneral16" fill-rule="nonzero">
+            <circle id="Oval" fill="#3C91AF" cx="8" cy="8" r="8"></circle>
+            <path d="M8,0 C3.581722,0 0,3.581722 0,8 C0,12.418278 3.581722,16 8,16 C12.418278,16 16,12.418278 16,8 C16,3.581722 12.418278,0 8,0 Z M8,1 C11.8659932,1 15,4.13400675 15,8 C15,11.8659932 11.8659932,15 8,15 C4.13400675,15 1,11.8659932 1,8 C1,4.13400675 4.13400675,1 8,1 Z" id="Oval" fill="#464646"></path>
+            <path d="M8.5,11.5 L8.5,12.5 L7.5,12.5 L7.5,11.5 L8.5,11.5 Z M8.5,4 L8.5,10.5 L7.5,10.5 L7.5,4 L8.5,4 Z" id="Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

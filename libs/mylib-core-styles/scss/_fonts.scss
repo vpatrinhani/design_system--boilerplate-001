@@ -1,0 +1,9 @@
+@mixin mylib-icons--font-faces($baseFontPath: "../fonts") {
+  @font-face {
+    font-family: 'mylib-icons';
+    src: url($baseFontPath + '/mylib-icons.ttf') format('truetype'), url($baseFontPath + '/mylib-icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}

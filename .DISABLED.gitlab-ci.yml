@@ -1,0 +1,218 @@
+image: node:16.20.1
+
+include:
+  - local: '/.gitlab/ci_templates/core.gitlab-ci.yml'
+  - local: '/.gitlab/ci_templates/trigger_deploy.gitlab-ci.yml'
+
+variables:
+  VAR_MAIN_LIB_NAME: "mylib"
+  GITLAB_TOKEN: $GITLAB_PRIVATE_TOKEN
+  MAIN_RESOURCE_GROUP: $CI_COMMIT_REF_NAME
+  RELEASE_RESOURCE_GROUP: "${MAIN_RESOURCE_GROUP}-release"
+  NX_EXCLUDE_PROJECTS: "sample-react-e2e,sample-react,sample-native,sample-angular,sample-vue"
+
+stages:
+  - prepare
+  - orchestration
+  - quality
+  - build
+  - review
+  - release
+
+# ================================================================
+# ================================================================
+
+build:docker:cicd:
+  extends: .base:build:docker
+  variables:
+    JOB_PARAM_IMAGE_PATH_NAME: "$CI_REGISTRY/mylib/sw-web-components/cicd"
+    JOB_PARAM_IMAGE_TAG: latest
+    JOB_PARAM_DOCKER_FOLDER: "./.gitlab/docker/cicd"
+    JOB_PARAM_DOCKER_FILE: "./.gitlab/docker/cicd/Dockerfile"
+
+# ================================================================
+# ================================================================
+
+cicd:pipeline:check:
+  stage: prepare
+  resource_group: $MAIN_RESOURCE_GROUP
+  script:
+    - env | sort
+  rules:
+    - if: ($CI_COMMIT_MESSAGE =~ /chore\(cicd-updt\)\:/) && ($CI_PIPELINE_SOURCE == 'merge_request_event')
+  tags:
+    - docker
+
+prepare:
+  extends: .base:prepare:job
+  stage: prepare
+  resource_group: $MAIN_RESOURCE_GROUP
+  needs:
+    - job: cicd:pipeline:check
+      optional: true
+  script:
+    - env | sort
+    - echo "NX_BASE=$NX_BASE"
+    - echo "NX_HEAD=$NX_HEAD"
+    - touch .env-cijob-prepare-shared
+    - npx nx print-affected --base=$NX_BASE --head=$NX_HEAD --select=projects --exclude="${NX_EXCLUDE_PROJECTS}"
+    - LIB_AFFECTED_FOUND=$(npx nx print-affected --base=$NX_BASE --head=$NX_HEAD --select=projects);
+    - |
+      if [ -z "${LIB_AFFECTED_FOUND}" ]; then
+        echo "[LIB_AFFECTED - NOT FOUND]"
+      else
+        echo "[LIB_AFFECTED - FOUND] = $LIB_AFFECTED_FOUND"
+
+        echo "CIJOB_PREPARE_HAS_AFFECTED_LIB_PROJECTS=true" >> .env-cijob-prepare-shared
+      fi
+  artifacts:
+    reports:
+      dotenv: .env-cijob-prepare-shared
+  tags:
+    - docker
+
+# ----------------------------------------------------------------
+
+prepare:orchestration:main:
+  stage: prepare
+  resource_group: $MAIN_RESOURCE_GROUP
+  script:
+    - env | sort
+  artifacts:
+    paths:
+      - .main--post--release.gitlab-ci.yml
+  rules:
+    - if: ($JOB_MANUAL_TRIGGER) && ($JOB_MANUAL_TRIGGER !~ "/^(orchestration[:])/")
+      when: never
+    - if: ($CI_COMMIT_REF_NAME =~ /^(main)$/)
+    - if: ($CI_COMMIT_REF_NAME =~ /^(main)$/) && ($JOB_MANUAL_TRIGGER =~ "/^(orchestration[:]main)/")
+  tags:
+    - docker
+
+orchestration:main:post:release:
+  stage: orchestration
+  resource_group: $MAIN_RESOURCE_GROUP
+  needs: ["prepare:orchestration:main"]
+  trigger:
+    include: .main--post--release.gitlab-ci.yml
+    strategy: depend
+  rules:
+    - if: ($CI_MERGE_REQUEST_IID == null) && ($CI_COMMIT_REF_NAME =~ /^(main)$/) && ($CI_COMMIT_MESSAGE =~ /chore\(release\)\:/)
+    - if: ($CI_COMMIT_REF_NAME =~ /^(main)$/) && ($JOB_MANUAL_TRIGGER =~ "/^(orchestration[:]main[:]post[:]release)/")
+
+# ================================================================
+# ================================================================
+
+lint:
+  extends: .base:ci:job
+  stage: quality
+  resource_group: $MAIN_RESOURCE_GROUP
+  needs: ["prepare"]
+  script:
+    - npx nx affected --base=$NX_BASE --head=$NX_HEAD --target=lint --parallel=3 --exclude="${NX_EXCLUDE_PROJECTS}"
+  tags:
+    - docker
+
+test:
+  extends: .base:ci:job
+  stage: quality
+  resource_group: $MAIN_RESOURCE_GROUP
+  needs: ["prepare"]
+  script:
+    - npx nx affected --base=$NX_BASE --head=$NX_HEAD --target=test --parallel=3 --ci --code-coverage --exclude="${NX_EXCLUDE_PROJECTS}"
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/libs/${VAR_MAIN_LIB_NAME}/cobertura-coverage.xml
+      junit: test-reports/libs/${VAR_MAIN_LIB_NAME}/report.xml
+  tags:
+    - docker
+
+build:
+  extends: .base:ci:job
+  stage: build
+  resource_group: $MAIN_RESOURCE_GROUP
+  needs: ["prepare", "lint", "test"]
+  script:
+    - npx nx affected --base=$NX_BASE --head=$NX_HEAD --target=build --parallel=3 --exclude="${NX_EXCLUDE_PROJECTS}"
+    - npx nx build-storybook mylib ci
+  artifacts:
+    paths:
+      - .release.gitlab-ci.yml
+      - dist/
+  tags:
+    - docker
+
+# ----------------------------------------------
+
+manual:artifacts:published:release:build:
+  extends: .base:job
+  stage: build
+  resource_group: $MAIN_RESOURCE_GROUP
+  before_script:
+    - |
+    - export CYPRESS_INSTALL_BINARY=0
+    - export PUPPETEER_SKIP_DOWNLOAD=1
+    - npm ci --cache .npm --prefer-offline
+  script:
+    - npx nx run-many --target=build --parallel=3 --exclude="${NX_EXCLUDE_PROJECTS}"
+    - npx nx build-storybook mylib ci
+    - npx nx run-many --target=release --parallel=3 --exclude="${NX_EXCLUDE_PROJECTS}"
+    - touch .env-ci-release-output-vars
+    - |
+      cd ./libs/mylib
+      SWWWC_PKG_VERSION=$(npm pkg get version)
+      cd ../../
+      echo "NEXT_RELEASE_VERSION=${SWWWC_PKG_VERSION}" >> .env-ci-release-output-vars
+      echo "NEXT_RELEASE_TAG=v${SWWWC_PKG_VERSION}" >> .env-ci-release-output-vars
+  artifacts:
+    paths:
+      - pack/
+      - dist/storybook/${VAR_MAIN_LIB_NAME}
+      - .env-ci-release-output-vars
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "pipeline"
+      when: never
+    - if: $JOB_MANUAL_TRIGGER == "manual:artifacts:published:release"
+      when: always
+  tags:
+    - docker
+
+# ----------------------------------------------
+
+review:storybook:start:
+  extends: .base:review:storybook:start:artifact
+  environment:
+    name: review/$CI_COMMIT_REF_SLUG
+    on_stop: review:storybook:stop
+
+review:storybook:stop:
+  extends: .base:review:storybook:stop:artifact
+  needs: ["review:storybook:start"]
+  environment:
+    name: review/$CI_COMMIT_REF_SLUG
+    action: stop
+
+# ----------------------------------------------
+
+trigger:release:lib:
+  stage: release
+  resource_group: $RELEASE_RESOURCE_GROUP
+  needs: ["prepare", "build"]
+  variables:
+    PARENT_PIPELINE_ID: $CI_PIPELINE_ID
+  trigger:
+    include: .release.gitlab-ci.yml
+    strategy: depend
+  rules:
+    - if: $JOB_MANUAL_TRIGGER == "build:docker"
+      when: never
+    - if: $CI_PIPELINE_SOURCE !~ /push/
+      when: never
+    - !reference [.job-key:rules:skip-cicd-commit, rules]
+    - !reference [.job-key:rules:skip-release-commit, rules]
+    - !reference [.job-key:rules:skip-non-release-branches, rules]
+    - !reference [.job-key:rules:allow-release-branches, rules]
+
+# ----------------------------------------------

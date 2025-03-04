@@ -1,0 +1,12 @@
+@import '@libs/mylib/src/scss/variables';
+@import './mixins';
+
+:host {
+  @include mylib-button--host();
+}
+
+:host(.disabled) {
+  @include mylib-button--host--disabled();
+}
+
+@include mylib-button();

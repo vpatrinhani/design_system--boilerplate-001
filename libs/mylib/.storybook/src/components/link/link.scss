@@ -1,0 +1,16 @@
+@import '../../../scss/variables';
+
+@import '@libs/mylib-core-styles/scss/components/mylib-link/variables';
+@import '@libs/mylib-core-styles/scss/components/mylib-link/mixins';
+
+.mylib-storybook-link {
+  @include mylib-link__anchor();
+
+  &.mylib-theme--scheme--light {
+    @include mylib-link__anchor--scheme('light');
+  }
+
+  &.mylib-theme--scheme--dark {
+    @include mylib-link__anchor--scheme('dark');
+  }
+}

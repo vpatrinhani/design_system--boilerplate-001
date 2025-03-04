@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+
+    <script type="module" src="js/vendor/mylib-head-styles.js"></script>
+  </head>
+
+  <body>
+    <div class="component-demo-section">
+      <h2>Buttons</h2>
+      <mylib-button label="Mylib Button" icon="cmdEdit16"></mylib-button>
+      <mylib-button label="Mylib Button" icon="" icon-type="svg">
+        <svg slot="custom-svg-icon" style="margin-top: -7px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+          <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="3.5" y1="-1278.5" x2="45" y2="-1320" gradientTransform="matrix(1 0 0 -1 0 -1272)">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="0.2323" style="stop-color:#FAFAFA"/>
+            <stop  offset="0.4964" style="stop-color:#EDEDED"/>
+            <stop  offset="0.775" style="stop-color:#D6D6D6"/>
+            <stop  offset="1" style="stop-color:#BEBEBE"/>
+          </linearGradient>
+          <polygon fill="url(#SVGID_1_)" stroke="#464646" stroke-miterlimit="10" points="32.5,0.5 9.5,0.5 9.5,47.5 45.5,47.5 45.5,13.5 "/>
+          <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="29.25" y1="-1275.75" x2="42.25" y2="-1288.75" gradientTransform="matrix(1 0 0 -1 0 -1272)">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="0.2214" style="stop-color:#F8F8F8"/>
+            <stop  offset="0.5415" style="stop-color:#E5E5E5"/>
+            <stop  offset="0.92" style="stop-color:#C6C6C6"/>
+            <stop  offset="1" style="stop-color:#BEBEBE"/>
+          </linearGradient>
+          <polygon fill="url(#SVGID_2_)" stroke="#464646" stroke-linejoin="round" stroke-miterlimit="10" points="32.5,0.5 32.5,13.5
+            45.5,13.5 "/>
+          <line fill="none" stroke="#5A5A5A" x1="15" y1="34.5" x2="40" y2="34.5"/>
+          <line fill="none" stroke="#5A5A5A" x1="15" y1="28.5" x2="40" y2="28.5"/>
+          <line fill="none" stroke="#5A5A5A" x1="15" y1="40.5" x2="40" y2="40.5"/>
+          <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="3.75" y1="0.25" x2="26.25" y2="22.75">
+            <stop  offset="0" style="stop-color:#73B4C8"/>
+            <stop  offset="0.1747" style="stop-color:#6AAEC3"/>
+            <stop  offset="0.4567" style="stop-color:#529EB5"/>
+            <stop  offset="0.8089" style="stop-color:#2C839F"/>
+            <stop  offset="1" style="stop-color:#147391"/>
+          </linearGradient>
+          <rect x="0.5" y="3.5" fill="url(#SVGID_3_)" stroke="#464646" stroke-miterlimit="10" width="29" height="16"/>
+          <path fill="#FFFFFF" d="M7,6H3v11h2v-4h2c1.7,0,3-1.3,3-3V9C10,7.3,8.7,6,7,6z M8,10c0,0.6-0.4,1-1,1H5V8h2c0.6,0,1,0.4,1,1V10z"/>
+          <polygon fill="#FFFFFF" points="27,8 27,6 21,6 21,17 23,17 23,13 26,13 26,11 23,11 23,8 "/>
+          <path fill="#FFFFFF" d="M15,17h-4V6h4c2.2,0,4,1.8,4,4v3C19,15.2,17.2,17,15,17z M13,15h2c1.1,0,2-0.9,2-2v-3c0-1.1-0.9-2-2-2h-2V15
+            z"/>
+        </svg>
+      </mylib-button>
+    </div>
+
+    <div class="component-demo-section">
+      <h2>Notification Badges</h2>
+      <div class="wrapper-notification-badge variants">
+        <mylib-notification-badge
+          class="notification-badge-container-items"
+          value="1"
+        >
+        </mylib-notification-badge>
+
+        <mylib-notification-badge
+          class="notification-badge-container-items"
+          variant="positive"
+          value="10"
+        >
+        </mylib-notification-badge>
+
+        <mylib-notification-badge
+          class="notification-badge-container-items"
+          variant="warning"
+          value="100"
+        >
+        </mylib-notification-badge>
+
+        <mylib-notification-badge
+          class="notification-badge-container-items"
+          variant="negative"
+          value="1000"
+        >
+        </mylib-notification-badge>
+      </div>
+
+      <div class="wrapper-notification-badge">
+        <mylib-notification-badge value="12">
+          <mylib-icon name="cmdAlerts24" size="md"></mylib-icon>
+        </mylib-notification-badge>
+      </div>
+
+      <div class="wrapper-notification-badge">
+        <mylib-notification-badge value="1">
+          <mylib-button label="Mylib Button" icon="cmdEdit16"></mylib-button>
+        </mylib-notification-badge>
+      </div>
+
+      <div class="wrapper-notification-badge container">
+        <mylib-notification-badge
+          class="wrapped-by-container"
+          value="1"
+          variant="default"
+        >
+        </mylib-notification-badge>
+        <mylib-button
+          type="button"
+          label="Label"
+          variant="base"
+          disabled="false"
+        >
+        </mylib-button>
+      </div>
+
+      <mylib-command-bar
+        class="wrapper-notification-badge"
+        orientation="vertical"
+        shadow-position="left"
+      >
+        <mylib-notification-badge
+          class="badge-over-command-button"
+          value="10"
+          variant="default"
+        >
+          <mylib-command-button
+            label="My button label #1"
+            icon="cmdAlerts24"
+            icon-size="md"
+            orientation="vertical"
+          ></mylib-command-button>
+        </mylib-notification-badge>
+
+        <mylib-command-pipe></mylib-command-pipe>
+
+        <mylib-notification-badge
+          class="badge-over-command-button"
+          value="100"
+          variant="default"
+        >
+          <mylib-command-button
+            label="My Button Label #2"
+            icon="cmdAlerts24"
+            icon-size="md"
+            orientation="vertical"
+            hidden-label="false"
+          ></mylib-command-button>
+        </mylib-notification-badge>
+
+        <mylib-command-button
+          label="Command Group Label"
+          icon="cmdCancelCheckout24"
+          icon-size="md"
+          orientation="vertical"
+          hidden-label="false"
+        ></mylib-command-button>
+
+        <mylib-command-button
+          label="Command Group Label Command Group Label"
+          icon="cmdCancelCheckout24"
+          disabled=""
+          icon-size="md"
+          orientation="vertical"
+          hidden-label="false"
+        ></mylib-command-button>
+      </mylib-command-bar>
+    </div>
+
+    <div class="component-demo-section">
+      <h2>Breadcrumb</h2>
+      <p>Common usage example</p>
+      <mylib-breadcrumb id="test--breadcrumb--case-01"></mylib-breadcrumb>
+      <p>
+        Example usage of the itemClick event to control the click action over
+        the breadcrumb items.
+      </p>
+      <mylib-breadcrumb id="test--breadcrumb--case-02"></mylib-breadcrumb>
+    </div>
+
+    <div class="component-demo-section mylib-modal-dialog">
+      <h2>Modal Dialog</h2>
+      <div class="row">
+        <mylib-button
+          id="input-modal-btn"
+          type="button"
+          label="Input Variant"
+          variant="base"
+          disabled="false"
+        >
+        </mylib-button>
+        <mylib-modal-dialog
+          id="input-modal"
+          dialog-title="Input Variant"
+          is-modal="true"
+          type="input"
+          is-draggable="true"
+        >
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem, aspernatur labore, pariatur dignissimos culpa facilis
+            nobis placeat nam praesentium suscipit expedita magni, consequatur
+            vel architecto! Dicta voluptate incidunt tempore reiciendis.
+          </p>
+        </mylib-modal-dialog>
+      </div>
+      <div class="row">
+        <mylib-button
+          id="danger-modal-btn"
+          type="button"
+          label="Danger Variant"
+          variant="negative"
+          disabled="false"
+        >
+        </mylib-button>
+        <mylib-modal-dialog
+          id="danger-modal"
+          dialog-title="Danger Variant"
+          is-modal="true"
+          type="danger"
+        >
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem, aspernatur labore, pariatur dignissimos culpa facilis
+            nobis placeat nam praesentium suscipit expedita magni, consequatur
+            vel architecto! Dicta voluptate incidunt tempore reiciendis.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem, aspernatur labore, pariatur dignissimos culpa facilis
+            nobis placeat nam praesentium suscipit expedita magni, consequatur
+            vel architecto! Dicta voluptate incidunt tempore reiciendis.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem, aspernatur labore, pariatur dignissimos culpa facilis
+            nobis placeat nam praesentium suscipit expedita magni, consequatur
+            vel architecto! Dicta voluptate incidunt tempore reiciendis.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem, aspernatur labore, pariatur dignissimos culpa facilis
+            nobis placeat nam praesentium suscipit expedita magni, consequatur
+            vel architecto! Dicta voluptate incidunt tempore reiciendis.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem, aspernatur labore, pariatur dignissimos culpa facilis
+            nobis placeat nam praesentium suscipit expedita magni, consequatur
+            vel architecto! Dicta voluptate incidunt tempore reiciendis.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem, aspernatur labore, pariatur dignissimos culpa facilis
+            nobis placeat nam praesentium suscipit expedita magni, consequatur
+            vel architecto! Dicta voluptate incidunt tempore reiciendis.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem, aspernatur labore, pariatur dignissimos culpa facilis
+            nobis placeat nam praesentium suscipit expedita magni, consequatur
+            vel architecto! Dicta voluptate incidunt tempore reiciendis.
+          </p>
+          <div slot="actions" class="btn-group">
+            <mylib-button
+              id="danger-modal-cancel-btn"
+              type="button"
+              label="Cancel"
+              variant="base"
+              disabled="false"
+            >
+            </mylib-button>
+            <mylib-button
+              type="button"
+              label="Confirm"
+              variant="base"
+              disabled="false"
+            >
+            </mylib-button>
+          </div>
+        </mylib-modal-dialog>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-command-bar mylib-command-button">
+      <h2>Command Button</h2>
+      <p>
+        #90 issue - When you use the preventDefault method, the toggle state
+        doesn't change. With that, you can trigger it in a specific case. (the prop is-toggle need to be true)
+      </p>
+      <mylib-command-bar
+        class="warpper-notification-badge"
+        orientation="horizontal"
+        shadow-position="left"
+      >
+        <mylib-command-button
+          class="is-toggle-handle-click firstBtn"
+          label="Parallel"
+          icon="cmdEdge24"
+          icon-size="md"
+          orientation="horizontal"
+          is-toggle="true"
+        ></mylib-command-button>
+
+        <mylib-command-button
+          class="is-toggle-handle-click secondBtn"
+          label="Perspective"
+          is-toggle="true"
+          icon="cmdRecordPartMovement24"
+          icon-size="md"
+          orientation="horizontal"
+          hidden-label="false"
+        ></mylib-command-button>
+
+        <mylib-command-button
+          label="Trimetric"
+          icon="cmdCancelCheckout24"
+          icon-size="md"
+          orientation="horizontal"
+          hidden-label="false"
+        ></mylib-command-button>
+
+        <mylib-command-button
+          class="cmd-button--toggle-uncontrolled"
+          label="Uncontrolled Toggle"
+          icon="cmdCancelCheckout24"
+          icon-size="md"
+          orientation="horizontal"
+          is-toggle
+          toggled
+        ></mylib-command-button>
+
+        <mylib-command-button
+          label="Front/Back (F)"
+          icon="cmdSync16"
+          icon-size="md"
+          orientation="horizontal"
+          hidden-label="false"
+        ></mylib-command-button>
+
+        <mylib-command-button
+          label="Left/Right (S)"
+          icon="cmdReplace16"
+          icon-size="md"
+          orientation="horizontal"
+          hidden-label="false"
+        ></mylib-command-button>
+
+        <mylib-command-button
+          label="Top/Buttom(T)"
+          icon="cmdReorder16"
+          icon-size="md"
+          orientation="horizontal"
+          hidden-label="false"
+        ></mylib-command-button>
+
+        <mylib-command-button
+          label="Reset(R)"
+          icon="cmdFitToWindow16"
+          icon-size="md"
+          orientation="horizontal"
+          hidden-label="false"
+        ></mylib-command-button>
+      </mylib-command-bar>
+    </div>
+
+    <div class="component-demo-section mylib-toast">
+      <h2>Toast</h2>
+      <div class="row">
+        <mylib-button
+          id="input-toast"
+          type="button"
+          label="Make a toast!"
+          variant="base"
+          disabled="false">
+        </mylib-button>
+        <mylib-toast
+          id="default-toast"
+          opened="false"
+          sub-description="Sub description"
+          toast-title="This toast title"
+          description="This is a toast description"
+          >
+        </mylib-toast>
+      </div>
+      <div class="row">
+        <mylib-button
+          id="inside-element-toast-btn"
+          type="button"
+          label="Inside Element!"
+          variant="base"
+          disabled="false">
+        </mylib-button>
+        <div class="toast-container">
+          <mylib-toast
+            style="position: absolute"
+            id="inside-element-toast"
+            opened="false"
+            sub-description="Sub description"
+            toast-title="This toast title"
+            description="This is a toast description"
+            >
+        </div>
+        </mylib-toast>
+      </div>
+      <h3>Variants</h3>
+      <hr/>
+      <div class="row mylib-toast-variants" >
+        <mylib-toast
+          id="default-toast-2"
+          style="position: relative; width: 482px;"
+          opened="true"
+          variant="primary"
+          sub-description="Sub description"
+          toast-title="This toast title"
+          description="This is a toast description"
+          no-auto-close
+        >
+        </mylib-toast>
+        <mylib-toast
+          id="warning-toast"
+          style="position: relative; width: 482px;"
+          opened="true"
+          variant="warning"
+          sub-description="Sub description"
+          toast-title="This toast title"
+          description="This is a toast description"
+          no-auto-close
+        >
+        </mylib-toast>
+        <mylib-toast
+          id="error-toast"
+          style="position: relative; width: 482px;""
+          opened="true"
+          variant="error"
+          sub-description="Sub description"
+          toast-title="This toast title"
+          description="This is a toast description"
+          no-auto-close
+        >
+        </mylib-toast>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-menu">
+        <h2>Menu</h2>
+          <mylib-button id="button-trigger-menu" label="Open/Hide Menu"></mylib-button>
+        <mylib-menu id="menu-example" menu-title="Title test" opened="false"></mylib-menu>
+    </div>
+
+    <div class="component-demo-section mylib-file-upload">
+      <h2>File Upload</h2>
+      <div class="row">
+          <mylib-file-upload target-url="https://0c08c583-6874-46eb-8154-ebe598814272.mock.pstmn.io/mock-api/file-upload" accept=".png" max-file-size="2000000" form-data-name="file" method="POST">
+          </mylib-file-upload>
+      </div>
+
+      <h3>No auto upload</h3>
+      <hr>
+      <div class="row">
+        <mylib-file-upload target-url="https://0c08c583-6874-46eb-8154-ebe598814272.mock.pstmn.io/mock-api/file-upload" accept=".png" max-file-size="2000000" form-data-name="file" method="POST" manual-upload="true" id="file-upload-manual-upload">
+        </mylib-file-upload>
+
+        <mylib-button type="button" label="Upload" variant="base" disabled="false" id="file-upload-btn">
+        </mylib-button>
+      </div>
+
+      <h2>Drag and Drop</h2>
+      <div class="row">
+          <mylib-file-upload target-url="https://0c08c583-6874-46eb-8154-ebe598814272.mock.pstmn.io/mock-api/file-upload" max-file-size="2000000" form-data-name="file" method="POST" is-draggable="true" max-files="20">
+          </mylib-file-upload>
+      </div>
+
+    <h2>Custom File Upload Engine</h2>
+      <div class="row">
+          <mylib-file-upload id="custom-file-upload--engine" target-url="https://0c08c583-6874-46eb-8154-ebe598814272.mock.pstmn.io/mock-api/file-upload" max-file-size="2000000" form-data-name="file" method="POST" is-draggable="true" max-files="20">
+          </mylib-file-upload>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-information-bar">
+      <h2>Information Bar</h2>
+      <div class="row">
+        <mylib-information-bar  variant="info" label="General" information-text="Lorem ipsum dolor set amet, consectetur adipiscing elit, sed do." closable="true" full-width-mode="false" use-icon="true" button-text="Action"></mylib-information-bar>
+        <mylib-information-bar  variant="success" label="General" information-text="Lorem ipsum dolor set amet, consectetur adipiscing elit, sed do." closable="false" full-width-mode="true" use-icon="true" button-text="Action"></mylib-information-bar>
+      </div>
+      <div class="row">
+        <mylib-information-bar  variant="warning" label="General" information-text="Lorem ipsum dolor set amet, consectetur adipiscing elit, sed do." closable="true" full-width-mode="false" use-icon="true" button-text="Action"></mylib-information-bar>
+        <mylib-information-bar  variant="error" label="General" information-text="Lorem ipsum dolor set amet, consectetur adipiscing elit, sed do." closable="false" full-width-mode="true" use-icon="true" button-text="Action"></mylib-information-bar>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-checkbox-group">
+      <h2>Checkbox Group</h2>
+      <hr/>
+      <h3>Vertical Alignment</h3>
+      <div class="row checkbox-group-vertical-container">
+        <mylib-checkbox-group
+        id="id--checkbox-group-input-name" name="checkbox-group-input-name" label="Checkbox label" dirty="false" disabled="false" error="false" items-list-type="vertical" show-select-all-items="true" items='[{"value":"item-1","key":"item-1","label":"Item 1","disabled":"false","dirty":"false","checked":"false"},{"value":"item-2","key":"item-2","label":"Item 2","disabled":"false","dirty":"false","checked":"true"},{"value":"item-3","key":"item-3","label":"Item 3","disabled":"false","dirty":"false","checked":"false"},{"value":"item-4","key":"item-4","label":"Item 4","disabled":"false","dirty":"false","checked":"false"},{"value":"item-5","key":"item-5","label":"Item 5","disabled":"false","dirty":"false","checked":"false"},{"value":"item-6","key":"item-6","label":"Item 6","disabled":"false","dirty":"false","checked":"false"},{"value":"item-7","key":"item-7","label":"Item 7","disabled":"false","dirty":"false","checked":"false"},{"value":"item-8","key":"item-8","label":"Item 8","disabled":"false","dirty":"false","checked":"false"},{"value":"item-9","key":"item-9","label":"Item 9","disabled":"false","dirty":"false","checked":"false"}]'>
+        </mylib-checkbox-group>
+        <mylib-checkbox-group
+        id="id--checkbox-group-input-name" name="checkbox-group-input-name" label="Checkbox label" dirty="false" disabled="false" error="true" error-message="Select at least two vehicles" error-tooltip="You have to select at least two vehicles" show-select-all-items="true" items-list-type="vertical" show-select-all-items="false" items='[{"value":"item-1","key":"item-1","label":"Item 1","disabled":"false","dirty":"false","checked":"false"},{"value":"item-2","key":"item-2","label":"Item 2","disabled":"false","dirty":"false","checked":"true"},{"value":"item-3","key":"item-3","label":"Item 3","disabled":"false","dirty":"false","checked":"false"},{"value":"item-4","key":"item-4","label":"Item 4","disabled":"false","dirty":"false","checked":"false"},{"value":"item-5","key":"item-5","label":"Item 5","disabled":"false","dirty":"false","checked":"false"},{"value":"item-6","key":"item-6","label":"Item 6","disabled":"false","dirty":"false","checked":"false"},{"value":"item-7","key":"item-7","label":"Item 7","disabled":"false","dirty":"false","checked":"false"},{"value":"item-8","key":"item-8","label":"Item 8","disabled":"false","dirty":"false","checked":"false"},{"value":"item-9","key":"item-9","label":"Item 9","disabled":"false","dirty":"false","checked":"false"}]'>
+        </mylib-checkbox-group>
+        <mylib-checkbox-group
+        id="id--checkbox-group-input-name" name="checkbox-group-input-name" label="Checkbox label" dirty="false" disabled="true" error="false"  items-list-type="vertical" show-select-all-items="false" items='[{"value":"item-1","key":"item-1","label":"Item 1","disabled":"false","dirty":"false","checked":"false"},{"value":"item-2","key":"item-2","label":"Item 2","disabled":"false","dirty":"false","checked":"true"},{"value":"item-3","key":"item-3","label":"Item 3","disabled":"false","dirty":"false","checked":"false"},{"value":"item-4","key":"item-4","label":"Item 4","disabled":"false","dirty":"false","checked":"false"},{"value":"item-5","key":"item-5","label":"Item 5","disabled":"false","dirty":"false","checked":"false"},{"value":"item-6","key":"item-6","label":"Item 6","disabled":"false","dirty":"false","checked":"false"},{"value":"item-7","key":"item-7","label":"Item 7","disabled":"false","dirty":"false","checked":"false"},{"value":"item-8","key":"item-8","label":"Item 8","disabled":"false","dirty":"false","checked":"false"},{"value":"item-9","key":"item-9","label":"Item 9","disabled":"false","dirty":"false","checked":"false"}]'>
+        </mylib-checkbox-group>
+      </div>
+      <hr/>
+      <h3>Horizontal Alignment</h3>
+      <div class="row">
+        <mylib-checkbox-group
+        id="id--checkbox-group-input-name" name="checkbox-group-input-name" label="Checkbox label" dirty="false" disabled="false" error="false" items-list-type="horizontal" show-select-all-items="true" items='[{"value":"item-1","key":"item-1","label":"Item 1","disabled":"false","dirty":"false","checked":"false"},{"value":"item-2","key":"item-2","label":"Item 2","disabled":"false","dirty":"false","checked":"true"},{"value":"item-3","key":"item-3","label":"Item 3","disabled":"false","dirty":"false","checked":"false"},{"value":"item-4","key":"item-4","label":"Item 4","disabled":"false","dirty":"false","checked":"false"},{"value":"item-5","key":"item-5","label":"Item 5","disabled":"false","dirty":"false","checked":"false"},{"value":"item-6","key":"item-6","label":"Item 6","disabled":"false","dirty":"false","checked":"false"},{"value":"item-7","key":"item-7","label":"Item 7","disabled":"false","dirty":"false","checked":"false"},{"value":"item-8","key":"item-8","label":"Item 8","disabled":"false","dirty":"false","checked":"false"},{"value":"item-9","key":"item-9","label":"Item 9","disabled":"false","dirty":"false","checked":"false"}]'>
+        </mylib-checkbox-group>
+        <mylib-checkbox-group
+        id="id--checkbox-group-input-name" name="checkbox-group-input-name" label="Checkbox label" dirty="false" disabled="false" error="true" items-list-type="horizontal" show-select-all-items="false" items='[{"value":"item-1","key":"item-1","label":"Item 1","disabled":"false","dirty":"false","checked":"false"},{"value":"item-2","key":"item-2","label":"Item 2","disabled":"false","dirty":"false","checked":"true"},{"value":"item-3","key":"item-3","label":"Item 3","disabled":"false","dirty":"false","checked":"false"},{"value":"item-4","key":"item-4","label":"Item 4","disabled":"false","dirty":"false","checked":"false"},{"value":"item-5","key":"item-5","label":"Item 5","disabled":"false","dirty":"false","checked":"false"},{"value":"item-6","key":"item-6","label":"Item 6","disabled":"false","dirty":"false","checked":"false"},{"value":"item-7","key":"item-7","label":"Item 7","disabled":"false","dirty":"false","checked":"false"},{"value":"item-8","key":"item-8","label":"Item 8","disabled":"false","dirty":"false","checked":"false"},{"value":"item-9","key":"item-9","label":"Item 9","disabled":"false","dirty":"false","checked":"false"}]'>
+        </mylib-checkbox-group>
+        <mylib-checkbox-group
+        id="id--checkbox-group-input-name" name="checkbox-group-input-name" label="Checkbox label" dirty="false" disabled="true" error="false" items-list-type="horizontal" show-select-all-items="false" items='[{"value":"item-1","key":"item-1","label":"Item 1","disabled":"false","dirty":"false","checked":"false"},{"value":"item-2","key":"item-2","label":"Item 2","disabled":"false","dirty":"false","checked":"true"},{"value":"item-3","key":"item-3","label":"Item 3","disabled":"false","dirty":"false","checked":"false"},{"value":"item-4","key":"item-4","label":"Item 4","disabled":"false","dirty":"false","checked":"false"},{"value":"item-5","key":"item-5","label":"Item 5","disabled":"false","dirty":"false","checked":"false"},{"value":"item-6","key":"item-6","label":"Item 6","disabled":"false","dirty":"false","checked":"false"},{"value":"item-7","key":"item-7","label":"Item 7","disabled":"false","dirty":"false","checked":"false"},{"value":"item-8","key":"item-8","label":"Item 8","disabled":"false","dirty":"false","checked":"false"},{"value":"item-9","key":"item-9","label":"Item 9","disabled":"false","dirty":"false","checked":"false"}]'>
+        </mylib-checkbox-group>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-table">
+      <h2>Table</h2>
+      <div class="row">
+        <button id="table-example-btn">Change table config</button>
+        <mylib-table id="table-example" checkbox-selection="false">
+        </mylib-table>
+      </div>
+      <div class="row">
+        <h2>Scroll</h2>
+        <h3>Example of how the component responds to small height containers.</h3>
+        <mylib-table id="table-example-2" class="table-container" checkbox-selection="true">
+        </mylib-table>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-tooltip--example">
+      <h2>Tooltip</h2>
+      <hr>
+      <h3>Positions</h3>
+      <div class="row position-section">
+        <div class="tooltip-container">
+            <span tabindex="0" id="target-pos-1">Top</span>
+          <mylib-tooltip label="Top" text="" target="target-pos-1" variation="default" position="top">
+          </mylib-tooltip>
+        </div>
+        <div class="tooltip-container">
+            <span tabindex="0" id="target-pos-2">Bottom</span>
+          <mylib-tooltip label="Bottom" text="" target="target-pos-2" variation="default" position="bottom">
+          </mylib-tooltip>
+        </div>
+        <div class="tooltip-container">
+            <span tabindex="0" id="target-pos-3">Left</span>
+          <mylib-tooltip label="Left" text="" target="target-pos-3" variation="default" position="left">
+          </mylib-tooltip>
+        </div>
+        <div class="tooltip-container">
+            <span tabindex="0" id="target-pos-4">Right</span>
+          <mylib-tooltip label="Right" text="" target="target-pos-4" variation="default" position="right">
+          </mylib-tooltip>
+        </div>
+      </div>
+      <h3>No Space</h3>
+      <div class="row">
+        <div>
+          <span id="target-2">Tooltip target</span>
+          <mylib-tooltip label="Label: " text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." target="target-2" variation="default" position="top">
+          </mylib-tooltip>
+        </div>
+
+        <div>
+          <span id="target-3">Tooltip target</span>
+          <mylib-tooltip label="Label: " text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." target="target-3" variation="default" position="top">
+          </mylib-tooltip>
+        </div>
+
+        <div>
+          <span id="target-4">Tooltip target</span>
+          <mylib-tooltip label="Label: " text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." target="target-4" variation="default" position="top">
+          </mylib-tooltip>
+        </div>
+
+        <div>
+          <span id="target-5">Tooltip target</span>
+          <mylib-tooltip label="Label: " text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." target="target-5" variation="default" position="top">
+          </mylib-tooltip>
+        </div>
+
+        <div>
+          <span id="target-6">Tooltip target</span>
+          <mylib-tooltip label="Label: " text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." target="target-6" variation="default" position="top">
+          </mylib-tooltip>
+        </div>
+      </div>
+      <h3>Variations</h3>
+      <div class="row">
+        <div class="variations-section">
+          <div>
+            <h5 id="target-var-1">Default</h5>
+            <mylib-tooltip label="Label: " target="target-var-1" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." variation="default" position="right">
+            </mylib-tooltip>
+          </div>
+          <div>
+            <h5 id="target-var-2">Error</h5>
+            <mylib-tooltip label="Label: " target="target-var-2" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." variation="error" position="right">
+            </mylib-tooltip>
+          </div>
+          <div>
+            <h5 id="target-var-3">Caution</h5>
+            <mylib-tooltip label="Label: " target="target-var-3" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." variation="caution" position="right">
+            </mylib-tooltip>
+          </div>
+          <div>
+            <h5 id="target-var-4">Success</h5>
+            <mylib-tooltip label="Label: " target="target-var-4" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." variation="success" position="right">
+            </mylib-tooltip>
+          </div>
+        </div>
+      </div>
+      <h2>Use cases</h2>
+      <hr>
+      <h3>Case - No attribution to target prop</h3>
+      <div class="row position-section no-target">
+          <div class="tooltip-container">
+            <div>Top</div>
+            <mylib-tooltip label="Top" variation="default" position="top">
+            </mylib-tooltip>
+          </div>
+          <div class="tooltip-container">
+            <div>Bottom</div>
+            <mylib-tooltip label="Bottom" variation="default" position="bottom">
+            </mylib-tooltip>
+          </div>
+          <div class="tooltip-container">
+            <div>Left</div>
+            <mylib-tooltip label="Left" variation="default" position="left">
+            </mylib-tooltip>
+          </div>
+          <div class="tooltip-container">
+            <div>Right</div>
+            <mylib-tooltip label="Right" variation="default" position="right">
+            </mylib-tooltip>
+          </div>
+      </div>
+      <div class="imperative-case--container">
+        <mylib-button type="button" id="btn-show-tooltip" label="Show" variant="base" icon-position="left" size="sm">
+        </mylib-button>
+        <mylib-button type="button" id="btn-hide-tooltip" label="Hide" variant="base" icon-position="left" size="sm">
+        </mylib-button>
+        <div>
+          <span tabindex="0" id="target-api-1">Tooltip target</span>
+          <mylib-tooltip id="tooltip" label="Label" text="Lorem ipsum dolor sit amet" target="target-api-1" variation="default" position="top">
+          </mylib-tooltip>
+        </div>
+     </div>
+    </div>
+
+    <div class="component-demo-section mylib-splitter--example">
+      <h2>Splitter</h2>
+      <div class="container">
+        <mylib-splitter variant="horizontal">
+          <mylib-splitter-item style="background-color: lightcoral">
+            <div>left side</div>
+          </mylib-splitter-item>
+          <mylib-splitter-item style="background-color: lightgreen">
+            <div>right side</div>
+          </mylib-splitter-item>
+        </mylib-splitter>
+      </div>
+      <div class="container--vertical">
+        <h3>Vertical</h3>
+        <mylib-splitter variant="vertical">
+          <mylib-splitter-item style="background-color: lightcoral">
+            <div>first item</div>
+          </mylib-splitter-item>
+          <mylib-splitter-item style="background-color: lightgreen">
+            <div>second item</div>
+          </mylib-splitter-item>
+          <mylib-splitter-item style="background-color: lightblue">
+            <div>third item</div>
+          </mylib-splitter-item>
+        </mylib-splitter>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-slider--example">
+      <h2>Slider</h2>
+        <div class="slider-container">
+          <mylib-slider class="mylib-sliter-example" max="100" min="0" step="10" show-tick-marks ></mylib-slider>
+        </div>
+      <h3>Featurette - Custom Tick Mark Labels</h3>
+      <div class="slider-container">
+        <mylib-slider id="slider-custom-tick-mark" class="mylib-sliter-example" max="10" min="0" step="1" show-tick-marks snap-to-step></mylib-slider>
+      </div>
+      <h3>Featurette - Controlled Mode (value attribute)</h3>
+      <div class="slider-container">
+        <mylib-slider id="controlled-sliter" class="mylib-sliter-example" max="70" min="0" step="10" show-tick-marks auto-mark-labels with-buttons value="20"></mylib-slider>
+      </div>
+      <h3>Case - Form Integration</h3>
+      <form id="form-template-wrapper-slider">
+        <div class="slider-container">
+          <mylib-slider id="case--form--slider-01" class="mylib-sliter-example" name="slider-01" max="100" min="0" step="10"></mylib-slider>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="component-demo-section mylib-radio-group">
+      <h2>Radio Button Group</h2>
+      <hr>
+      <div class="row">
+        <i>valueChange Event:</i>
+        <mylib-radio-group id="radioGroupFirstExample" label="Radio Group:" orientation="horizontal" variant="default" value="" error="false">
+          <span slot="error">* Review Required</span>
+          <mylib-radio-button label="Label Radio 1" name="radio" value="value1" variant="default">
+          </mylib-radio-button>
+          <mylib-radio-button label="Label Radio 2" name="radio" value="value2" variant="default">
+          </mylib-radio-button>
+          <mylib-radio-button label="Label Radio 3" name="radio" value="value3" variant="default">
+          </mylib-radio-button>
+        </mylib-radio-group>
+      </div>
+      <div class="row">
+        <mylib-radio-group label="Radio Group:" orientation="horizontal" variant="default" value="" error="false">
+          <span slot="error">* Review Required</span>
+          <mylib-radio-button label="Label Radio 1" name="radio" value="value1" variant="default" disabled>
+          </mylib-radio-button>
+          <mylib-radio-button label="Label Radio 2" name="radio" value="value2" variant="default">
+          </mylib-radio-button>
+          <mylib-radio-button label="Label Radio 3" name="radio" value="value3" variant="default">
+          </mylib-radio-button>
+        </mylib-radio-group>
+      </div>
+      <div class="row">
+        <hr>
+        <h3>Vertical Orientation</h3>
+        <mylib-radio-group label="Radio Group:" orientation="vertical" variant="default" value="" error="false">
+          <span slot="error">* Review Required</span>
+          <mylib-radio-button label="Label Radio 1" name="radio" value="value1" variant="default">
+          </mylib-radio-button>
+          <mylib-radio-button label="Label Radio 2" name="radio" value="value2" variant="default">
+          </mylib-radio-button>
+          <mylib-radio-button label="Label Radio 3" name="radio" value="value3" variant="default">
+          </mylib-radio-button>
+        </mylib-radio-group>
+      </div>
+      <div class="row">
+        <hr>
+        <h3>Detailed</h3>
+        <mylib-radio-group label="Radio Group:" orientation="vertical" variant="detailed" value="" error="false">
+          <span slot="error">* Review Required</span>
+          <mylib-radio-button label="Label Radio 1" name="radio" value="value1" variant="default">
+          </mylib-radio-button>
+          <mylib-radio-button label="Label Radio 2" name="radio" value="value2" variant="default">
+          </mylib-radio-button>
+          <mylib-radio-button label="Label Radio 3" name="radio" value="value3" variant="default">
+          </mylib-radio-button>
+        </mylib-radio-group>
+      </div>
+      <div class="row">
+        <hr>
+        <h3>Controlled</h3>
+        <mylib-radio-group id="controlled-radio-button" label="Radio Group:" orientation="vertical" variant="default" value="" error="false" is-controlled="true">
+          <span slot="error">* Review Required</span>
+          <mylib-radio-button label="Label Radio 1" name="radio" value="value1" variant="default" is-controlled="true">
+          </mylib-radio-button>
+          <mylib-radio-button label="Label Radio 2" name="radio" value="value2" variant="default" is-controlled="true">
+          </mylib-radio-button>
+          <mylib-radio-button label="Label Radio 3" name="radio" value="value3" variant="default" is-controlled="true">
+          </mylib-radio-button>
+        </mylib-radio-group>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-dropdown">
+      <h2>Dropdown</h2>
+      <hr>
+      <div style="width: 100%;" class="row">
+          <mylib-dropdown class="dropdown-example" id="dropdown-example" selection-mode="single" placeholder-icon="cmdExport16" placeholder="Export as">
+          </mylib-dropdown>
+      </div>
+      <h3>Multiple Selection with Seach, clear all options, initialValue</h3>
+      <hr>
+      <div style="width: 100%;" class="row">
+          <mylib-dropdown class="dropdown-example" id="dropdown-example-2" selection-mode="multiple" placeholder-icon="cmdExport16" placeholder="Export as" enable-clear-all="true" with-search>
+          </mylib-dropdown>
+      </div>
+      <h3>Dropdown with dirty true</h3>
+      <hr>
+      <div style="width: 100%;" class="row">
+        <mylib-dropdown class="dropdown-example" id="dropdown-example-3" placeholder-icon="cmdExport16" dirty="true">
+        </mylib-dropdown>
+      </div>
+      <h3>Dropdown with dirty mode multiple</h3>
+      <hr>
+      <div style="width: 100%;" class="row">
+        <mylib-dropdown class="dropdown-example" id="dropdown-example-4" placeholder-icon="cmdExport16" dirty="true" selection-mode="multiple">
+        </mylib-dropdown>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-datepicker">
+      <h2>DatePicker</h2>
+      <hr>
+      <div class="row">
+        <mylib-datepicker id="datepicker-example">
+        </mylib-datepicker>
+      </div>
+      <h3>Form Integration</h3>
+      <div class="row datepicker-form">
+        <form id="form-date-picker">
+          <div>
+            <mylib-datepicker id="case--form--datepicker-01" label="Date" input-format="MM-DD-YYYY" name="datepicker-01">
+            </mylib-datepicker>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <hr>
+      <h2>Datepicker Calendar</h2>
+      <div class="row">
+        <mylib-datepicker-calendar id="datepicker-calendar-example" ></mylib-datepicker-calendar>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-timepicker">
+      <h2>TimePicker</h2>
+      <hr>
+      <div class="row">
+        <div class="container-timepicker">
+          <mylib-timepicker id="timepicker-example">
+          </mylib-timepicker>
+        </div>
+      </div>
+      <h3>Form Integration</h3>
+      <div class="row timepicker-form">
+        <form id="form-time-picker">
+          <div>
+            <mylib-timepicker id="case--form--timepicker-01" label="Date" name="timepicker-01">
+            </mylib-timepicker>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-combo-box">
+      <h2>Combo box</h2>
+      <hr>
+      <div class="row box">
+          <mylib-combo-box id="combo-box-example" value="item2" disable-truncated="false" label="Label Name:" placeholder="This is the link" items='[{"text":"list item 1","value":"item1","name":"name1","checked":false},{"text":"list item 2","value":"item2","name":"name2","checked":false},{"text":"list item 3","value":"item3","name":"name3","checked":false}]'>
+          </mylib-combo-box>
+      </div>
+      <h3>Responsiveness and Adaptiveness</h3>
+      <hr>
+      <div class="mylib-storybook-template-container mylib-combo-box--story--responsiveness-adaptiveness">
+        <mylib-combo-box id="combo-box-example2" value="item2" disable-truncated="false" label="Label Name:" placeholder="This is the link" items='[{"text":"list item 1","value":"item1","name":"name1","checked":false},{"text":"list item 2","value":"item2","name":"name2","checked":false},{"text":"list item 3","value":"item3","name":"name3","checked":false}]'>
+        </mylib-combo-box>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-primary-navigation">
+      <h2>Primary Navigation</h2>
+      <i>Pin example in Attach button...</i>
+      <div class="primary-nav-wrapper--example-02" style="overflow: hidden; overflow-y: scroll;">
+        <mylib-primary-navigation-bar>
+          <div slot="top-section--command-items">
+            <mylib-command-button
+              id="mylib-cmd-btn--1"
+              orientation="vertical"
+              label="Search"
+              icon="cmdSearch16"
+            ></mylib-command-button>
+            <mylib-command-button
+              id="mylib-cmd-btn--2"
+              orientation="vertical"
+              label="Full size"
+              icon="cmdCut16"
+            ></mylib-command-button>
+            <mylib-command-button
+              id="mylib-cmd-btn--3"
+              orientation="vertical"
+              label="Edit"
+              icon="cmdEdit16"
+            ></mylib-command-button>
+            <mylib-command-button
+              id="mylib-cmd-btn--4"
+              orientation="vertical"
+              label="Attach"
+              icon="cmdAttach16"
+              is-toggle="true"
+            ></mylib-command-button>
+            <mylib-command-button
+              id="mylib-cmd-btn--5"
+              orientation="vertical"
+              label="Panel Link (Controlled)"
+              icon="cmdAssign16"
+              is-toggle="true"
+            ></mylib-command-button>
+          </div>
+          <div slot="bottom-section--command-items">
+            <mylib-command-button
+              id="mylib-cmd-btn--6"
+              orientation="vertical"
+              label="Search"
+              icon="cmdSearch16"
+            ></mylib-command-button>
+            <mylib-command-button
+              id="mylib-cmd-btn--7"
+              orientation="vertical"
+              label="Full size"
+              icon="cmdCut16"
+            ></mylib-command-button>
+            <mylib-command-button
+              id="mylib-cmd-btn--8"
+              orientation="vertical"
+              label="Edit"
+              icon="cmdEdit16"
+            ></mylib-command-button>
+            <mylib-command-button
+              id="mylib-cmd-btn--9"
+              orientation="vertical"
+              label="Attach"
+              icon="cmdAttach16"
+              is-toggle="true"
+            ></mylib-command-button>
+            <mylib-command-button
+              id="mylib-cmd-btn--99"
+              orientation="vertical"
+              label="Inside overflow example"
+              icon="cmdAssign16"
+              is-toggle="true"
+            ></mylib-command-button>
+          </div>
+
+          <mylib-primary-navigation-panel
+            id="navigation-panel--edit"
+            panel-title="Edit"
+            trigger-command-button-toggle-id="mylib-cmd-btn--3"
+            slot="navigation-panel"
+          >
+            <div>
+              <h3>Some content here for "Edit"</h3>
+            </div>
+          </mylib-primary-navigation-panel>
+
+          <mylib-primary-navigation-panel
+            id="navigation-panel--attach"
+            panel-title="Attach"
+            trigger-command-button-toggle-id="mylib-cmd-btn--4"
+            slot="navigation-panel"
+            pinable
+          >
+            <div>
+              <h3>Some content here for "Attach"</h3>
+            </div>
+          </mylib-primary-navigation-panel>
+
+          <mylib-primary-navigation-panel
+            id="navigation-panel--controlled-example-2"
+            panel-title="Panel Link (Controlled)"
+            trigger-command-button-toggle-id="mylib-cmd-btn--5"
+            slot="navigation-panel"
+            close-on-click-outside
+            close-on-link-click
+          >
+            <div>
+              <mylib-primary-navigation-panel-link id="case-01--panel-link--handler-sample" text="Panel Link Text"></mylib-primary-navigation-panel-link>
+              <mylib-primary-navigation-panel-link id="case-02--panel-link--handler-sample" text="Panel Link Text"></mylib-primary-navigation-panel-link>
+              <mylib-primary-navigation-panel-separator></mylib-primary-navigation-panel-separator>
+              <mylib-primary-navigation-panel-link id="case-03--panel-link--handler-sample" text="Panel Link Text"></mylib-primary-navigation-panel-link>
+            </div>
+          </mylib-primary-navigation-panel>
+
+          <mylib-primary-navigation-panel
+            id="navigation-panel--controlled-example"
+            panel-title="Inside overflow example"
+            trigger-command-button-toggle-id="mylib-cmd-btn--99"
+            slot="navigation-panel"
+            close-on-click-outside
+          >
+            <div>
+              <h3>Inside overflow example</h3>
+            </div>
+          </mylib-primary-navigation-panel>
+        </mylib-primary-navigation-bar>
+
+        <div class="fake-content">
+          My content...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam
+            aliquam sem et tortor consequat id. Orci ac auctor augue mauris
+            augue neque gravida. Egestas maecenas pharetra convallis posuere
+            morbi leo urna. Proin sed libero enim sed faucibus. Quam vulputate
+            dignissim suspendisse in est ante in nibh mauris. Erat nam at lectus
+            urna duis convallis. Urna nunc id cursus metus. Blandit cursus risus
+            at ultrices. Interdum varius sit amet mattis vulputate enim nulla
+            aliquet. Risus at ultrices mi tempus imperdiet nulla. Est velit
+            egestas dui id ornare arcu. Gravida dictum fusce ut placerat orci
+            nulla pellentesque dignissim. Erat imperdiet sed euismod nisi porta
+            lorem mollis aliquam ut. Congue nisi vitae suscipit tellus mauris a
+            diam maecenas. Sed turpis tincidunt id aliquet risus feugiat in
+            ante. Eu nisl nunc mi ipsum.
+          </p>
+
+          <p>
+            Aliquam nulla facilisi cras fermentum odio eu feugiat pretium.
+            Elementum pulvinar etiam non quam lacus suspendisse. Sit amet nulla
+            facilisi morbi. Dignissim enim sit amet venenatis urna cursus. Sem
+            fringilla ut morbi tincidunt augue interdum. Elit duis tristique
+            sollicitudin nibh sit. Pellentesque sit amet porttitor eget dolor.
+            Non quam lacus suspendisse faucibus interdum posuere lorem. Purus
+            non enim praesent elementum facilisis leo vel. Interdum velit
+            euismod in pellentesque massa. Nulla malesuada pellentesque elit
+            eget gravida cum sociis natoque penatibus. Diam sit amet nisl
+            suscipit adipiscing bibendum est ultricies. Molestie nunc non
+            blandit massa enim nec dui. At augue eget arcu dictum.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-tabset">
+      <h2>Tabs</h2>
+      <div class="example-1">
+        <p>Borderless prop test, remove the tabs borders</p>
+        <mylib-tabset borderless>
+          <mylib-tab label="Tab 1" tab="0"></mylib-tab>
+          <mylib-tab label="Tab 2" tab="1"></mylib-tab>
+          <mylib-tab label="Tab 3" tab="2"></mylib-tab>
+        </mylib-tabset>
+      </div>
+      <hr />
+      <div class="example-2">
+        <p>No padding prop test, removes the padding from the first element</p>
+        <mylib-tabset no-padding>
+          <mylib-tab label="Tab 1" tab="0"></mylib-tab>
+          <mylib-tab label="Tab 2" tab="1"></mylib-tab>
+          <mylib-tab label="Tab 3" tab="2"></mylib-tab>
+        </mylib-tabset>
+      </div>
+      <div class="example-3">
+        <p>Set the selected tab</p>
+        <mylib-button id="tabset-test-btn" label="Select tab 1"></mylib-button>
+        <mylib-tabset>
+          <mylib-tab id="tabset-test-tab1" label="Tab 1" tab="0"></mylib-tab>
+          <mylib-tab label="Tab 2" tab="1"></mylib-tab>
+          <mylib-tab label="Tab 3" tab="2"></mylib-tab>
+        </mylib-tabset>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-icon">
+      <h2>Icons</h2>
+      <hr>
+      <div style="width: 100%;" class="row">
+        <p>Font icons</p>
+        <mylib-icon name="cmdAbortTask24"></mylib-icon>
+      </div>
+      <div style="width: 100%;" class="row">
+        <p>Svg icons</p>
+        <mylib-icon name="AppIcon32_placeholder" type="svg"></mylib-icon>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-primary-navigation example--issue-356">
+      <h2>Primary Navigation Issue 356</h2>
+      <div class="primary-nav-wrapper" style="height: 500px; overflow:hidden; overflow-y: scroll;">
+        <mylib-primary-navigation-bar id="example--issue-356" class="mylib-primary-navigation-panel-example--01" hide-account-icon hide-command-items-label>
+          <div slot="top-section--command-items">
+            <mylib-command-button
+              hidden-label="false"
+              orientation="vertical"
+              label="Search"
+              icon="cmdSearch16"
+              icon-size="md"
+            ></mylib-command-button>
+          </div>
+        </mylib-primary-navigation-bar>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-tree">
+      <h2>Tree</h2>
+      <div class="row mylib-tree">
+        <mylib-tree id="tree-example">
+          <ul>
+            <li>
+              UK
+              <ul>
+                <li>
+                  Yorkshire
+                  <ul>
+                    <li>
+                      Leeds
+                      <ul>
+                        <li>Train station</li>
+                        <li>Town hall</li>
+                        <li>Headrow</li>
+                      </ul>
+                    </li>
+                    <li>Bradford</li>
+                    <li>Hull</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              USA
+              <ul>
+                <li>
+                  California
+                  <ul>
+                    <li>Los Angeles</li>
+                    <li>San Francisco</li>
+                    <li>Berkeley</li>
+                  </ul>
+                </li>
+                <li>Nevada</li>
+                <li>Oregon</li>
+              </ul>
+            </li>
+          </ul>
+        </mylib-tree>
+        <mylib-tree show-dotted-guideline id="tree-example-dotted">
+          <ul>
+            <li>
+              UK
+              <ul>
+                <li>
+                  Yorkshire
+                  <ul>
+                    <li>
+                      Leeds
+                      <ul>
+                        <li>Train station</li>
+                        <li>Town hall</li>
+                        <li>Headrow</li>
+                      </ul>
+                    </li>
+                    <li>Bradford</li>
+                    <li>Hull</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              USA
+              <ul>
+                <li>
+                  California
+                  <ul>
+                    <li>Los Angeles</li>
+                    <li>San Francisco</li>
+                    <li>Berkeley</li>
+                  </ul>
+                </li>
+                <li>Nevada</li>
+                <li>Oregon</li>
+              </ul>
+            </li>
+          </ul>
+        </mylib-tree>
+      </div>
+    </div>
+
+    <div class="component-demo-section panel-section">
+      <h2>Panel Section</h2>
+      <div class="panel-section-wrapper">
+        <mylib-panel-section uncontrolled-mode label="Panel Section" compact-mode="false">
+          <mylib-panel-section-command slot="actions" label="Add" icon="cmdAdd24" icon-type="font">
+          </mylib-panel-section-command>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            placerat elit nec elit dignissim pretium. Curabitur ut arcu in orci
+            pulvinar imperdiet vitae ut orci. Aliquam ullamcorper condimentum
+            laoreet. In hac habitasse platea dictumst. Donec sollicitudin orci et
+            consequat congue. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Fusce volutpat dolor ipsum. Pellentesque vel aliquet velit.
+          </span>
+        </mylib-panel-section>
+      </div>
+
+      <h4>Compact mode</h4>
+      <div class="panel-section-wrapper">
+        <mylib-panel-section uncontrolled-mode label="Panel Section" compact-mode>
+          <mylib-panel-section-command slot="actions" label="Add" icon="cmdAdd24" icon-type="font">
+          </mylib-panel-section-command>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            placerat elit nec elit dignissim pretium. Curabitur ut arcu in orci
+            pulvinar imperdiet vitae ut orci. Aliquam ullamcorper condimentum
+            laoreet. In hac habitasse platea dictumst. Donec sollicitudin orci et
+            consequat congue. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Fusce volutpat dolor ipsum. Pellentesque vel aliquet velit.
+          </span>
+        </mylib-panel-section>
+      </div>
+
+      <h4>Panel Section</h4>
+      <div class="panel-section-wrapper">
+        <mylib-panel-section uncontrolled-mode="" label="Panel Section" hide-tooltip="false" compact-mode="false" collapsed="false">
+
+          <mylib-panel-section label="Panel Section 2" compact-mode="false">
+            <mylib-panel-section label="Panel Section 3" compact-mode="false">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                placerat elit nec elit dignissim pretium. Curabitur ut arcu in orci
+                pulvinar imperdiet vitae ut orci. Aliquam ullamcorper condimentum
+                laoreet. In hac habitasse platea dictumst. Donec sollicitudin orci et
+                consequat congue. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Fusce volutpat dolor ipsum. Pellentesque vel aliquet velit.
+             </span>
+          </mylib-panel-section>
+          </mylib-panel-section>
+        </mylib-panel-section>
+      </div>
+
+      <h4>Nested Table</h4>
+      <div class="panel-section-wrapper">
+        <mylib-panel-section uncontrolled-mode="" label="Nested Table" hide-tooltip="false" compact-mode="false" collapsed="false">
+          <mylib-table id="panel-section-table-example" checkbox-selection="false">
+          </mylib-table>
+        </mylib-panel-section>
+      </div>
+
+      <h4>Tooltip example</h4>
+      <div class="panel-section-wrapper">
+        <mylib-panel-section uncontrolled-mode="" label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        placerat elit nec elit dignissim pretium." hide-tooltip="false" compact-mode="false" collapsed="false">
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            placerat elit nec elit dignissim pretium. Curabitur ut arcu in orci
+            pulvinar imperdiet vitae ut orci. Aliquam ullamcorper condimentum
+            laoreet. In hac habitasse platea dictumst. Donec sollicitudin orci et
+            consequat congue. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Fusce volutpat dolor ipsum. Pellentesque vel aliquet velit.
+         </span>
+        </mylib-panel-section>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-acccordion">
+      <h2>Accordion</h2>
+      <h4>Accordion item tooltip example</h4>
+      <mylib-accordion style="width: 400px;">
+        <mylib-accordion-item
+        id="accordion-item-0"
+        label="Some label"
+        expanded="true"
+        header-tooltip-text="Some tooltip text"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus rerum modi odio ipsum alias repellat mollitia esse dolore dolorem culpa beatae incidunt, aperiam earum quo sunt voluptatum saepe. Tempore, sed?
+        </mylib-accordion-item>
+      </mylib-accordion>
+
+      <h4>Accordion item multiple actions tooltip example</h4>
+      <mylib-accordion style="width: 400px;">
+        <mylib-accordion-item
+        id="accordion-item-1"
+        label="Some label"
+        expanded="true"
+        header-tooltip-text="Some tooltip text"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus rerum modi odio ipsum alias repellat mollitia esse dolore dolorem culpa beatae incidunt, aperiam earum quo sunt voluptatum saepe. Tempore, sed?
+        </mylib-accordion-item>
+      </mylib-accordion>
+    </div>
+    <div class="component-demo-section mylib-progress-bar">
+      <h2>Progress Bar</h2>
+      <h4>Variants</h4>
+      <div class="mylib-progress-bar-container">
+        <mylib-progress-bar progress="25" status="progressing" hint="Progress Bar" error-message="Something went wrong!"></mylib-progress-bar>
+        <mylib-progress-bar progress="50" status="error" hint="Progress Bar" error-message="Something went wrong!"></mylib-progress-bar>
+        <mylib-progress-bar progress="75" status="paused" hint="Progress Bar" error-message="Something went wrong!"></mylib-progress-bar>
+        <mylib-progress-bar progress="100" status="completed" hint="Progress Bar" error-message="Something went wrong!"></mylib-progress-bar>
+       </div>
+     </div>
+
+    <div class="component-demo-section mylib-floating-button">
+      <h2>Floating Button</h2>
+      <h4>Sizes</h4>
+      <div class="floating-button--sizes--container">
+        <mylib-floating-button size="sm" label="Label" variant="base" icon="cmdAdd24" icon-type="font">
+        </mylib-floating-button>
+        <mylib-floating-button id="floating-button--sizes--large" size="lg" label="Label" variant="base" icon="cmdAdd24" icon-type="font">
+        </mylib-floating-button>
+      </div>
+      <h4>Variants</h4>
+      <div class="floating-button--variants--container">
+        <mylib-floating-button variant="base" label="Label" size="lg" icon="cmdAdd24" icon-type="font">
+        </mylib-floating-button>
+        <mylib-floating-button id="floating-button--variants--accent" variant="accent" label="Label" size="lg" icon="cmdAdd24" icon-type="font">
+        </mylib-floating-button>
+      </div>
+      <h4>Custom Icon</h4>
+      <div class="floating-button--customIcon--container">
+        <mylib-floating-button label="" variant="base" size="lg" icon="cmdAdd24" icon-type="svg">
+          <svg slot="icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="3.5" y1="-1278.5" x2="45" y2="-1320" gradientTransform="matrix(1 0 0 -1 0 -1272)">
+              <stop offset="0" style="stop-color:#FFFFFF"></stop>
+              <stop offset="0.2323" style="stop-color:#FAFAFA"></stop>
+              <stop offset="0.4964" style="stop-color:#EDEDED"></stop>
+              <stop offset="0.775" style="stop-color:#D6D6D6"></stop>
+              <stop offset="1" style="stop-color:#BEBEBE"></stop>
+            </linearGradient>
+            <polygon fill="url(#SVGID_1_)" stroke="#464646" stroke-miterlimit="10" points="32.5,0.5 9.5,0.5 9.5,47.5 45.5,47.5 45.5,13.5 "></polygon>
+            <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="29.25" y1="-1275.75" x2="42.25" y2="-1288.75" gradientTransform="matrix(1 0 0 -1 0 -1272)">
+              <stop offset="0" style="stop-color:#FFFFFF"></stop>
+              <stop offset="0.2214" style="stop-color:#F8F8F8"></stop>
+              <stop offset="0.5415" style="stop-color:#E5E5E5"></stop>
+              <stop offset="0.92" style="stop-color:#C6C6C6"></stop>
+              <stop offset="1" style="stop-color:#BEBEBE"></stop>
+            </linearGradient>
+            <polygon fill="url(#SVGID_2_)" stroke="#464646" stroke-linejoin="round" stroke-miterlimit="10" points="32.5,0.5 32.5,13.5
+              45.5,13.5 "></polygon>
+            <line fill="none" stroke="#5A5A5A" x1="15" y1="34.5" x2="40" y2="34.5"></line>
+            <line fill="none" stroke="#5A5A5A" x1="15" y1="28.5" x2="40" y2="28.5"></line>
+            <line fill="none" stroke="#5A5A5A" x1="15" y1="40.5" x2="40" y2="40.5"></line>
+            <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="3.75" y1="0.25" x2="26.25" y2="22.75">
+              <stop offset="0" style="stop-color:#73B4C8"></stop>
+              <stop offset="0.1747" style="stop-color:#6AAEC3"></stop>
+              <stop offset="0.4567" style="stop-color:#529EB5"></stop>
+              <stop offset="0.8089" style="stop-color:#2C839F"></stop>
+              <stop offset="1" style="stop-color:#147391"></stop>
+            </linearGradient>
+            <rect x="0.5" y="3.5" fill="url(#SVGID_3_)" stroke="#464646" stroke-miterlimit="10" width="29" height="16"></rect>
+            <path fill="#FFFFFF" d="M7,6H3v11h2v-4h2c1.7,0,3-1.3,3-3V9C10,7.3,8.7,6,7,6z M8,10c0,0.6-0.4,1-1,1H5V8h2c0.6,0,1,0.4,1,1V10z"></path>
+            <polygon fill="#FFFFFF" points="27,8 27,6 21,6 21,17 23,17 23,13 26,13 26,11 23,11 23,8 "></polygon>
+            <path fill="#FFFFFF" d="M15,17h-4V6h4c2.2,0,4,1.8,4,4v3C19,15.2,17.2,17,15,17z M13,15h2c1.1,0,2-0.9,2-2v-3c0-1.1-0.9-2-2-2h-2V15
+              z"></path>
+          </svg>
+        </mylib-floating-button>
+      </div>
+    </div>
+
+    <div class="component-demo-section mylib-segmented-button">
+      <div class="list-variant--example">
+        <h4>Segmented Buttons List Variant - Default Size</h4>
+        <mylib-segmented-button size="default" variant="list">
+          <mylib-segmented-button-item label="Year" name="test-1" value="year">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item label="Month" name="test-2" value="month">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item label="Week" name="test-3" value="week">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item label="Day" name="test-4" value="day">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item label="Hour" name="test-5" value="hour">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item label="Minute" name="test-6" value="minute">
+          </mylib-segmented-button-item>
+        </mylib-segmented-button>
+      </div>
+      <div class="grid-variant--example" style="width: 400px;">
+        <h4>Segmented Buttons Grid Variant - Large Size</h4>
+        <mylib-segmented-button size="large" variant="grid">
+          <mylib-segmented-button-item label="Year" name="test-1" value="year">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item label="Month" name="test-2" value="month">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item label="Week" name="test-3" value="week">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item label="Day" name="test-4" value="day">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item label="Hour" name="test-5" value="hour">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item label="Minute" name="test-6" value="minute">
+          </mylib-segmented-button-item>
+        </mylib-segmented-button>
+      </div>
+
+      <div class="icon--example">
+        <h4>Segmented Buttons Icons - Controlled Value</h4>
+        <mylib-segmented-button size="large" variant="grid" value="user">
+          <mylib-segmented-button-item icon="cmdUser24" label="User" name="iconLabel-1" value="user">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item icon="cmdUpload16" label="Upload" name="iconLabel-2" value="upload">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item icon="AppIcon32_placeholder" icon-type="svg" label="AppIcon" name="iconLabel-3" value="unlock">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item icon="cmdZoomIn16" label="Zoom in" name="iconLabel-4" value="zoomIn">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item icon="cmdTrash16" label="Trash" name="iconLabel-5" value="trash">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item icon="cmdStart16" label="Start" name="iconLabel-6" value="start">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item icon="cmdSettings24" label="Setting" name="iconLabel-7" value="setting">
+          </mylib-segmented-button-item>
+          <mylib-segmented-button-item disabled icon="cmdSave16" label="Save" name="iconLabel-8" value="save">
+          </mylib-segmented-button-item>
+        </mylib-segmented-button>
+      </div>
+    </div>
+
+    <script type="module" src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script type="module" src="js/vendor/mylib.js"></script>
+    <script type="module" src="js/plugins.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/test--mylib-modal-dialog.js"></script>
+    <script type="module" src="js/test--mylib-toast.js"></script>
+    <script type="module" src="js/test--mylib-breadcrumb.js"></script>
+    <script type="module" src="js/test--mylib-menu.js"></script>
+    <script type="module" src="js/test--mylib-file-upload.js"></script>
+    <script type="module" src="js/test--mylib-command-button.js"></script>
+    <script type="module" src="js/test--mylib-information-bar.js"></script>
+    <script type="module" src="js/test--mylib-table.js"></script>
+    <script type="module" src="js/text--mylib-primary-navigation-panel.js"></script>
+    <script type="module" src="js/test--mylib-tooltip.js"></script>
+    <script type="module" src="js/test--mylib-radio-group.js"></script>
+    <script type="module" src="js/test--mylib-dropdown.js"></script>
+    <script type="module" src="js/test--mylib-tabs.js"></script>
+    <script type="module" src="js/test--mylib-datepicker.js"></script>
+    <script type="module" src="js/test--mylib-timepicker.js"></script>
+    <script type="module" src="js/test--mylib-tree.js"></script>
+    <script type="module" src="js/test--mylib-combo-box.js"></script>
+    <script type="module" src="js/test--mylib-slider.js"></script>
+    <script type="module" src="js/test--mylib-panel-section.js"></script>
+    <script type="module" src="js/test--mylib-accordion.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga('create', 'UA-XXXXX-Y', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('set', 'transport', 'beacon');
+      ga('send', 'pageview');
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
+</html>

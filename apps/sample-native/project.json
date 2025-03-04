@@ -1,0 +1,34 @@
+{
+  "name": "sample-native",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sample-native",
+  "projectType": "application",
+  "implicitDependencies": ["mylib-core-js", "mylib-core-styles", "mylib"],
+  "tags": [ "app" ],
+  "targets": {
+    "prepare": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm install"],
+        "cwd": "./apps/sample-native",
+        "parallel": false
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["parcel build index.html"],
+        "cwd": "./apps/sample-native",
+        "parallel": false
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["parcel index.html --open"],
+        "cwd": "./apps/sample-native",
+        "parallel": false
+      }
+    }
+  }
+}

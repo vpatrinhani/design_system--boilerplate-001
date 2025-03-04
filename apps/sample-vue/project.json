@@ -1,0 +1,53 @@
+{
+  "root": "apps/sample-vue",
+  "sourceRoot": "apps/sample-vue/src",
+  "projectType": "application",
+  "implicitDependencies": [
+    "mylib-core-js",
+    "mylib-core-styles",
+    "mylib"
+  ],
+  "targets": {
+    "prepare": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["npm install"],
+        "cwd": "./apps/sample-vue",
+        "parallel": false
+      }
+    },
+      "build": {
+        "executor": "@nrwl/workspace:run-commands",
+        "options": {
+          "commands": ["npm run build"],
+          "cwd": "./apps/sample-vue",
+          "parallel": false
+        }
+        },
+        "serve": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": ["npm run dev"],
+            "cwd": "./apps/sample-vue",
+            "parallel": false
+          }
+        },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sample-vue/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/sample-vue"],
+      "options": {
+        "jestConfig": "apps/sample-vue/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
+  

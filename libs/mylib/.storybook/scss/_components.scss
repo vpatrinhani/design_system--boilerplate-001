@@ -1,0 +1,48 @@
+@import '@libs/mylib-core-styles/scss/components/mylib-link/variables';
+@import '@libs/mylib-core-styles/scss/components/mylib-link/mixins';
+
+.mylib-storybook-link {
+  @include mylib-link__anchor();
+
+  &.mylib-theme--scheme--light {
+    @include mylib-link__anchor--scheme('light');
+  }
+
+  &.mylib-theme--scheme--dark {
+    @include mylib-link__anchor--scheme('dark');
+  }
+}
+
+.mylib-core-layout {
+  &_grid {
+    display: flex;
+  }
+  &_col {
+    flex: 1;
+  }
+}
+
+ul.reset li,
+ul.reset ul li {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    font-size: 1.5em;
+    padding-left: 8px;
+
+    &::marker {
+      // content: get-icon--code("uiUp12");
+      // font-family: 'mylib-icons';
+      font-size: 1.5em;;
+      margin-left: -1.3em; /* same as padding-left set on li */
+    }
+  }
+}

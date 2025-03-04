@@ -1,0 +1,29 @@
+@import '@libs/mylib-core-styles/scss/components/mylib-button/variables';
+@import '@libs/mylib-core-styles/scss/components/mylib-button/mixins';
+
+@mixin mylib-button--host {
+  box-sizing: border-box;
+  display: inline-block;
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+  }
+}
+
+@mixin mylib-button--host--disabled {
+  @include mylib-button--state--disabled();
+}
+
+@mixin mylib-button() {
+  button {
+    &,
+    :host(.mylib-theme--scheme--light) & {
+      @include mylib-button--button('light');
+    }
+
+    :host(.mylib-theme--scheme--dark) & {
+      @include mylib-button--button('dark');
+    }
+  }
+}

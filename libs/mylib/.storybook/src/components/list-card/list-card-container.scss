@@ -1,0 +1,14 @@
+.mylib-storybook-list-card-container {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  > .mylib-storybook-list-card-item {
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+}

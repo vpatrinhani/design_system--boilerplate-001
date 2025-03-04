@@ -1,0 +1,443 @@
+@mixin mylib-button--button($color-scheme: 'light') {
+  font-family: $font-family;
+  font-size: rem(14px);
+  font-weight: var(--mylib-button--font-weight, $font-weight-base);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: rem(20px);
+  letter-spacing: normal;
+
+  border: None;
+  border-radius: 2px;
+  outline: none;
+
+  padding: 6px 12px;
+  min-width: rem(80px);
+  min-height: rem(32px);
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  color: $color-white;
+
+  @include mylib-button--button--states($color-scheme);
+
+  // variant
+  @include mylib-button--button--variants($color-scheme);
+
+  // size
+  @include mylib-button--button--sizes();
+
+  // Internal Elements
+  mylib-icon {
+    // Define a height size for the host element
+    &.mylib-icon__size {
+      &--sm {
+        @include mylib-button--icon-height('sm');
+      }
+
+      &--md {
+        @include mylib-button--icon-height('md');
+      }
+
+      &--lg {
+        @include mylib-button--icon-height('lg');
+      }
+    }
+
+    &.icon-place {
+      &--left {
+        margin-right: rem(8px);
+      }
+
+      &--center {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      &--right {
+        margin-left: rem(8px);
+      }
+    }
+  }
+}
+
+@mixin mylib-button--icon-height($size) {
+  --mylib-button--icon-height:
+    var(
+      --mylib-slider-button--icon-height,
+      #{get-icon-size($size)}
+    );
+
+  --mylib-button--icon-line-height: var(
+    --mylib-slider-button--icon-line-height,
+    #{get-icon-size($size)}
+  );
+
+  height: var(--mylib-button--icon-height, get-icon-size($size));
+  line-height: var(--mylib-button--icon-line-height, get-icon-size($size));
+}
+
+@mixin mylib-button--button--states($color-scheme) {
+  &,
+  &.base {
+    @include create--mylib-button--button--state('base', $color-scheme);
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+
+  &.accent-high-contrast {
+    @include create--mylib-button--button--state(
+      'accent-high-contrast',
+      $color-scheme
+    );
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+
+  &.accent-mid-contrast {
+    @include create--mylib-button--button--state(
+      'accent-mid-contrast',
+      $color-scheme
+    );
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+
+  &.positive {
+    @include create--mylib-button--button--state('positive', $color-scheme);
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+
+  &.accent-positive {
+    @include create--mylib-button--button--state(
+      'accent-positive',
+      $color-scheme
+    );
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+
+  &.caution {
+    @include create--mylib-button--button--state('caution', $color-scheme);
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+
+  &.accent-caution {
+    @include create--mylib-button--button--state(
+      'accent-caution',
+      $color-scheme
+    );
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+
+  &.negative {
+    @include create--mylib-button--button--state('negative', $color-scheme);
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+
+  &.accent-negative {
+    @include create--mylib-button--button--state(
+      'accent-negative',
+      $color-scheme
+    );
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+
+  &.accent-marketing {
+    @include create--mylib-button--button--state(
+      'accent-marketing',
+      $color-scheme
+    );
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+
+  &.chromeless {
+    @include create--mylib-button--button--state('chromeless', $color-scheme);
+    @include mylib-button--button--disabled('chromeless', $color-scheme);
+  }
+
+  &.chromeless-colorless {
+    @include create--mylib-button--button--state(
+      'chromeless-colorless',
+      $color-scheme
+    );
+    @include mylib-button--button--disabled(
+      'chromeless-colorless',
+      $color-scheme
+    );
+  }
+
+  &.custom {
+    @include create--mylib-button--button--state('custom', $color-scheme);
+    @include mylib-button--button--disabled('default', $color-scheme);
+  }
+}
+
+@mixin mylib-button--button--variants($color-scheme) {
+  &,
+  &.base {
+    @include create--mylib-button--button--variant('base', $color-scheme);
+  }
+
+  &.accent-high-contrast {
+    @include create--mylib-button--button--variant(
+      'accent-high-contrast',
+      $color-scheme
+    );
+  }
+
+  &.accent-mid-contrast {
+    @include create--mylib-button--button--variant(
+      'accent-mid-contrast',
+      $color-scheme
+    );
+  }
+
+  &.positive {
+    @include create--mylib-button--button--variant('positive', $color-scheme);
+  }
+
+  &.accent-positive {
+    @include create--mylib-button--button--variant(
+      'accent-positive',
+      $color-scheme
+    );
+  }
+
+  &.caution {
+    @include create--mylib-button--button--variant('caution', $color-scheme);
+  }
+
+  &.accent-caution {
+    @include create--mylib-button--button--variant(
+      'accent-caution',
+      $color-scheme
+    );
+  }
+
+  &.negative {
+    @include create--mylib-button--button--variant('negative', $color-scheme);
+  }
+
+  &.accent-negative {
+    @include create--mylib-button--button--variant(
+      'accent-negative',
+      $color-scheme
+    );
+  }
+
+  &.accent-marketing {
+    @include create--mylib-button--button--variant(
+      'accent-marketing',
+      $color-scheme
+    );
+  }
+
+  &.chromeless {
+    @include create--mylib-button--button--variant('chromeless', $color-scheme);
+    box-shadow: none;
+  }
+
+  &.chromeless-colorless {
+    @include create--mylib-button--button--variant(
+      'chromeless-colorless',
+      $color-scheme
+    );
+    box-shadow: none;
+  }
+
+  &.custom {
+    @include create--mylib-button--button--variant('custom', $color-scheme);
+  }
+
+  &.accent-positive,
+  &.accent-caution,
+  &.accent-negative {
+    > span {
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+@mixin mylib-button--button--sizes() {
+  &.button-size {
+    &--xs {
+      line-height: normal;
+      font-size: rem(12px);
+      padding: 2px 4px;
+      min-width: var(--mylib-button--min-width, rem(24px));
+      min-height: rem(16px);
+    }
+
+    &--sm {
+      font-size: rem(12px);
+      line-height: rem(16px);
+      padding: 4px 8px;
+      min-width: var(--mylib-button--min-width, rem(60px));
+      min-height: rem(24px);
+    }
+
+    &--md {
+      min-width: var(--mylib-button--min-width);
+    }
+
+    &--lg {
+      font-size: rem(17px);
+      line-height: rem(23px);
+      padding: 8px 16px;
+      min-width: var(--mylib-button--min-width, rem(120px));
+      min-height: rem(40px);
+    }
+  }
+}
+
+@mixin create--mylib-button--button--state($variant, $color-scheme) {
+  &:hover {
+    background: get-comp-var(
+      $mylib-button-vars,
+      'hover',
+      $variant,
+      'background',
+      $color-scheme
+    );
+
+    @if $variant == chromeless {
+      box-shadow: none;
+    } @else if $variant == chromeless-colorless {
+      box-shadow: none;
+    } @else {
+      box-shadow: get-comp-var(
+        $mylib-button-vars,
+        'hover',
+        'base',
+        'shadow',
+        $color-scheme
+      );
+    }
+  }
+
+  &:focus-visible {
+    outline: get-comp-var(
+      $mylib-button-vars,
+      'focus',
+      'default',
+      'outline',
+      $color-scheme
+    );
+    outline-offset: get-comp-var(
+      $mylib-button-vars,
+      'focus',
+      'default',
+      'outline-offset',
+      $color-scheme
+    );
+  }
+
+  &.toggled,
+  &:active {
+    background: get-comp-var(
+      $mylib-button-vars,
+      'active',
+      $variant,
+      'background',
+      $color-scheme
+    );
+    outline: none;
+
+    @if $variant == chromeless {
+      box-shadow: none;
+    } @else if $variant == chromeless-colorless {
+      box-shadow: none;
+    } @else {
+      box-shadow: get-comp-var(
+        $mylib-button-vars,
+        'active',
+        'base',
+        'shadow',
+        $color-scheme
+      );
+    }
+  }
+}
+
+@mixin create--mylib-button--button--variant($variant, $color-scheme) {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+
+  mylib-icon::part(mylib-icon__content) {
+    color: get-comp-var(
+      $mylib-button-vars,
+      'normal',
+      $variant,
+      'color',
+      $color-scheme
+    );
+  }
+  color: get-comp-var(
+    $mylib-button-vars,
+    'normal',
+    $variant,
+    'color',
+    $color-scheme
+  );
+  border: get-comp-var(
+    $mylib-button-vars,
+    'normal',
+    $variant,
+    'border',
+    $color-scheme
+  );
+  background: get-comp-var(
+    $mylib-button-vars,
+    'normal',
+    $variant,
+    'background',
+    $color-scheme
+  );
+}
+
+@mixin mylib-button--button--disabled($variant: 'default', $color-scheme) {
+  &:disabled {
+    mylib-icon::part(mylib-icon__content) {
+      color: get-comp-var(
+        $mylib-button-vars,
+        'disabled',
+        $variant,
+        'color',
+        $color-scheme
+      );
+    }
+    color: get-comp-var(
+      $mylib-button-vars,
+      'disabled',
+      $variant,
+      'color',
+      $color-scheme
+    );
+    border: get-comp-var(
+      $mylib-button-vars,
+      'disabled',
+      $variant,
+      'border',
+      $color-scheme
+    );
+    background: get-comp-var(
+      $mylib-button-vars,
+      'disabled',
+      $variant,
+      'background',
+      $color-scheme
+    );
+
+    box-shadow: none;
+
+    > span {
+      text-shadow: none;
+    }
+  }
+}
+
+@mixin mylib-button--state--disabled() {
+  pointer-events: none;
+}

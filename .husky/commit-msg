@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "HUSKY_GIT_PARAMS: $1"
+
+npm run lint:scm:commit -- --edit $1

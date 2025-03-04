@@ -1,0 +1,10 @@
+// @import "../../styles/typography";
+// @import "../../../styles/global-css-settings";
+// @import "../../styles/content-spacing";
+
+@mixin sub-title-appearance{
+}
+
+.mylib-storybook-sub-title {
+  @include sub-title-appearance;
+}

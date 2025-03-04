@@ -1,0 +1,53 @@
+/* Your styles goes here. */
+header {
+  background-color: #666;
+  padding: 8px 32px;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+  .spacer {
+    flex: 1;
+  }
+}
+
+/* Container for flexboxes */
+section {
+  display: flex;
+  height: 100%;
+}
+
+/* Style the navigation menu */
+nav {
+  flex: 0.4;
+  background: #ccc;
+  padding: 8px 32px;
+}
+
+/* Style the content */
+
+main {
+  flex: 2;
+  padding: 32px 32px;
+}
+
+body.mylib-theme--scheme--dark main {
+  color: white;
+}
+
+body main mylib-application-frame {
+  color: initial;
+}
+
+.unique {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px; /* opcional, para dar um espaço abaixo do elemento */
+}
+
+.toolbar-scroll {
+  overflow: scroll;
+  height: calc(100vh - 70px);
+}

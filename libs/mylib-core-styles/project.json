@@ -1,0 +1,135 @@
+{
+  "name": "mylib-core-styles",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/mylib-core-styles/src",
+  "projectType": "library",
+  "peerDependencies": {},
+  "tags": ["lib", "lib:mylib-core-styles"],
+  "targets": {
+    "build-js": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "project": "libs/mylib-core-styles/package.json",
+        "entryFile": "libs/mylib-core-styles/src/index.ts",
+        "outputPath": "dist/libs/mylib-core-styles",
+        "tsConfig": "libs/mylib-core-styles/tsconfig.lib.json",
+        "rollupConfig": ["libs/mylib-core-styles/rollup.config.js"],
+        "updateBuildableProjectDepsInPackageJson": true
+      }
+    },
+    "build-sass": {
+      "executor": "nx:run-commands",
+      "options": {
+        "outputPath": "dist/libs/mylib-core-styles/css",
+        "commands": [
+          "npx sass --embed-sources libs/mylib-core-styles/scss:dist/libs/mylib-core-styles/css",
+          "npx sass --embed-sources libs/mylib-core-styles/scss/__obsolete:dist/libs/mylib-core-styles/css/__obsolete"
+        ],
+        "parallel": false
+      }
+    },
+    "generate-icons": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm run generate-icons"],
+        "cwd": "./libs/mylib-core-styles",
+        "parallel": false
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "outputPath": "dist/libs/mylib-core-styles",
+        "commands": [
+          "nx build-js mylib-core-styles",
+          "nx build-sass mylib-core-styles"
+        ],
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/mylib-core-styles/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/mylib-core-styles"],
+      "options": {
+        "jestConfig": "libs/mylib-core-styles/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx run mylib-core-styles:build",
+          "nx run mylib-core-styles:serve-storybook"
+        ],
+        "parallel": true
+      }
+    },
+    "serve-storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/web-components",
+        "port": 4400,
+        "configDir": "libs/mylib-core-styles/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "uiFramework": "@storybook/web-components",
+        "configDir": "libs/mylib-core-styles/.storybook",
+        "outputDir": "dist/storybook/mylib-core-styles"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "prepare-release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm version {args.version} --allow-same-version"],
+        "cwd": "./libs/mylib-core-styles",
+        "parallel": false
+      }
+    },
+    "release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "mkdir -p '../../../pack/libs/mylib-core-styles'",
+          "npm pack --pack-destination '../../../pack/libs/mylib-core-styles'"
+        ],
+        "cwd": "./dist/libs/mylib-core-styles",
+        "parallel": false
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/mylib-core-styles/**/*.css",
+          "libs/mylib-core-styles/**/*.scss"
+        ],
+        "formatter": "stylelint-formatter-pretty",
+        "allowEmptyInput": true
+      }
+    }
+  }
+}

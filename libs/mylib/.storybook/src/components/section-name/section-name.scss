@@ -1,0 +1,15 @@
+// @import "../../styles/typography";
+// @import "../../styles/content-spacing";
+// @import "../../../styles/global-css-settings";
+
+.mylib-storybook-section-name {
+  margin-top: 48px;
+  margin-bottom: 8px;
+
+  &:after {
+    content: "";
+    // margin-top: $spacing-small;
+    // @include theme-prop(background, primary-text-color);
+    height: 2px;
+  }
+}

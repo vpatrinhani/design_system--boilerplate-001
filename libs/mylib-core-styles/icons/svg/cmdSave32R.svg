@@ -1,0 +1,57 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #474747;
+      }
+
+      .cls-1 {
+        stroke-linecap: round;
+        fill: url(#Dark_Blue_Grad);
+      }
+
+      .cls-1, .cls-5 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-3, .cls-4, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="Dark_Blue_Grad" data-name="Dark Blue Grad" x1="0.5" y1="16" x2="31.5" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#74b5c8"/>
+      <stop offset="0.179" stop-color="#6bafc3"/>
+      <stop offset="0.467" stop-color="#539eb5"/>
+      <stop offset="0.828" stop-color="#2d839e"/>
+      <stop offset="1" stop-color="#187491"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient" x1="6.549" y1="14.648" x2="25.451" y2="33.549" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.232" stop-color="#fafafa"/>
+      <stop offset="0.496" stop-color="#ededed"/>
+      <stop offset="0.775" stop-color="#d7d6d6"/>
+      <stop offset="1" stop-color="#bfbebe"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="10.174" y1="0.174" x2="22.037" y2="12.037" xlink:href="#linear-gradient"/>
+  </defs>
+  <title>cmdSave32R</title>
+  <polygon id="_Path_" data-name="&lt;Path&gt;" class="cls-1" points="31.5 6.743 31.5 31.5 0.5 31.5 0.5 0.5 25.341 0.5 31.5 6.743"/>
+  <rect id="_Rectangle_" data-name="&lt;Rectangle&gt;" class="cls-2" width="32" height="32"/>
+  <path id="_Path_2" data-name="&lt;Path&gt;" class="cls-3" d="M4.5,17.5v14h23v-14a2.047,2.047,0,0,0-2.091-2H6.591A2.047,2.047,0,0,0,4.5,17.5Z" transform="translate(0 0)"/>
+  <rect id="_Path_3" data-name="&lt;Path&gt;" class="cls-4" x="8.5" y="0.5" width="14" height="10"/>
+  <line id="_Path_4" data-name="&lt;Path&gt;" class="cls-5" x1="10" y1="21.5" x2="22" y2="21.5"/>
+  <line id="_Path_5" data-name="&lt;Path&gt;" class="cls-5" x1="10" y1="25.5" x2="22" y2="25.5"/>
+  <line id="_Path_6" data-name="&lt;Path&gt;" class="cls-6" x1="19.5" y1="4" x2="19.5" y2="8"/>
+</svg>

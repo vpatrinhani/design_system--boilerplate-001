@@ -1,0 +1,52 @@
+<form [formGroup]="myForm">
+    <mylib-form-control-wrapper
+        formControlName="mylibInputField"
+        [valueChangedHandler]="valueChangedHandler">
+      <mylib-input-field label="Text Box"></mylib-input-field>
+    </mylib-form-control-wrapper>
+    <mylib-form-control-wrapper
+        formControlName="mylibCheckbox"
+        bindPropertyName="checked"
+        bindEventName="checkChanged"
+        [valueChangedHandler]="checkChangedHandler">
+      <mylib-checkbox label="Checkbox label"></mylib-checkbox>
+    </mylib-form-control-wrapper>
+    <mylib-form-control-wrapper
+        formControlName="mylibDatepicker"
+        bindEventName="valueChange">
+        <mylib-datepicker label="Date" input-format="MM-DD-YYYY"></mylib-datepicker>
+    </mylib-form-control-wrapper>
+    <mylib-form-control-wrapper
+        formControlName="mylibTimepicker"
+        bindEventName="valueChange">
+        <mylib-timepicker></mylib-timepicker>
+    </mylib-form-control-wrapper>
+    <mylib-form-control-wrapper
+        formControlName="mylibTextarea"
+        bindEventName="changeInput"
+        [valueChangedHandler]="valueChangedHandler">
+        <mylib-textarea label="label"></mylib-textarea>
+    </mylib-form-control-wrapper>
+    <mylib-form-control-wrapper
+        formControlName="mylibCheckboxGroup"
+        bindEventName="selectionChanged"
+        [valueChangedHandler]="checkGroupChangedHandler">
+        <mylib-checkbox-group [items]="checkboxGroupItems"></mylib-checkbox-group>
+    </mylib-form-control-wrapper>
+    <mylib-form-control-wrapper formControlName="mylibRadioGroup" bindEventName="valueChange">
+        <mylib-radio-group label="Radio Group:" orientation="horizontal" variant="default">
+            <mylib-radio-button label="Label Radio 1" name="radio" value="value1" variant="default">
+            </mylib-radio-button>
+            <mylib-radio-button label="Label Radio 2" name="radio" value="value2" variant="default">
+            </mylib-radio-button>
+            <mylib-radio-button label="Label Radio 3" name="radio" value="value3" variant="default">
+            </mylib-radio-button>
+        </mylib-radio-group>
+    </mylib-form-control-wrapper>
+</form>
+<mylib-dropdown
+    [options]="dropdownItems"
+    style="width: 100%;"
+    [value]="dropdownFormControl.value"
+    [selectionMode]="'multiple'"
+    (valueChange)="dropdownValueChanged($event)"></mylib-dropdown>

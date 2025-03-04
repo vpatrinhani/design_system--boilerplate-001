@@ -1,0 +1,19 @@
+
+.mylib-storybook-disw-reference-version-badge {
+  > a {
+    all: unset;
+
+    cursor: pointer;
+
+    > span {
+      font-weight: 400;
+      line-height: 1.55;
+      color: #fff;
+      font-size: 14px;
+      background-color: #41aaaa;
+      padding: 10px 15px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+  }
+}

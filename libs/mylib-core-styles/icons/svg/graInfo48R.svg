@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>graInfo48R</title>
+    <defs>
+        <linearGradient x1="14.6435897%" y1="14.6435897%" x2="85.3564103%" y2="85.3564103%" id="linearGradient-1">
+            <stop stop-color="#73B4C8" offset="0%"></stop>
+            <stop stop-color="#6AAEC3" offset="17.5%"></stop>
+            <stop stop-color="#529EB5" offset="45.7%"></stop>
+            <stop stop-color="#2C839F" offset="80.9%"></stop>
+            <stop stop-color="#147391" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="graInfo48R" fill-rule="nonzero">
+            <circle id="Oval" fill="url(#linearGradient-1)" cx="24" cy="24" r="19.5"></circle>
+            <path d="M24,3.9755 C12.940774,3.9755 3.9755,12.940774 3.9755,24 C3.9755,35.059226 12.940774,44.0245 24,44.0245 C35.059226,44.0245 44.0245,35.059226 44.0245,24 C44.0245,12.940774 35.059226,3.9755 24,3.9755 Z M24,5.0245 C34.4798793,5.0245 42.9755,13.5201207 42.9755,24 C42.9755,34.4798793 34.4798793,42.9755 24,42.9755 C13.5201207,42.9755 5.0245,34.4798793 5.0245,24 C5.0245,13.5201207 13.5201207,5.0245 24,5.0245 Z" id="Oval" fill="#464646"></path>
+            <g id="Group" transform="translate(20.660000, 10.520000)">
+                <path d="M3.34,6.18 C1.77151131,6.18 0.5,4.90848869 0.5,3.34 C0.5,1.77151131 1.77151131,0.5 3.34,0.5 C4.90848869,0.5 6.18,1.77151131 6.18,3.34 C6.17834649,4.90780327 4.90780327,6.17834649 3.34,6.18 Z" id="Path" fill="#FFFFFF"></path>
+                <path d="M3.34,1 C4.63234631,1 5.68,2.04765369 5.68,3.34 C5.68,4.63234631 4.63234631,5.68 3.34,5.68 C2.04765369,5.68 1,4.63234631 1,3.34 C1,2.04765369 2.04765369,1 3.34,1 M3.34,0 C1.49536894,0 0,1.49536894 0,3.34 C0,5.18463106 1.49536894,6.68 3.34,6.68 C5.18463106,6.68 6.68,5.18463106 6.68,3.34 C6.67834599,1.49605448 5.18394552,0.00165401103 3.34,0 L3.34,0 Z" id="Shape" fill="#147391"></path>
+            </g>
+            <g id="Group" transform="translate(21.440000, 19.100000)">
+                <polygon id="Rectangle" fill="#FFFFFF" points="0.5 0.5 4.62 0.5 4.62 18.66 0.5 18.66"></polygon>
+                <path d="M4.12,1 L4.12,18.16 L1,18.16 L1,1 L4.12,1 M5.12,0 L3.55271368e-15,0 L3.55271368e-15,19.16 L5.12,19.16 L5.12,0 Z" id="Shape" fill="#147391"></path>
+            </g>
+        </g>
+    </g>
+</svg>

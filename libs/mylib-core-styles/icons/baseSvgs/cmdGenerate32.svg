@@ -1,0 +1,12 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <polygon points="6 26 2 26 2 2 26 2 26 5 25 5 25 3 3 3 3 25 6 25 6 26" fill="#464646"/>
+  <rect x="17" y="10" width="1" height="4" fill="#464646"/>
+  <rect x="17" y="21" width="1" height="4" fill="#464646"/>
+  <rect x="21" y="17" width="4" height="1" fill="#464646"/>
+  <rect x="10" y="17" width="4" height="1" fill="#464646"/>
+  <rect x="12.658" y="11.121" width="1" height="4.073" transform="translate(-5.45 13.158) rotate(-45)" fill="#464646"/>
+  <rect x="19.718" y="12.553" width="4.37" height="1" transform="translate(-2.814 19.311) rotate(-45)" fill="#464646"/>
+  <rect x="11.121" y="21.299" width="4.073" height="1" transform="translate(-11.56 15.689) rotate(-45)" fill="#464646"/>
+  <rect x="21.299" y="19.762" width="1" height="4.074" transform="translate(-9.029 21.799) rotate(-45)" fill="#464646"/>
+  <path d="M30,29H5V5H30ZM6,28H29V6H6Z" class="aw-theme-iconOutline" fill="#464646"/>
+</svg>

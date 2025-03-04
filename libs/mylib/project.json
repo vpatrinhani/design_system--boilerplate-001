@@ -1,0 +1,173 @@
+{
+  "name": "mylib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/mylib/src",
+  "projectType": "library",
+  "generators": {
+    "@nxext/stencil:component": {
+      "style": "scss"
+    }
+  },
+  "implicitDependencies": ["mylib-core-js", "mylib-core-styles"],
+  "tags": ["lib", "lib:mylib"],
+  "targets": {
+    "test-STENCIL": {
+      "executor": "@nxext/stencil:test",
+      "outputs": ["{workspaceRoot}/coverage/libs/mylib"],
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "dependencies"
+        }
+      ],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/mylib/tsconfig.spec.json",
+        "configPath": "libs/mylib/stencil.config.ts",
+        "outputPath": "dist/libs/mylib"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/mylib"],
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "dependencies"
+        }
+      ],
+      "options": {
+        "passWithNoTests": true,
+        "codeCoverage": true,
+        "jestConfig": "libs/mylib/jest.config.js"
+      }
+    },
+    "test--update-snapshots": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/mylib"],
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "dependencies"
+        }
+      ],
+      "options": {
+        "passWithNoTests": true,
+        "updateSnapshot": true,
+        "jestConfig": "libs/mylib/jest.config.js"
+      }
+    },
+    "build": {
+      "executor": "@nxext/stencil:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/mylib/tsconfig.lib.json",
+        "configPath": "libs/mylib/stencil.config.ts",
+        "outputPath": "dist/libs/mylib"
+      },
+      "configurations": {
+        "production": {
+          "dev": false,
+          "prod": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nxext/stencil:serve",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/mylib/tsconfig.lib.json",
+        "configPath": "libs/mylib/stencil.config.ts",
+        "outputPath": "dist/libs/mylib",
+        "noOpen": true
+      }
+    },
+    "e2e": {
+      "executor": "@nxext/stencil:e2e",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/mylib/tsconfig.lib.json",
+        "configPath": "libs/mylib/stencil.config.ts",
+        "outputPath": "dist/libs/mylib"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/mylib/src/**/*.{ts,tsx}"]
+      }
+    },
+    "storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["nx run mylib:serve", "nx run mylib:serve-storybook"],
+        "parallel": true
+      }
+    },
+    "serve-storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/web-components",
+        "port": 4400,
+        "configDir": "libs/mylib/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "uiFramework": "@storybook/web-components",
+        "configDir": "libs/mylib/.storybook",
+        "outputDir": "dist/storybook/mylib"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "prepare-release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm version {args.version} --allow-same-version"],
+        "cwd": "./libs/mylib",
+        "parallel": false
+      }
+    },
+    "release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "mkdir -p '../../../pack/libs/mylib'",
+          "npm pack --pack-destination '../../../pack/libs/mylib'"
+        ],
+        "cwd": "./dist/libs/mylib",
+        "parallel": false
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/mylib/**/*.css", "libs/mylib/**/*.scss"],
+        "formatter": "stylelint-formatter-pretty",
+        "allowEmptyInput": true
+      }
+    }
+  },
+  "namedInputs": {
+    "projectSpecificFiles": [
+      "{workspaceRoot}/libs/mylib-core-styles/**/*.scss",
+      "{workspaceRoot}/libs/mylib-react/src/**/*"
+    ]
+  }
+}

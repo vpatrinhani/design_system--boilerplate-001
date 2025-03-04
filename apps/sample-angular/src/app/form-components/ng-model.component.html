@@ -1,0 +1,81 @@
+<form (ngSubmit)="onSubmit(testForm?.form)" #testForm="ngForm">
+  <div class="form-group">
+    <mylib-input-field
+      label="Text box"
+      [(ngModel)]="mylibInputValue"
+      #mylibInput="ngModel"
+      name="mylibInput"
+      ></mylib-input-field>
+  </div>
+
+  <div class="form-group">
+    <mylib-checkbox-group
+      [items]="checkboxGroupItems"
+      #mylibCheckboxGroup="ngModel"s
+      [(ngModel)]="mylibCheckboxGroupValue"
+      label="text"
+      name="mylibCheckboxGroup">
+    </mylib-checkbox-group>
+  </div>
+
+  <div class="form-group">
+    <mylib-radio-group
+      #mylibRadioGroup="ngModel"
+      [(ngModel)]="mylibRadioGroupValue"
+      label="text"
+      name="mylibRadioGroup"
+      orientation="horizontal"
+      variant="default">
+      <mylib-radio-button label="Label Radio 1" name="radio" value="value1" variant="default">
+      </mylib-radio-button>
+      <mylib-radio-button label="Label Radio 2" name="radio" value="value2" variant="default">
+      </mylib-radio-button>
+      <mylib-radio-button label="Label Radio 3" name="radio" value="value3" variant="default">
+      </mylib-radio-button>
+    </mylib-radio-group>
+  </div>
+
+  <div class="form-group">
+    <mylib-textarea
+      label="label"
+      [(ngModel)]="mylibTextareaValue"
+      #mylibTextarea="ngModel"
+      name="mylibTextarea"></mylib-textarea>
+  </div>
+
+  <div class="form-group">
+    <mylib-checkbox
+      label="Checkbox label"
+      [(ngModel)]="mylibCheckboxValue"
+      #mylibCheckbox="ngModel"
+      name="mylibCheckbox"></mylib-checkbox>
+  </div>
+
+  <div class="form-group">
+      <mylib-datepicker
+        label="Date"
+        input-format="MM-DD-YYYY"
+        [(ngModel)]="mylibDatepickerValue"
+        #mylibDatepicker="ngModel"
+        name="mylibDatepicker"></mylib-datepicker>
+  </div>
+
+  <div class="form-group">
+      <mylib-timepicker
+        [(ngModel)]="mylibTimepickerValue"
+        #mylibTimepicker="ngModel"
+        name="mylibTimepicker"></mylib-timepicker>
+  </div>
+
+  <div class="form-group">
+      <mylib-dropdown
+        [options]="dropdownItems"
+        [(ngModel)]="mylibDropdownValue" #mylibDropdown="ngModel" name="mylibDropdown"
+        style="width: 100%;"
+        [selectionMode]="'multiple'"
+      ></mylib-dropdown>
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!testForm.form.valid">Submit</button>
+</form>
+

@@ -1,0 +1,67 @@
+{
+  "plugins": ["@nrwl/nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "warn",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": ["$lib-mylib/**", "$root/**"],
+            "depConstraints": [
+              {
+                "sourceTag": "lib:mylib",
+                "onlyDependOnLibsWithTags": [
+                  "lib:mylib",
+                  "lib:mylib-core-js",
+                  "lib:mylib-core-styles"
+                ]
+              },
+              {
+                "sourceTag": "lib:mylib-core-styles",
+                "onlyDependOnLibsWithTags": ["lib:mylib-core-js"]
+              },
+              {
+                "sourceTag": "lib:mylib:react",
+                "onlyDependOnLibsWithTags": [
+                  "lib:mylib",
+                  "lib:mylib-core-js",
+                  "lib:mylib-core-styles"
+                ]
+              },
+              {
+                "sourceTag": "lib:mylib:angular",
+                "onlyDependOnLibsWithTags": [
+                  "lib:mylib",
+                  "lib:mylib-core-js",
+                  "lib:mylib-core-styles"
+                ]
+              }
+            ]
+          }
+        ],
+        "@typescript-eslint/ban-types": [
+          "error",
+          {
+            "types": {
+              // un-ban a type that's banned by default
+              "{}": false
+            },
+            "extendDefaults": true
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nrwl/nx/typescript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {}
+    }
+  ]
+}

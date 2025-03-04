@@ -1,0 +1,102 @@
+$black: $color-black;
+$primary: mylib-color('blue', 'dark');
+$secondary: mylib-color('blue', 'light');
+$success: mylib-color-corporate('status', 'green', 'dark');
+$info: mylib-color('blue', 'light');
+$warning: mylib-color-corporate('status', 'yellow', 'dark');
+$danger: mylib-color-corporate('status', 'red', 'dark');
+$light: mylib-color('blue', 'light');
+$dark: mylib-color('blue', 'dark');
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+  ),
+  $theme-colors
+);
+
+/*
+* CSS Var format
+* No Color Scheme
+* --mylib-theme--state--[state]--[prop]
+*
+* Color Scheme (light | dark)
+* --mylib-theme--[color-scheme]--state--[state]--[prop]
+*/
+$theme-states: (
+  'focus': (
+    'all': (
+      'outline': solid rem(2px),
+      'outline-offset': rem(2px),
+    ),
+    'light': (
+      'outline-color': mylib-color('blue', 9),
+    ),
+    'dark': (
+      'outline-color': mylib-color('blue', 21),
+    ),
+  ),
+  'selection-hover-default': (
+    'all': (
+      'background-color': adjust-color(#daecf0, $alpha: -0.4),
+    ),
+  ),
+  'selection-pressed-default': (
+    'all': (
+      'background-color': adjust-color(#afd7e1, $alpha: -0.3),
+    ),
+  ),
+  'selection-selected-default': (
+    'all': (
+      'background-color': adjust-color(#afd7e1, $alpha: -0.2),
+    ),
+  ),
+  'selection-hover-selected-default': (
+    'all': (
+      'background-color': #afd7e1,
+    ),
+  ),
+  'selection-hover-toggle': (
+    'all': (
+      'background-color': adjust-color(#afd7e1, $alpha: -0.5),
+    ),
+  ),
+  'selection-pressed-toggle': (
+    'all': (
+      'background-color': adjust-color(#afd7e1, $alpha: -0.3),
+    ),
+  ),
+  'selection-selected-toggle': (
+    'all': (
+      'background-color': adjust-color(#afd7e1, $alpha: -0.2),
+    ),
+  ),
+  'selection-hover-selected-toggle': (
+    'all': (
+      'background-color': #afd7e1,
+    ),
+  ),
+  'selection-hover-content': (
+    'all': (
+      'background-color': adjust-color(#daecf0, $alpha: -0.55),
+    ),
+  ),
+  'selection-selected-content': (
+    'all': (
+      'background-color': adjust-color(#afd7e1, $alpha: -0.2),
+    ),
+  ),
+  'selection-hover-selected-content': (
+    'all': (
+      'background-color': #afd7e1,
+    ),
+  ),
+);

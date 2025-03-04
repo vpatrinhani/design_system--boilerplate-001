@@ -1,0 +1,97 @@
+$modular-scale-ratio: 1.2;
+
+// Borders
+$border-radius: rem(2px); // 0.25rem
+$border-radius-lg: rem(4px); // 0.5rem
+$border-radius-xl: rem(8px); // 1rem
+
+// Spacing/Padding
+$spacing-base: 0.25rem;
+$margin-base: $spacing-base; // 0.5rem / 8px
+$padding-base: $spacing-base; // 0.5rem / 8px
+
+$margin-xs: $margin-base * 1; // 0.5rem / 4px
+$margin-sm: $margin-base * 2; // 1rem / 8px
+$margin-md: $margin-base * 3; // 1.5rem / 16px
+$margin-lg: $margin-base * 4; // 2rem / 24px
+$margin-xl: $margin-base * 5; // 2.5rem / 32px
+
+$padding-xs: $padding-base * 1; // 0.5rem / 4px
+$padding-sm: $padding-base * 2; // 1rem / 8px
+$padding-md: $padding-base * 3; // 1.5rem / 16px
+$padding-lg: $padding-base * 4; // 2rem / 24px
+$padding-xl: $padding-base * 5; // 2.5rem / 32px
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: $spacing-base !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25,
+    ),
+    2: (
+      $spacer * 0.5,
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5,
+    ),
+    5: (
+      $spacer * 3,
+    ),
+  ),
+  $spacers
+);
+
+// media queries
+// use @include media-breakpoint-up(sm) {...}
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+);
+
+// Grid containers
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1080px,
+);
+
+// Grid Columns / Container Variables
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12;
+$grid-gutter-width: 24px;
+$container-padding: $grid-gutter-width * 0.5;
+
+// z-index map
+// use "z-index: z-index('modal');" -> z-index: 5000
+
+$z-indexes: (
+  'modal': 5000,
+  'header': 4000,
+  'breadcrumb': 3000,
+  'tooltip': 2000,
+  'content': 1000,
+  'default': auto,
+);
+
+// icon sizes map
+$mylib-icon--sizes: (
+  'sm': 12px,
+  'md': 16px,
+  'lg': 24px,
+);

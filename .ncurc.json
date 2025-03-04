@@ -1,0 +1,12 @@
+{
+  "upgrade": true,
+  "filter": "*",
+  "reject": [
+    "webpack",
+    "*-webpack-plugin",
+    "webpack-*",
+    "*-loader",
+    "@storybook/*",
+    "storybook-*"
+  ]
+}

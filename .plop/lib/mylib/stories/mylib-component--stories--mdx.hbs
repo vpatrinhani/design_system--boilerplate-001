@@ -1,0 +1,63 @@
+import { html } from 'lit-html';
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+import { scriptLoader } from '$root/.storybook/helpers/lit-script';
+
+import { CssPropsBlock } from "@ljcl/storybook-addon-cssprops";
+
+import { args, argTypes, cssProperties } from './story/story-args';
+
+import {
+  meta,
+  Template
+} from './story/{{kebabCase componentName}}.story';
+
+<Meta
+  title={meta.title}
+  component='{{kebabCase componentName}}'
+  parameters={meta.parameters}
+/>
+
+# Button
+- [Overview](#overview)
+- [Props](#props)
+- [Events](#events)
+- [CSS Props](#css-props)
+- [Usage](#usage)
+- [Featurettes](#featurettes)
+- [Use cases and examples](#use-cases-and-examples)
+- [Feedback](#feedback)
+
+## Overview
+Describe here an overview about your component.
+
+<Canvas withToolbar>
+  <Story
+    name="Overview"
+    args=\{{...args}}
+    argTypes=\{{...argTypes}}
+    cssprops=\{{...cssProperties}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+<ArgsTable story="Overview" />
+
+## Events
+**(NONE)**
+
+## CSS Props
+**(NONE)**
+<CssPropsBlock />
+
+## Usage
+**(NONE)**
+
+## Featurettes
+
+Add here the variety of ```<Canvas/>``` for each feature use case of your component.
+
+## Use cases and examples
+
+Add here the variety of ```<Canvas/>``` exercisint some real and important use case scnarios to guide your users.
+

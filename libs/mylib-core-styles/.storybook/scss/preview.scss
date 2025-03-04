@@ -1,0 +1,55 @@
+@import '../../scss/mylib-icons--all';
+// @import '../../src/scss/colors';
+
+body {
+  // --mylib-theme--color--dark: red;
+
+  // --mylib-theme--state--focus--outline: solid 4px;
+  // --mylib-theme--light--state--focus--outline-color: fuchsia;
+  // --mylib-theme--dark--state--focus--outline-color: red;
+
+  &.mylib-theme--scheme--light {
+    background: #fff;
+  }
+
+  &.mylib-theme--scheme--dark {
+    background: #003750;
+  }
+}
+
+.elcolor-box {
+  display: block;
+}
+
+ul.reset li,
+ul.reset ul li {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+ul {
+  &.list-demo-components {
+    li {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+div {
+  &.demo-unity-comp-container {
+    display: block;
+  }
+}
+
+.story-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .align-wrapper-content--center {
+    align-items: center;
+  }
+}

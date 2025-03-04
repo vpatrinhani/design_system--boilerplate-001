@@ -1,0 +1,5 @@
+dist
+.storybook
+tmp
+coverage
+pack

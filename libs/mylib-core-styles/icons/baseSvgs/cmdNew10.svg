@@ -1,0 +1,10 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+  <rect x="4" width="1" height="2.5" fill="#464646"/>
+  <rect x="4" y="6.5" width="1" height="2.5" fill="#464646"/>
+  <rect x="6.5" y="4" width="2.5" height="1" fill="#464646"/>
+  <rect y="4" width="2.5" height="1" fill="#464646"/>
+  <rect x="5.482" y="1.25" width="3.536" height="1" transform="translate(0.886 5.639) rotate(-45)" fill="#464646"/>
+  <rect x="-0.018" y="6.75" width="3.536" height="1" transform="translate(-4.614 3.361) rotate(-45)" fill="#464646"/>
+  <rect x="6.75" y="5.482" width="1" height="3.536" transform="translate(-3.003 7.25) rotate(-45)" fill="#464646"/>
+  <rect x="1.25" y="-0.018" width="1" height="3.536" transform="translate(-0.725 1.75) rotate(-45)" class="aw-theme-iconOutline" fill="#464646"/>
+</svg>

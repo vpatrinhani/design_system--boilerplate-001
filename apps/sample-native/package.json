@@ -1,0 +1,27 @@
+{
+  "name": "sample-native",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "html5boilerplate"
+  ],
+  "license": "",
+  "author": "",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.8.1",
+    "@parcel/transformer-webmanifest": "^2.8.1",
+    "parcel": "^2.0.0"
+  },
+  "workspaces": [
+    "../../dist/libs/**"
+  ],
+  "dependencies": {
+    "@my-lib-org/mylib": "file:../../dist/libs/mylib",
+    "@my-lib-org/mylib-core-styles": "file:../../dist/libs/mylib-core-styles"
+  }
+}

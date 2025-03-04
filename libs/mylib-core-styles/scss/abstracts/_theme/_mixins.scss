@@ -1,0 +1,68 @@
+@mixin theme-state--all($state, $theme-state-dic: $theme-states) {
+  @if (map-has-key($theme-state-dic, $state)) {
+    $map-state: map-get($theme-state-dic, $state);
+
+    @if (map-has-key($map-state, 'all')) {
+      @each $prop, $value in map-get($map-state, 'all') {
+        #{$prop}: var-theme-state-value($state, $prop, $value);
+      }
+    }
+  }
+}
+
+@mixin theme-state--light($state, $theme-state-dic: $theme-states) {
+  @if (map-has-key($theme-state-dic, $state)) {
+    $map-state: map-get($theme-state-dic, $state);
+
+    @if (map-has-key($map-state, 'light')) {
+      @each $prop, $value in map-get($map-state, 'light') {
+        #{$prop}: var-theme-state-value($state, $prop, $value, 'light');
+      }
+    }
+  }
+}
+
+@mixin theme-state--dark($state, $theme-state-dic: $theme-states) {
+  @if (map-has-key($theme-state-dic, $state)) {
+    $map-state: map-get($theme-state-dic, $state);
+
+    @if (map-has-key($map-state, 'dark')) {
+      @each $prop, $value in map-get($map-state, 'dark') {
+        #{$prop}: var-theme-state-value($state, $prop, $value, 'dark');
+      }
+    }
+  }
+}
+
+@mixin theme-state--by-scheme($state, $color-scheme: 'light', $theme-state-dic: $theme-states) {
+  @if (map-has-key($theme-state-dic, $state)) {
+    $map-state: map-get($theme-state-dic, $state);
+
+    @if (map-has-key($map-state, $color-scheme)) {
+      @each $prop, $value in map-get($map-state, $color-scheme) {
+        #{$prop}: var-theme-state-value($state, $prop, $value, $color-scheme);
+      }
+    }
+  }
+}
+
+@mixin theme-state($state, $theme-state-dic: $theme-states) {
+  @if (map-has-key($theme-state-dic, $state)) {
+    $map-state: map-get($theme-state-dic, $state);
+
+    @include theme-state--all($state);
+
+    @if (map-has-key($map-state, 'light')) {
+      &,
+      .mylib-theme--scheme--light & {
+        @include theme-state--light($state);
+      }
+    }
+
+    @if (map-has-key($map-state, 'dark')) {
+      .mylib-theme--scheme--dark & {
+        @include theme-state--dark($state);
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+$data-svg-prefix: 'data:image/svg+xml;utf-8,';
+
+$mylib-icon--state-map: (
+  'normal': (
+    'default': (
+      'color': (
+        'light': var(--mylib-icon--color--light-scheme, var(--mylib-icon--color, $color-black) ),
+        'dark': var(--mylib-icon--color--dark-scheme, var(--mylib-icon--color, $color-white)),
+      )
+    ),
+  )
+);
+
+@function mylib-icon--get-state-map-value($state: 'normal', $variant: 'default', $prop: 'color', $color-scheme: 'light') {
+  @return map-get(map-get(map-get(map-get($mylib-icon--state-map, $state), $variant), $prop), $color-scheme);
+};

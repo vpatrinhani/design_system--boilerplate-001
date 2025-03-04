@@ -1,0 +1,85 @@
+@use 'sass:math';
+
+@import '~bootstrap-scss/functions';
+
+// https://www.modularscale.com/?1&rem&1.2
+@function ms($increment) {
+  $ratio: $modular-scale-ratio;
+  $v1: nth($base-font-size, 1);
+  $v2: nth($base-font-size, length($base-font-size));
+  $value: $v1;
+
+  @while $v2>$v1 {
+    $v2: ($v2 / $ratio);
+  }
+
+  @while $v2 < $v1 {
+    $v2: ($v2 * $ratio);
+  }
+
+  $double-stranded: $v2>$v1;
+
+  @if $increment>0 {
+    @for $i from 1 through $increment {
+      @if $double-stranded and ($v1 * $ratio) >$v2 {
+        $value: $v2;
+        $v2: ($v2 * $ratio);
+      } @else {
+        $v1: ($v1 * $ratio);
+        $value: $v1;
+      }
+    }
+  }
+
+  @if $increment < 0 {
+    @if $double-stranded {
+      $v2: (math.div($v2, $ratio));
+    }
+
+    @for $i from $increment through -1 {
+      @if $double-stranded and (math.div($v1, $ratio)) < $v2 {
+        $value: $v2;
+        $v2: ($v2 / $ratio);
+      } @else {
+        $v1: ($v1 / $ratio);
+        $value: $v1;
+      }
+    }
+  }
+
+  @return round($value);
+}
+
+// 16px => 16
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+// ( rem(16px) || rem(16) ) => 1rem
+@function rem($size) {
+  $rem-size: math.div(strip-unit($size), strip-unit($base-font-size));
+  @return ($rem-size * 1rem);
+}
+
+// ( -rem(16px) || -rem(16) ) => -1rem
+@function negative-rem($size) {
+  @return -(rem($size));
+}
+
+// ( em(16px) || em(16) ) => 1em
+@function em($size) {
+  $rem-size: math.div(strip-unit($size), strip-unit($base-font-size));
+  @return ($rem-size * 1em);
+}
+
+@function z-index($layer) {
+  @return map-get($z-indexes, $layer);
+}
+
+@function get-icon-size($size) {
+  @return rem(map-get($mylib-icon--sizes, $size));
+}

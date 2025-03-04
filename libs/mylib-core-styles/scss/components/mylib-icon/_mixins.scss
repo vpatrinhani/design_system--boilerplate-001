@@ -1,0 +1,68 @@
+@import './variables';
+
+@mixin mylib-icon__host() {
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+@mixin mylib-icon__content() {
+  font-family: 'mylib-icons';
+  user-select: none;
+
+  &.mylib-icon__size {
+    &--sm {
+      @include mylib-icon__set--font--size('sm');
+    }
+
+    &--md {
+      @include mylib-icon__set--font--size('md');
+    }
+
+    &--lg {
+      @include mylib-icon__set--font--size('lg');
+    }
+  }
+}
+
+@mixin mylib-icon__svg--content() {
+  user-select: none;
+
+  &.mylib-icon__size {
+    &--sm {
+      @include mylib-icon__set--svg--size('sm');
+    }
+
+    &--md {
+      @include mylib-icon__set--svg--size('md');
+    }
+
+    &--lg {
+      @include mylib-icon__set--svg--size('lg');
+    }
+  }
+}
+
+@mixin mylib-icon__set--font--size($size: 'md') {
+  display: inline-block;
+  text-align: center;
+  font-size: get-icon-size($size);
+  line-height: var(--mylib-icon--line-height, get-icon-size($size));
+  width: var(--mylib-icon--width, get-icon-size($size));
+  height: var(--mylib-icon--height, get-icon-size($size));
+}
+
+@mixin mylib-icon__set--svg--size($size: 'md') {
+  width: var(--mylib-icon--width, get-icon-size($size));
+  height: var(--mylib-icon--height, get-icon-size($size));
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin mylib-icon__content--scheme($color-scheme: 'light') {
+  color: mylib-icon--get-state-map-value(
+    $prop: 'color',
+    $color-scheme: $color-scheme
+  );
+}

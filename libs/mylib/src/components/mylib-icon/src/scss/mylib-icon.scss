@@ -1,0 +1,25 @@
+@import "@libs/mylib/src/scss/variables";
+
+@import './mixins';
+
+// Shadow-DOM enabled
+:host {
+  @include mylib-icon__host();
+}
+
+:host(.mylib-icon__size--sm) {
+  width: var(--mylib-icon--width, get-icon-size('sm'));
+  height: var(--mylib-icon--height, get-icon-size('sm'));
+}
+
+:host(.mylib-icon__size--md) {
+  width: var(--mylib-icon--width, get-icon-size('md'));
+  height: var(--mylib-icon--height, get-icon-size('md'));
+}
+
+:host(.mylib-icon__size--lg) {
+  width: var(--mylib-icon--width, get-icon-size('lg'));
+  height: var(--mylib-icon--height, get-icon-size('lg'));
+}
+
+@include mylib-icon();

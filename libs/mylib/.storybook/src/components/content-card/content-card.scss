@@ -1,0 +1,68 @@
+// @import "../../styles/typography";
+// @import "../../../styles/global-css-settings";
+// @import "../../styles/content-spacing";
+
+.mylib-storybook-content-card {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px #0000004D;
+  border: 1px solid #DCDCDC80;
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 24px 8px;
+
+  width: calc(240px - 8px*2);
+  height: calc(240px - 24px*2);
+
+  > a {
+    all: unset;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_imag-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    min-height: 86px;
+    max-height: 86px;
+
+    img {
+      height: max-content;
+      width: fit-content;
+    }
+
+    margin-bottom: 16px
+  }
+
+  &_title {
+    font-size: 1.5em;
+    line-height: 1.32em;
+
+    color: #1E1E1E;
+  }
+
+  &_summary {
+    font-size: 1em;
+    line-height: 1.32em;
+    text-align: center;
+
+    color: #464646;
+  }
+
+  &_bottom-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+}

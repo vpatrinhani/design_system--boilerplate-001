@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://example.com/",
+    "secure": false
+  }
+}

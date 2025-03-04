@@ -1,0 +1,568 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
+  color: #222;
+  font-family: 'Segoe UI', 'Open Sans', 'Verdana', 'Arial', 'Helvetica',
+    'sans-serif';
+  /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
+  font-size: 12px;
+  line-height: 1.32em;
+}
+
+/*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *row"
+   * Customize the background color to match your design.
+   */
+
+/* stylelint-disable-next-line selector-no-vendor-prefix */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+   * A better looking default horizontal rule
+   */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+   * Remove default fieldset styles.
+   */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+   * Allow only vertical resizing of textareas.
+   */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+
+/* ==========================================================================
+     Helper classes
+     ========================================================================== */
+
+/*
+   * Hide visually and from screen readers
+   */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+
+/* stylelint-disable-next-line selector-class-pattern */
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+   * Extends the .sr-only class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+
+/* stylelint-disable-next-line selector-class-pattern, selector-list-comma-newline-after */
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+   * Hide visually and from screen readers, but maintain layout
+   */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+   * Clearfix: contain floats
+   *
+   * For modern browsers
+   * 1. The space content is one way to avoid an Opera bug when the
+   *    `contenteditable` attribute is included anywhere else in the document.
+   *    Otherwise it causes space to appear at the top and bottom of elements
+   *    that receive the `clearfix` class.
+   * 2. The use of `table` rather than `block` is only necessary if using
+   *    `:before` to contain the top-margins of child elements.
+   */
+
+.clearfix::before,
+.clearfix::after {
+  content: ' ';
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+/* stylelint-disable-next-line media-feature-name-no-vendor-prefix */
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+  }
+
+  abbr[title]::after {
+    content: ' (' attr(title) ')';
+  }
+
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+.component-demo-section {
+  display: block;
+  margin: 24px 8px;
+  padding: 24px;
+  border: 1px solid #000;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.notification-badge-container-items {
+  margin-right: 30px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.notification-badge-container-items:first-of-type {
+  margin-left: 10px;
+}
+
+.wrapper-notification-badge {
+  margin-block: 20px;
+}
+
+.container {
+  position: relative;
+  width: 100px;
+  height: 80px;
+
+  background: rgb(153, 165, 176);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 10px;
+}
+
+.container .wrapped-by-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+mylib-command-bar.vertical {
+  width: 56px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.badge-over-command-button {
+  --mylib-notification-badge--position--top-offset: 8px;
+  --mylib-notification-badge--position--right-offset: 20px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.checkbox-group-vertical-container {
+  display: flex;
+  gap: 5rem;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.checkbox-group-vertical-container.row {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.component-demo-section.mylib-primary-navigation > .primary-nav-wrapper {
+  display: flex;
+  border: 1px solid rgb(96, 95, 95);
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.component-demo-section.mylib-primary-navigation.example--issue-356
+  > .primary-nav-wrapper {
+  position: relative;
+}
+
+.component-demo-section.mylib-primary-navigation
+  mylib-primary-navigation-bar#example--issue-356 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.component-demo-section.mylib-primary-navigation
+  .primary-nav-wrapper--example-02 {
+  display: flex;
+  flex-direction: row;
+}
+
+.component-demo-section.mylib-primary-navigation .fake-content {
+  /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
+  font-weight: 400;
+  padding: 16px;
+}
+
+.row {
+  margin: 32px auto;
+}
+
+.mylib-toast-variants {
+  display: flex;
+  height: 110px;
+}
+
+.toast-container {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  border: 1px solid rgb(255, 0, 0);
+  margin-top: 12px;
+}
+
+.mylib-information-bar .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 0;
+  width: 85%;
+}
+
+.table-container {
+  max-height: 200px;
+  max-width: 500px;
+  margin-block: 10px;
+}
+
+.mylib-tooltip--example {
+  position: relative;
+}
+
+.mylib-tooltip--example .position-section {
+  margin: 20px 0;
+  display: flex;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.mylib-tooltip--example .position-section.no-target {
+  position: relative;
+  height: 100px;
+  align-items: center;
+}
+
+.mylib-tooltip--example .imperative-case--container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 80px;
+}
+
+.mylib-tooltip--example .position-section .tooltip-container {
+  margin: 0 10px;
+}
+
+.mylib-tooltip--example .variations-section {
+  width: 40px;
+}
+
+.mylib-dropdown .row .dropdown-example {
+  width: 300px;
+}
+
+.mylib-splitter--example .container {
+  width: 600px;
+  height: 200px;
+  border: 1px solid #eee;
+}
+
+.mylib-splitter--example .container--vertical {
+  width: 640px;
+  height: 480px;
+  border: 1px solid #eee;
+
+  margin-block: 30px;
+}
+
+.datepicker-container {
+  width: 100%;
+  padding-left: 30px;
+}
+
+.mylib-datepicker .datepicker-form {
+  display: flex;
+  justify-content: left;
+}
+
+.mylib-tree .row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+form#form-date-picker::before,
+form#form-time-picker::before {
+  content: 'Form';
+  position: absolute;
+  left: -2px;
+  top: -26px;
+  background-color: #009999;
+  color: white;
+  padding: 4px 16px;
+}
+
+form#form-date-picker,
+form#form-time-picker {
+  position: relative;
+  border: 2px solid #009999;
+  padding: 16px;
+  box-shadow: 6px 4px #009999;
+}
+
+.mylib-timepicker .container-timepicker,
+form#form-time-picker {
+  width: 300px;
+}
+.mylib-storybook-template-container.mylib-combo-box--story--responsiveness-adaptiveness {
+  width: 100px;
+  padding: 2px;
+  border: 1px solid #009999;
+  box-shadow: 6px 4px #009999;
+}
+
+.mylib-storybook-template-container.mylib-combo-box--story--responsiveness-adaptiveness
+  mylib-combo-box {
+  --mylib-combo-box--menu-width: 100px;
+}
+
+.mylib-slider--example .slider-container {
+  height: 150px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+
+.mylib-sliter-example {
+  width: 300px;
+}
+
+.mylib-slider--example form {
+  width: 350px;
+}
+
+.mylib-slider--example form#form-template-wrapper-slider::before {
+  content: 'Form';
+  position: absolute;
+  left: -2px;
+  top: -26px;
+  background-color: #009999;
+  color: white;
+  padding: 4px 16px;
+}
+
+.mylib-slider--example form#form-template-wrapper-slider {
+  position: relative;
+  border: 2px solid #009999;
+  padding: 16px;
+  box-shadow: 6px 4px #009999;
+  margin: 24px;
+}
+.panel-section-wrapper {
+  width: 396px;
+}
+
+.mylib-progress-bar-container {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mylib-progress-bar-container mylib-progress-bar {
+  width: 100%;
+}
+.floating-button--sizes--container {
+  position: relative;
+  height: 100px;
+  width: 200px;
+}
+
+#floating-button--sizes--large {
+  top: 50px;
+}
+
+.floating-button--variants--container {
+  position: relative;
+  height: 120px;
+
+  margin-bottom: 8px;
+}
+
+#floating-button--variants--accent {
+  top: 70px;
+}
+
+.floating-button--customIcon--container {
+  height: 60px;
+}

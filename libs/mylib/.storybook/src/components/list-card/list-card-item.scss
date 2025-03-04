@@ -1,0 +1,74 @@
+@import '../../../scss/variables';
+
+@import '@libs/mylib-core-styles/scss/components/mylib-link/variables';
+@import '@libs/mylib-core-styles/scss/components/mylib-link/mixins';
+
+.mylib-storybook-list-card-item {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  > a {
+    all: unset;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 4px;
+
+    &:hover {
+      background-color: mylib-color('teal', 23);
+    }
+
+    &:focus-visible {
+      @include theme-state--all('focus');
+      @include theme-state--light('focus');
+    }
+  }
+
+  &_image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    min-height: 86px;
+    max-height: 86px;
+
+    img {
+      height: max-content;
+      width: fit-content;
+    }
+
+    margin-right: 8px;
+  }
+
+  &_content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &_title {
+    font-size: 1.17em;
+    line-height: 1.32em;
+    font-weight: 600;
+
+    color: #1E1E1E;
+
+    margin-bottom: 4px;
+  }
+
+  &_summary {
+    font-size: 1em;
+    line-height: 1.32em;
+    margin: 0;
+
+    color: #464646;
+  }
+}

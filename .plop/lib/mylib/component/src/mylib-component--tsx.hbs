@@ -1,0 +1,39 @@
+import { Component, h, Element, Host, ComponentInterface, State } from '@stencil/core';
+import { inheritAttributes } from '../../../utils';
+
+@Component({
+  tag: 'mylib-{{kebabCase componentName}}',
+  styleUrl: './scss/mylib-{{kebabCase componentName}}.scss',
+  shadow: true
+})
+export class {{properCase componentName}} implements ComponentInterface {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private inheritedAttributes: { [k: string]: any } = {};
+
+  @Element() el!: HTMLMyLib{{properCase componentName}}Element;
+
+  @State() isDarkThemed = false;
+
+  componentWillLoad() {
+    this.inheritedAttributes = inheritAttributes(this.el, []);
+    this.isDarkThemed = this.el.closest('.mylib-theme--scheme--dark') ? true : false;
+  }
+
+  render() {
+    const { inheritedAttributes, isDarkThemed } = this;
+
+    const shadowClassMap = {
+      [isDarkThemed ? 'mylib-theme--scheme--dark' : 'mylib-theme--scheme--light']: true,
+    };
+
+    const hostClassMap = {
+      ...shadowClassMap,
+    };
+
+    return (
+      <Host class={hostClassMap}>
+        <label {...inheritedAttributes}>Hello: {{properCase componentName}}</label>
+      </Host>
+    );
+  }
+}

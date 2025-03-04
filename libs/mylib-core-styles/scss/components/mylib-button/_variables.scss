@@ -1,0 +1,441 @@
+$mylib-button-vars: (
+  'normal': (
+    'base': (
+      'color': (
+        'light': theme-color('dark'),
+        'dark': #fff,
+      ),
+      'border': (
+        'light': solid 1px theme-color('dark'),
+        'dark': solid 1px #fff,
+      ),
+      'background': (
+        'light': #fff,
+        'dark': theme-color('dark'),
+      ),
+    ),
+    'accent-high-contrast': (
+      'color': (
+        'light': #fff,
+        'dark': theme-color('dark'),
+      ),
+      'border': (
+        'light': solid 1px #003950,
+        'dark': solid 1px #003950,
+      ),
+      'background': (
+        'light': theme-color('dark'),
+        'dark': #fff,
+      ),
+    ),
+    'accent-mid-contrast': (
+      'color': (
+        'light': theme-color('dark'),
+        'dark': theme-color('dark'),
+      ),
+      'border': (
+        'light': solid 1px theme-color('dark'),
+        'dark': solid 1px theme-color('dark'),
+      ),
+      'background': (
+        'light': mylib-color('blue', 23),
+        'dark': mylib-color('blue', 23),
+      ),
+    ),
+    'positive': (
+      'color': (
+        'light': #1d731c,
+        'dark': #1d731c,
+      ),
+      'border': (
+        'light': solid 1px theme-color('success'),
+        'dark': solid 1px theme-color('success'),
+      ),
+      'background': (
+        'light': #fff,
+        'dark': #fff,
+      ),
+    ),
+    'accent-positive': (
+      'color': (
+        'light': #fff,
+        'dark': #fff,
+      ),
+      'border': (
+        'light': solid 1px #065d00,
+        'dark': solid 1px #065d00,
+      ),
+      'background': (
+        'light': theme-color('success'),
+        'dark': theme-color('success'),
+      ),
+    ),
+    'caution': (
+      'color': (
+        'light': #b64c24,
+        'dark': #b64c24,
+      ),
+      'border': (
+        'light': solid 1px #dc6914,
+        'dark': solid 1px #dc6914,
+      ),
+      'background': (
+        'light': #fff,
+        'dark': #fff,
+      ),
+    ),
+    'accent-caution': (
+      'color': (
+        'light': #fff,
+        'dark': #fff,
+      ),
+      'border': (
+        'light': solid 1px #843f0c,
+        'dark': solid 1px #843f0c,
+      ),
+      'background': (
+        'light': #dc6914,
+        'dark': #dc6914,
+      ),
+    ),
+    'negative': (
+      'color': (
+        'light': theme-color('danger'),
+        'dark': theme-color('danger'),
+      ),
+      'border': (
+        'light': solid 1px theme-color('danger'),
+        'dark': solid 1px theme-color('danger'),
+      ),
+      'background': (
+        'light': #fff,
+        'dark': #fff,
+      ),
+    ),
+    'accent-negative': (
+      'color': (
+        'light': #fff,
+        'dark': #fff,
+      ),
+      'border': (
+        'light': solid 1px #840000,
+        'dark': solid 1px #840000,
+      ),
+      'background': (
+        'light': theme-color('danger'),
+        'dark': theme-color('danger'),
+      ),
+    ),
+    'accent-marketing': (
+      'color': (
+        'light': #fff,
+        'dark': #fff,
+      ),
+      'border': (
+        'light': solid 1px #843f0c,
+        'dark': solid 1px #843f0c,
+      ),
+      'background': (
+        'light': #dc6914,
+        'dark': #dc6914,
+      ),
+    ),
+    'chromeless': (
+      'color': (
+        'light': theme-color('dark'),
+        'dark': mylib-color('blue', 21),
+      ),
+      'border': (
+        'light': none,
+        'dark': none,
+      ),
+      'background': (
+        'light': none,
+        'dark': none,
+      ),
+    ),
+    'chromeless-colorless': (
+      'color': (
+        'light': #1e1e1e,
+        'dark': #ffffff,
+      ),
+      'border': (
+        'light': none,
+        'dark': none,
+      ),
+      'background': (
+        'light': none,
+        'dark': none,
+      ),
+    ),
+    'custom': (
+      'color': (
+        'light':
+          var(
+            --mylib-button--custom--normal--text-color--light,
+            theme-color('dark')
+          ),
+        'dark':
+          var(--mylib-button--custom--normal--text-color--dark, $color-white),
+      ),
+      'border': (
+        'light':
+          var(
+            --mylib-button--custom--normal--border--light,
+            solid 1px theme-color('dark')
+          ),
+        'dark':
+          var(
+            --mylib-button--custom--normal--border--dark,
+            solid 1px $color-white
+          ),
+      ),
+      'background': (
+        'light':
+          var(--mylib-button--custom--normal--background--light, $color-white),
+        'dark':
+          var(
+            --mylib-button--custom--normal--background--dark,
+            theme-color('dark')
+          ),
+      ),
+    ),
+  ),
+  'hover': (
+    'base': (
+      'background': (
+        'light': #d9e7ed,
+        'dark': #004c6c,
+      ),
+      'shadow': (
+        'light': 0 3px 6px 0 rgba(0, 0, 0, 0.3),
+        'dark': 0 3px 6px 0 rgba(0, 0, 0, 0.3),
+      ),
+    ),
+    'accent-high-contrast': (
+      'background': (
+        'light': #004c6c,
+        'dark': #d9e7ed,
+      ),
+    ),
+    'accent-mid-contrast': (
+      'background': (
+        'light': mylib-color('blue', 21),
+        'dark': mylib-color('blue', 21),
+      ),
+    ),
+    'positive': (
+      'background': (
+        'light': #e6f5e5,
+        'dark': #e6f5e5,
+      ),
+    ),
+    'accent-positive': (
+      'background': (
+        'light': #0c7c01,
+        'dark': #0c7c01,
+      ),
+    ),
+    'caution': (
+      'background': (
+        'light': #fbf0e7,
+        'dark': #fbf0e7,
+      ),
+    ),
+    'accent-caution': (
+      'background': (
+        'light': #b05412,
+        'dark': #b05412,
+      ),
+    ),
+    'negative': (
+      'background': (
+        'light': #fae5e4,
+        'dark': #fae5e4,
+      ),
+    ),
+    'accent-negative': (
+      'background': (
+        'light': #b00,
+        'dark': #b00,
+      ),
+    ),
+    'accent-marketing': (
+      'background': (
+        'light': #b05412,
+        'dark': #b05412,
+      ),
+    ),
+    'chromeless': (
+      'background': (
+        'light': #d9e7ec,
+        'dark': #004c6c,
+      ),
+    ),
+    'chromeless-colorless': (
+      'background': (
+        'light': #d9e7ec,
+        'dark': #004c6c,
+      ),
+    ),
+    'custom': (
+      'background': (
+        'light': var(--mylib-button--custom--hover--background--light, #d9e7ec),
+        'dark': var(--mylib-button--custom--hover--background--dark, #004c6c),
+      ),
+    ),
+  ),
+  'active': (
+    'base': (
+      'background': (
+        'light': #b2cfdb,
+        'dark': #003951,
+      ),
+      'shadow': (
+        'light': 0 1px 2px 0 rgba(0, 0, 0, 0.3),
+        'dark': 0 1px 2px 0 rgba(0, 0, 0, 0.3),
+      ),
+    ),
+    'accent-high-contrast': (
+      'background': (
+        'light': #003951,
+        'dark': #bfd7e1,
+      ),
+    ),
+    'accent-mid-contrast': (
+      'background': (
+        'light': mylib-color('blue', 20),
+        'dark': mylib-color('blue', 20),
+      ),
+    ),
+    'positive': (
+      'background': (
+        'light': #c2e6bf,
+        'dark': #c2e6bf,
+      ),
+    ),
+    'accent-positive': (
+      'background': (
+        'light': #065d00,
+        'dark': #065d00,
+      ),
+    ),
+    'caution': (
+      'background': (
+        'light': #f6d9c4,
+        'dark': #f6d9c4,
+      ),
+    ),
+    'accent-caution': (
+      'background': (
+        'light': #85400e,
+        'dark': #85400e,
+      ),
+    ),
+    'negative': (
+      'background': (
+        'light': #f6bfbf,
+        'dark': #f6bfbf,
+      ),
+    ),
+    'accent-negative': (
+      'background': (
+        'light': #900,
+        'dark': #900,
+      ),
+    ),
+    'accent-marketing': (
+      'background': (
+        'light': #85400e,
+        'dark': #85400e,
+      ),
+    ),
+    'chromeless': (
+      'background': (
+        'light': #b2cfdb,
+        'dark': #003951,
+      ),
+    ),
+    'chromeless-colorless': (
+      'background': (
+        'light': #b2cfdb,
+        'dark': #003951,
+      ),
+    ),
+    'custom': (
+      'background': (
+        'light': var(--mylib-button--custom--active--background--light, #b2cfdb),
+        'dark': var(--mylib-button--custom--active--background--dark, #003951),
+      ),
+    ),
+  ),
+  'focus': (
+    'default': (
+      'outline': (
+        'light': #0f789b solid rem(2px),
+        'dark': #aae6f5 solid rem(2px),
+      ),
+      'outline-offset': (
+        'light': rem(2px),
+        'dark': rem(2px),
+      ),
+    ),
+  ),
+  'disabled': (
+    'default': (
+      'color': (
+        'light': #6e6e6e91,
+        'dark': #828282,
+      ),
+      'border': (
+        'light': solid 1px #6e6e6e91,
+        'dark': solid 1px #828282,
+      ),
+      'background': (
+        'light': #00000012,
+        'dark': rgba(#828282, 0.07),
+      ),
+    ),
+    'chromeless': (
+      'color': (
+        'light': #8c8c8c,
+        'dark': #828282,
+      ),
+      'border': (
+        'light': none,
+        'dark': none,
+      ),
+      'background': (
+        'light': none,
+        'dark': none,
+      ),
+    ),
+    'chromeless-colorless': (
+      'color': (
+        'light': #8c8c8c,
+        'dark': #828282,
+      ),
+      'border': (
+        'light': none,
+        'dark': none,
+      ),
+      'background': (
+        'light': none,
+        'dark': none,
+      ),
+    ),
+  ),
+);
+
+@function get-comp-var(
+  $comp-var-map,
+  $state: 'normal',
+  $variation: 'base',
+  $prop: 'bgcolor',
+  $color-scheme: 'light'
+) {
+  @return map-get(
+    map-get(map-get(map-get($comp-var-map, $state), $variation), $prop),
+    $color-scheme
+  );
+} ;
